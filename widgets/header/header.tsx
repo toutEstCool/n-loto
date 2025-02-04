@@ -4,8 +4,8 @@ import { cn } from "@/shared/lib/utils"
 import { Phone } from 'lucide-react';
 import { Container } from "../container/container";
 import Image from "next/image";
-import { HeaderDropdown } from "@/shared/components/header-dropdown/header-dropdown";
 import { useEffect, useRef, useState } from "react";
+import { Burger } from "@/shared/components/burger/burger";
 
 interface IHeaderProps {
   className?: string
@@ -47,12 +47,10 @@ export const Header: React.FC<IHeaderProps> = (props) => {
     setIsVisible((prev) => !prev);
   };
 
-
-
   return (
     <header className={cn('', className)}>
       {/* Upper Header */}
-      <div className="bg-[#8B3A9A] py-1 px-4  text-[13.5px] font-bold">
+      <div className="hidden md:block bg-[#8B3A9A] py-1 px-4 text-[12px] font-bold xl:text-[13.5px]">
         <Container>
           <div className="flex justify-between">
             <ul className="flex items-center text-[#dddddd] cursor-pointer gap-8">
@@ -62,7 +60,7 @@ export const Header: React.FC<IHeaderProps> = (props) => {
             <div>
               <a href="tel:" className="flex items-center gap-2">
                 <Phone color="white" size={14} />
-                <p className="text-white font-medium">Круглосуточная поддержка по телефону</p>
+                <p className="text-white font-medium xl:block hidden">Круглосуточная поддержка по телефону</p>
                 <p className="text-white font-medium">8 800 333-7-333</p>
               </a>
             </div>
@@ -76,14 +74,29 @@ export const Header: React.FC<IHeaderProps> = (props) => {
       </div>
       {/* Lower Header */}
       <div className="bg-[#FFFFFF] py-1">
-        <Container className="h-[54]">
+        <Container className="h-[36px] md:h-[54]">
           <div className="flex items-center justify-between h-[100%]">
             {/* Left Section */}
-            <div className="flex items-center">
-              <div className="mr-16">
-                <Image src={'/logo.png'} alt="Logo" width={150} height={39} />
+            <div className="flex items-center gap-8">
+              <div className="xl:hidden">
+                <Burger />
               </div>
-              <ul className="flex items-center gap-8 text-[#2F41B0] text-[16px] font-medium">
+              <div className="mr-16">
+                <Image
+                  src={'/logo.png'}
+                  alt="Logo"
+                  width={150}
+                  height={40}
+                  sizes="(max-width: 768px) 88px, (max-width: 1280px) 116px, 150px"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    maxWidth: '180px',
+                    maxHeight: '40px',
+                  }}
+                />
+              </div>
+              <ul className="hidden xl:flex items-center gap-8 text-[#2F41B0] text-[16px] font-medium">
                 <li>
                   <div className="w-full relative">
                     {/* Кнопка */}
@@ -113,7 +126,7 @@ export const Header: React.FC<IHeaderProps> = (props) => {
             </div>
             {/* Right Section */}
             <div>
-              <ul className="text-[#2F41B0] text-[16px] font-medium">
+              <ul className="text-[#2F41B0] text-[14px] md:text-[16px] font-medium">
                 <li>
                   <button>
                     <span>
