@@ -1,6 +1,5 @@
 'use client'
 
-import { Sheet } from "@/shared/components/sheet/sheet";
 import { useState } from "react";
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
   return (
     <>
       <h1>Hello</h1>
-      <Sheet />
     </>
   );
 }

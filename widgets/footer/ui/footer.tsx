@@ -1,7 +1,7 @@
 import { cn } from "@/shared/lib/utils"
-import { Phone } from 'lucide-react';
-import { Container } from "../container/container";
-import Image from "next/image";
+import { Phone } from 'lucide-react'
+import Image from "next/image"
+import { Container } from "@/widgets/container"
 
 interface IFooterProps {
   className?: string
