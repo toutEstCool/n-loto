@@ -63,16 +63,16 @@ export const WBigSlider: React.FC<IWBigSliderProps> = ({ items, renderItem }) =>
         </CarouselContent>
 
         <CarouselPrevious
-          className="z-0 absolute left-4 top-1/2 -translate-y-1/2 z-5 bg-transparent border-transparent"
+          className="z-0 absolute left-4 top-1/2 -translate-y-1/2 z-5 bg-transparent border-transparent hover:bg-transparent"
           icon={
-            <ChevronLeft className="z-0" />
+            <ChevronLeft className="z-0 text-white" />
           }
         />
 
         <CarouselNext
-          className="z-0 absolute right-4 top-1/2 -translate-y-1/2 z-5 bg-transparent border-transparent"
+          className="z-0 absolute right-4 top-1/2 -translate-y-1/2 z-5 bg-transparent border-transparent hover:bg-transparent"
           icon={
-            <ChevronRight className="z-0" />
+            <ChevronRight className="z-0 text-white" />
           }
         />
       </Carousel>
