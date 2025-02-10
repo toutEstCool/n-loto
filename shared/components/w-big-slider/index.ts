@@ -1,0 +1,1 @@
+export { WBigSlider } from './ui/w-big-slider'

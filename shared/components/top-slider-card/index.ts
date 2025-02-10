@@ -1,0 +1,1 @@
+export { TopSliderCard } from './ui/top-slider-card'
