@@ -1,5 +1,4 @@
 import { useMenuVisibility } from "@/features/header"
-import { Burger } from "@/shared/components/burger"
 import { BurgerMenu } from "@/widgets/burger-menu"
 import { Container } from "@/widgets/container"
 import Image from "next/image"

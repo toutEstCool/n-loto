@@ -40,3 +40,6 @@ export const Slider: FC<ISliderProps> = memo(({ cards }) => {
     </div>
   );
 });
+
+
+Slider.displayName = "Slider";

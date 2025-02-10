@@ -5,6 +5,7 @@ import { Slider } from "@/shared/components/slider";
 import { WBigSlider } from "@/shared/components/w-big-slider";
 import { Container } from "@/widgets/container";
 import { Lotterykits } from "@/widgets/lottery-kits";
+import Image from "next/image";
 
 
 const cardData = [
@@ -24,7 +25,7 @@ const images = [
   "https://online-static.website.cloud.croc.ru/online-meta/3db8e1dc-f786-4121-829f-2294a3a9a4d9.jpg",
   "https://online-static.website.cloud.croc.ru/online-meta/a3e05fd3-73ef-4eeb-914b-bb42060a58da.jpg",
   "https://online-static.website.cloud.croc.ru/online-meta/cdd3a83c-ea03-4440-a2f0-5b11dfaabbaa.jpg",
-  "	https://online-static.website.cloud.croc.ru/online-meta/9b36be50-3ee6-44b3-a28d-92beb6ae629f.jpg",
+  "https://online-static.website.cloud.croc.ru/online-meta/9b36be50-3ee6-44b3-a28d-92beb6ae629f.jpg",
   "https://online-static.website.cloud.croc.ru/online-meta/ea5f8e3b-9e62-4607-8630-d1467f4cd56f.jpg",
   "https://online-static.website.cloud.croc.ru/online-meta/1d461510-288e-4f60-9863-1d6ff12e025a.jpg",
   "https://online-static.website.cloud.croc.ru/online-meta/92f1ef48-addc-4e74-8e69-40499d0fadee.jpg"
@@ -45,10 +46,12 @@ export default function Home() {
             renderItem={(index) => (
               <div className="w-full flex items-center justify-center mx-1 h-[191px] sm:h-[213px] lg:h-[264px]"
               >
-                <img
+                <Image
                   src={images[index]}
                   alt={`Slide ${index + 1}`}
                   className="w-full h-[191px] sm:h-[180px] lg:h-[264px] object-cover rounded-lg"
+                  width={500}
+                  height={300}
                 />
               </div>
             )}
