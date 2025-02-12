@@ -3,6 +3,7 @@
 import { LittleBannerCard } from "@/shared/components/little-banner-card";
 import { Slider } from "@/shared/components/slider";
 import { WBigSlider } from "@/shared/components/w-big-slider";
+import { Button } from "@/shared/ui/button";
 import { Container } from "@/widgets/container";
 import { Lotterykits } from "@/widgets/lottery-kits";
 import Image from "next/image";
@@ -59,6 +60,46 @@ export default function Home() {
         </div>
         {/* Lottery pack */}
         <Lotterykits />
+        {/* Buy it */}
+        <div className="sm:mt-16">
+          <h2 className="text-center text-[#8b3a9a] mb-6 text-[42px] leading-[52px] font-medium">Покупайте, заполняйте, побеждайте!</h2>
+          {/* Buy it card */}
+          <div>
+            {/* start */}
+            <div className="flex items-center p-4 bg-white max-w-[700px] w-full rounded-xl">
+              {/* Левая часть с изображением (70%) */}
+              <div className="w-[70%]">
+                <Image
+                  src="https://i.pinimg.com/736x/48/89/96/488996c0c5cdc233b3523b926947fef8.jpg"
+                  alt="Card Banner"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+
+              {/* Разделительная пунктирная линия */}
+              <div className="h-full border-l border-dashed border-gray-400 mx-4"></div>
+              {/* Правая часть (30%) */}
+              <div className="w-[30%] text-lg font-bold flex flex-col">
+                <div>
+                  <div>
+                    <p>Тираж <br /> № 000127</p>
+                    <p>
+                      <time>23.02.2025</time>
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p>300 ₽</p>
+                  <Button>Купить</Button>
+                </div>
+              </div>
+            </div>
+            {/* end */}
+          </div>
+        </div>
       </Container >
     </>
   );
