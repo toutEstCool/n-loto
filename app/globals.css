@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Haval Mittel';
+  src: url('/fonts/HalvarMittel-Bd.ttf') format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -93,3 +98,4 @@ html {
 #nprogress .spinner-icon {
   @apply border-t-primary border-l-primary !important;
 }
+

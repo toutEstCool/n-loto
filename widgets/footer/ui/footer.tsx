@@ -1,74 +1,279 @@
-import { cn } from "@/shared/lib/utils"
-import { Phone } from 'lucide-react'
-import Image from "next/image"
-import { Container } from "@/widgets/container"
+import { cn } from '@/shared/lib/utils';
+import { Phone } from 'lucide-react';
+import Image from 'next/image';
+import { Container } from '@/widgets/container';
+import { Lowerfooter } from './lower-footer';
 
 interface IFooterProps {
-  className?: string
+  className?: string;
 }
+
+const footerData = [
+  {
+    title: 'Купить лотереи',
+    links: [
+      {
+        title: 'Мечталлион',
+        link: '',
+      },
+      {
+        title: 'Форсаж 75',
+        link: '',
+      },
+      {
+        title: 'Трижды три',
+        link: '',
+      },
+      {
+        title: 'Лавина призов',
+        link: '',
+      },
+      {
+        title: '12 добрых дел',
+        link: '',
+      },
+      {
+        title: 'Пять-О-Пять',
+        link: '',
+      },
+      {
+        title: 'Великолепная 8',
+        link: '',
+      },
+      {
+        title: 'Супер 8',
+        link: '',
+      },
+      {
+        title: 'Большая 8',
+        link: '',
+      },
+      {
+        title: 'Премьер',
+        link: '',
+      },
+      {
+        title: 'Топ 12',
+        link: '',
+      },
+      {
+        title: '5 из 36',
+        link: '',
+      },
+      {
+        title: '4x4',
+        link: '',
+      },
+      {
+        title: 'Цветные шары',
+        link: '',
+      },
+      {
+        title: 'Турнир',
+        link: '',
+      },
+      {
+        title: 'Трилогия',
+        link: '',
+      },
+      {
+        title: 'Моментальные лотереи',
+        link: '',
+      },
+    ],
+  },
+  {
+    title: 'Лотерейные билеты',
+    links: [
+      {
+        title: 'Победители',
+        link: '',
+      },
+    ],
+  },
+  {
+    title: 'Компания',
+    links: [
+      {
+        title: 'О компании',
+        link: '',
+      },
+      {
+        title: 'Контакты',
+        link: '',
+      },
+      {
+        title: 'Обратная связь',
+        link: '',
+      },
+      {
+        title: 'Вопросы и ответы',
+        link: '',
+      },
+      {
+        title: 'Пресс-центр',
+        link: '',
+      },
+      {
+        title: 'Франчайзинг',
+        link: '',
+      },
+      {
+        title: 'Благотворительность',
+        link: '',
+      },
+    ],
+  },
+  {
+    title: 'Информация',
+    links: [
+      {
+        title: 'Скачать мобильное приложение',
+        link: '',
+      },
+      {
+        title: 'Карта продаж',
+        link: '',
+      },
+      {
+        title: 'Как получить выигрыш',
+        link: '',
+      },
+      {
+        title: 'Архив тиражей',
+        link: '',
+      },
+    ],
+  },
+];
 
 export const Footer: React.FC<IFooterProps> = (props) => {
-  const { className } = props
+  const { className } = props;
 
   return (
-    <footer className={cn('', className)}>
-      {/* Upper Header */}
-      <div className="bg-[#8B3A9A] py-1 px-4  text-[13.5px] font-bold">
-        <Container>
-          <div className="flex justify-between">
-            <ul className="flex items-center text-[#dddddd] cursor-pointer gap-8">
-              <li className="hover:text-white">Франчайзинг</li>
-              <li className="hover:text-white">О компании</li>
-            </ul>
-            <div>
-              <a href="tel:" className="flex items-center gap-2">
-                <Phone color="white" size={14} />
-                <p className="text-white font-medium">Круглосуточная поддержка по телефону</p>
-                <p className="text-white font-medium">8 800 333-7-333</p>
-              </a>
-            </div>
-            <ul className="flex items-center text-[#dddddd] cursor-pointer gap-8">
-              <li className="hover:text-white">Проверить билет</li>
-              <li className="hover:text-white">
-                Как получить выигрыш</li>
-            </ul>
-          </div>
-        </Container>
-      </div>
-      {/* Lower Header */}
-      <div className="bg-[#FFFFFF] py-1">
-        <Container className="h-[54]">
-          <div className="flex items-center justify-between h-[100%]">
-            {/* Left Section */}
-            <div className="flex items-center">
-              <div className="mr-16">
-                <Image src={'/logo.png'} alt="Logo" width={150} height={39} />
-              </div>
-              <ul className="flex items-center gap-8 text-[#2F41B0] text-[16px] font-medium">
-                <li>
-                  <div className="w-full">
-                    <button className="border-t-[1px] border-b-[1px] border-[#8b3a9a] text-[#8b3a9a] font-black">Второй шанс</button>
-                  </div>
+    <footer className={cn('bg-[#F2F4FF] py-8 min-h-screen', className)}>
+      {/* <div className="sticky h-10 z-[1] top-0 left-0">lol this is logo</div> */}
+      <Container>
+        <div className="flex">
+          <div className="grid grid-cols-4 text-[#364059]">
+            {footerData.map((list) => (
+              <ul className="mx-3" key={list.title}>
+                <li className="mb-4 text-2xl font-bold font-HavalMittel">
+                  {list.title}
                 </li>
-                <li>Акции</li>
-                <li>Победители</li>
+                {list.links.map((link) => (
+                  <li
+                    key={link.title}
+                    className="mb-4 text-lg leading-6 font-normal hover:font-medium"
+                  >
+                    {link.title}
+                  </li>
+                ))}
               </ul>
+            ))}
+          </div>
+
+          <div className="max-w-[314px]">
+            <h3 className="mb-4 text-2xl font-bold text-[#364059] font-HavalMittel">
+              Способы оплаты
+            </h3>
+            <div className="flex">
+              <Image
+                src={'/icons/visa2.svg'}
+                alt="visa logo"
+                width={60}
+                height={44}
+                className="object-contain"
+                sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '60px',
+                  maxHeight: '44px',
+                }}
+              />
+              <Image
+                src={'/icons/mastercard.svg'}
+                alt="visa logo"
+                className="object-fit"
+                width={60}
+                height={44}
+                sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '60px',
+                  maxHeight: '44px',
+                }}
+              />
+              <Image
+                src={'/icons/mir.svg'}
+                alt="visa logo"
+                className="object-fit"
+                width={60}
+                height={44}
+                sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '60px',
+                  maxHeight: '44px',
+                }}
+              />
             </div>
-            {/* Right Section */}
-            <div>
-              <ul className="text-[#2F41B0] text-[16px] font-medium">
-                <li>
-                  <button>
-                    <span>
-                      <span>Вход / Регистрация</span>
-                    </span>
-                  </button>
-                </li>
-              </ul>
+            <p className="text-[15px] leading-[20px] text-[#5e6976] mb-6">
+              Официальный сайт «Национальная Лотерея» гарантирует безопасность
+              всех способов оплаты и не сохраняет ваши данные.
+            </p>
+            <div className="flex gap-3">
+              <Image
+                src={'/icons/vk.svg'}
+                alt="visa logo"
+                className="object-fit"
+                width={60}
+                height={44}
+                sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '32px',
+                  maxHeight: '44px',
+                }}
+              />
+              <Image
+                src={'/icons/odnoklassniki.svg'}
+                alt="visa logo"
+                className="object-fit"
+                width={60}
+                height={44}
+                sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '32px',
+                  maxHeight: '44px',
+                }}
+              />
+              <Image
+                src={'/icons/tg.svg'}
+                alt="visa logo"
+                className="object-fit"
+                width={60}
+                height={44}
+                sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '32px',
+                  maxHeight: '44px',
+                }}
+              />
             </div>
           </div>
-        </Container>
-      </div>
+        </div>
+
+        <Lowerfooter />
+      </Container>
     </footer>
-  )
-}
+  );
+};
