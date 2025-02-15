@@ -146,7 +146,7 @@ export const Lowerfooter = () => {
           <Image
             src={'/icons/18+.svg'}
             alt="visa logo"
-            className="absolute top-1/4 -right-[20px]"
+            className="absolute top-1/4 right-[0px]"
             width={60}
             height={44}
             sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
