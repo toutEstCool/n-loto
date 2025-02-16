@@ -29,7 +29,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen">{children}</main>
         <TopScroll />
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

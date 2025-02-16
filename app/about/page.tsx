@@ -124,19 +124,42 @@ const About = () => {
       />
       <Container className="pt-3 mb-6 flex flex-col gap-8 text-white">
         <Breadcrumbs items={breadcrumbItems} />
-        <h1 className="text-4xl font-bold font-HavalMittel">О компании</h1>
+        <h1
+          className="font-bold font-Acrom
+          text-[24px] leading-8
+          md:text-[28px] 
+          xl:text-[36px] xl:leading-[42px]
+        "
+        >
+          О компании
+        </h1>
       </Container>
 
-      <Container className="flex items-start gap-6">
-        <div className="bg-white rounded-[20px] p-8 flex flex-col gap-8 max-w-[1050px]">
-          <p className="max-w-[720px] text-[28px] leading-8 font-normal font-HavalMittel">
+      <Container className="flex flex-col xl:items-start xl:flex-row gap-6">
+        <div className="bg-white rounded-[20px] p-4 md:p-6 2xl:p-8 flex flex-col gap-8 max-w-[1050px]">
+          <p
+            className="max-w-[720px] font-HavalMittel-regular text-[#364059]
+            text-[24px] leading-8
+            xl:text-[28px]
+          "
+          >
             Мы — новая государственная лотерея, организованная Министерством
             финансов Российской Федерации. Оператор лотереи: ООО «Спортивные
             Лотереи».
           </p>
-          <div className="flex gap-6 justify-between">
-            <div className="flex flex-col gap-4 max-w-[481px]">
-              <h2 className="text-[28px] leading-8 font-bold text-[#8b3a9a] font-HavalMittel">
+          <div className="flex flex-col md:flex-row gap-6 justify-between">
+            <div
+              className="flex flex-col gap-4 
+              max-w-[332px]
+              xl:max-w-[481px]
+            "
+            >
+              <h2
+                className="text-[#8b3a9a] font-HavalMittel-bold
+                text-[24px] leading-8
+                xl:text-[28px]
+              "
+              >
                 НАША МИССИЯ
               </h2>
               <Image
@@ -149,13 +172,28 @@ const About = () => {
                   height: 'auto',
                 }}
               />
-              <p className="text-[20px] leading-6 font-normal font-HavalMittel">
+              <p
+                className="font-HavalMittel-regular text-[#364059]
+                text-[18px] leading-6 
+                xl:text-[20px] 
+              "
+              >
                 Сделать лотереи по-настоящему национальной традицией,
                 объединяющей поколения, где каждый сможет найти свою игру.
               </p>
             </div>
-            <div className="flex flex-col gap-4 max-w-[481px]">
-              <h2 className="text-[28px] leading-8 font-bold text-[#8b3a9a] font-HavalMittel">
+            <div
+              className="flex flex-col gap-4 
+              max-w-[332px]
+              xl:max-w-[481px]
+            "
+            >
+              <h2
+                className="text-[#8b3a9a] font-HavalMittel-bold
+                text-[24px] leading-8
+                xl:text-[28px]
+              "
+              >
                 НАШИ ЦЕННОСТИ
               </h2>
               <Image
@@ -168,7 +206,12 @@ const About = () => {
                   height: 'auto',
                 }}
               />
-              <p className="text-[20px] leading-6 font-normal font-HavalMittel">
+              <p
+                className="font-HavalMittel-regular text-[#364059]
+                text-[18px] leading-6 
+                xl:text-[20px] 
+              "
+              >
                 Играть честно. Действовать открыто и в интересах общества. Быть
                 доступными для всех.
               </p>
@@ -185,21 +228,36 @@ const About = () => {
             }}
           />
           <div className="max-w-[675px] w-full flex flex-col gap-2">
-            <h2 className="mb-2 text-[28px] leading-8 font-bold font-HavalMittel">
+            <h2
+              className="mb-4 xl:mb-2 font-HavalMittel-bold text-[#364059]
+              text-[24px] leading-8
+              xl:text-[28px]
+            "
+            >
               Отчетность
             </h2>
-            <p className="text-[18px] leading-6 font-normal font-HavalMittel">
+            <p
+              className="font-HavalMittel-regular text-[#364059]
+              text-[16px] leading-5
+              xl:text-[18px] xl:leading-6
+              "
+            >
               Для нас честность и открытость не просто слова. Лотереи под
               брендом «Национальная Лотерея» проводятся на основании
               распоряжения Правительства Российской Федерации от 29 августа 2019
               г. № 1921-р в полном соответствии с законом о лотереях.
             </p>
-            <p className="text-[18px] leading-6 font-normal font-HavalMittel">
+            <p
+              className="font-HavalMittel-regular text-[#364059]
+              text-[16px] leading-5
+              xl:text-[18px] xl:leading-6
+            "
+            >
               Здесь мы публикуем официальную отчетность компании ООО «Спортивные
               Лотереи», с которой может ознакомиться каждый.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 чд:grid-cols-3 gap-4">
             {reports.map((report) => (
               <div className="flex items-center gap-2" key={report.id}>
                 <Image
@@ -208,19 +266,33 @@ const About = () => {
                   width={64}
                   height={64}
                 />
-                <p className="text-[20px] leading-6 font-normal font-HavalMittel">
+                <p
+                  className="font-HavalMittel-regular hover:text-[#A0379E]
+                  text-[18px] leading-6
+                  xl:text-[20px]
+                "
+                >
                   {report.title}
                 </p>
               </div>
             ))}
           </div>
         </div>
-        <div className="max-w-[334px] w-full flex flex-col gap-6">
+        <div className="xl:max-w-[334px] w-full flex flex-col gap-6">
           <Image
             src="/images/about-ask-question.png"
             alt="our mission"
             width={334}
             height={223}
+            className="block md:hidden xl:block"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <Image
+            src="/images/about-mark_tg.png"
+            alt="our mission"
+            width={334}
+            height={223}
+            className="hidden md:block xl:hidden"
             style={{ width: '100%', height: 'auto' }}
           />
           <Image
@@ -228,6 +300,15 @@ const About = () => {
             alt="our mission"
             width={334}
             height={223}
+            className="block md:hidden xl:block"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <Image
+            src="/images/about-franshiza_table.png"
+            alt="our mission"
+            width={334}
+            height={223}
+            className="hidden md:block xl:hidden"
             style={{ width: '100%', height: 'auto' }}
           />
         </div>

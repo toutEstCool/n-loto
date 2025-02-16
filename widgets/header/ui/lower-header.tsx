@@ -63,17 +63,17 @@ export const LowerHeader = () => {
                   )}
                 </div>
               </li>
-              <li className="hover:text-[#8b3a9a] transition-all duration-300 cursor-pointer">
+              <li className="hover:text-[#8b3a9a] transition-all duration-300 cursor-pointer text-[20px] font-HavalMittel-regular">
                 <Link href={'/special'}>Акции</Link>
               </li>
-              <li className="hover:text-[#8b3a9a] transition-all duration-300 cursor-pointer">
+              <li className="hover:text-[#8b3a9a] transition-all duration-300 cursor-pointer text-[20px] font-HavalMittel-regular">
                 <Link href={'/winnings'}>Победители</Link>
               </li>
             </ul>
           </div>
           {/* Right Section */}
           <div>
-            <ul className="text-[#2F41B0] text-[14px] md:text-[16px] font-medium">
+            <ul className="text-[#2F41B0] font-HavalMittel-regular text-[14px] md:text-[16px] font-medium">
               <li>
                 <button>
                   <span>

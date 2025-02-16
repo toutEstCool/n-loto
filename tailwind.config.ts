@@ -11,6 +11,20 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        black: {
+          100: '#364059',
+        },
+      },
+      screens: {
+        xxs: '375px',
+        xs: '425px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1440px',
+      },
       animation: {
         'slide-down': 'slide-down 0.3s ease-out',
         'slide-up': 'slide-up 0.3s ease-out',
@@ -81,6 +95,7 @@ export default {
         'HavalMittel-regular': ['Halvar Mittel Regular', 'serif'],
         'HavalMittel-light': ['Halvar Mittel Light', 'serif'],
         'HavalMittel-thin': ['Halvar Mittel Thin', 'serif'],
+        Acrom: ['Acrom', 'sans-serif'],
       },
     },
   },

@@ -46,7 +46,6 @@
       url('/fonts/HalvarMittel/HalvarMittel-Md.woff2') format('woff2'),
       url('/fonts/HalvarMittel/HalvarMittel-Md.woff') format('woff'),
       url('/fonts/HalvarMittel/HalvarMittel-Md.ttf') format('truetype');
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -84,6 +83,11 @@
       url('/fonts/HalvarMittel/HalvarMittel-Th.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acrom';
+  src: url('/fonts/acrom/ofont.ru_Acrom.ttf');
 }
 
 html {
@@ -129,9 +133,9 @@ html {
   }
 }
 
-* {
+/* * {
   font-family: var(--font-inter), sans-serif;
-}
+} */
 
 .scrollbar::-webkit-scrollbar {
   width: 4px;
