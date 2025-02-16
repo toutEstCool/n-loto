@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/widgets/header';
 import { Footer } from '@/widgets/footer';
+import { TopScroll } from '@/widgets/top-scroll/ui/top-scroll';
 
 const inter = Inter({
   subsets: ['cyrillic'],
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={inter.variable}>
         <Header />
         <main className="min-h-screen">{children}</main>
+        <TopScroll />
         <Footer />
       </body>
     </html>

@@ -18,7 +18,7 @@ const cardData = [
   {
     type: '4x4',
     amount: '2 000',
-    isBigWin: false,
+    isBigWin: true,
     winners: 1,
     timeAgo: '58 минут назад',
   },
@@ -32,7 +32,7 @@ const cardData = [
   {
     type: '4x4',
     amount: '2 000',
-    isBigWin: false,
+    isBigWin: true,
     winners: 1,
     timeAgo: '58 минут назад',
   },
@@ -46,7 +46,7 @@ const cardData = [
   {
     type: '4x4',
     amount: '2 000',
-    isBigWin: false,
+    isBigWin: true,
     winners: 1,
     timeAgo: '58 минут назад',
   },
@@ -85,7 +85,7 @@ export default function Home() {
       <Container>
         <div className="mt-[74px] sm:mt-[122px] flex items-center gap-[70px]">
           <Slider cards={cardData} />
-          <LittleBannerCard bgUrl="https://online-static.website.cloud.croc.ru/online-meta/44e021fe-69e6-49e5-9558-92f182600fc0.png" />
+          {/* <LittleBannerCard bgUrl="https://online-static.website.cloud.croc.ru/online-meta/44e021fe-69e6-49e5-9558-92f182600fc0.png" /> */}
         </div>
         {/* Next Step */}
         <div className="mt-5 sm:mt-6">

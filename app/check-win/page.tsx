@@ -1,13 +1,13 @@
 import { Breadcrumbs } from '@/shared/components/breadcrumbs/breadcrumbs';
 import { Container } from '@/widgets/container';
-import { CircleHelp, HelpCircle, Star } from 'lucide-react';
+import { HelpCircle, Star } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
 const CheckWin = () => {
   const breadcrumbItems = [
     { label: 'Главная', href: '/' },
-    { label: 'Проверка билета', href: '/about' },
+    { label: 'Проверка билета', href: '/check-win' },
   ];
 
   return (
@@ -123,6 +123,7 @@ const CheckWin = () => {
               backgroundImage: 'url(/images/check_win-banner.png)',
               backgroundSize: '100% 100%',
             }}
+            className="mb-16"
           >
             <div className="p-11 max-w-[577px] w-full flex flex-col gap-4">
               <div className="flex flex-col gap-2 text-white">

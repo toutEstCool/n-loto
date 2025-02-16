@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from '@/shared/ui/carousel';
 import { Gift } from 'lucide-react';
+import Image from 'next/image';
 import React from 'react';
 
 export const LotteryDouble = () => {
@@ -23,7 +24,14 @@ export const LotteryDouble = () => {
       </div>
       <div className="px-6 mx-3 max-w-[766px]">
         <div>
-          <Carousel className=" ">
+          <Carousel
+            opts={{
+              containScroll: 'trimSnaps',
+              slidesToScroll: 2,
+              align: 'start',
+              loop: true,
+            }}
+          >
             <CarouselContent className="-ml-1">
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem
@@ -34,8 +42,29 @@ export const LotteryDouble = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-[#1d154f] w-[32px] h-[32px] border-[#0071F4]" />
-            <CarouselNext className="text-[#1d154f] w-[32px] h-[32px] border-[#0071F4]" />
+            <CarouselPrevious
+              className="absolute left-[-40px] text-[#1d154f] w-[32px] h-[32px] border-[#0071F4]"
+              icon={
+                <Image
+                  src="/icons/big-arrow.svg"
+                  alt="left"
+                  className="rotate-[180deg]"
+                  width={20}
+                  height={20}
+                />
+              }
+            />
+            <CarouselNext
+              className="absolute right-[-40px] text-[#1d154f] w-[32px] h-[32px] border-[#0071F4]"
+              icon={
+                <Image
+                  src="/icons/big-arrow.svg"
+                  alt="left"
+                  width={20}
+                  height={20}
+                />
+              }
+            />
           </Carousel>
         </div>
       </div>

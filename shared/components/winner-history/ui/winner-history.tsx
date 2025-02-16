@@ -20,8 +20,13 @@ export const WinnerHistory = () => {
         </button>
       </div>
       <Carousel
-        opts={{ slidesToScroll: 2, containScroll: 'trimSnaps' }}
         className=""
+        opts={{
+          containScroll: 'trimSnaps',
+          slidesToScroll: 1,
+          align: 'start',
+          loop: true,
+        }}
       >
         <CarouselContent className="-ml-1">
           {Array.from({ length: 9 }).map((_, index) => (
@@ -38,7 +43,7 @@ export const WinnerHistory = () => {
                 </p>
                 <div className="relative cursor-pointer group">
                   <Image
-                    src="/images/banner-mln.jpg"
+                    src="/images/winners.png"
                     alt="winner"
                     width={1000}
                     height={1000}
@@ -47,13 +52,13 @@ export const WinnerHistory = () => {
                       height: '127px',
                     }}
                   />
-                  <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#0004] flex items-center justify-center group-hover:bg-opacity-50 transition-all duration-300">
-                    <div className="w-11 h-11 bg-[#fff5] rounded-full flex items-center justify-center opacity-90 transform scale-100 group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute top-0 left-0 w-full h-full bg-[#112d73] bg-opacity-50 group-hover:bg-[#112d73] flex items-center justify-center group-hover:bg-opacity-80 transition-all duration-300">
+                    <div className="w-11 h-11 bg-[#fff5] rounded-full flex items-center justify-center opacity-100 transform scale-100 group-hover:scale-150 transition-transform duration-300">
                       <Image
                         src="/icons/play.svg"
                         alt="play"
-                        width={28}
-                        height={28}
+                        width={24}
+                        height={24}
                       />
                     </div>
                   </div>
