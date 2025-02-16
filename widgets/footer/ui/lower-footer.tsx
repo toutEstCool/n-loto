@@ -24,7 +24,7 @@ export const Lowerfooter = () => {
   return (
     <>
       <div className="grid grid-cols-[358px_1fr_360px]">
-        <div>
+        <div className="">
           <Image
             src={'/logo.svg'}
             alt="visa logo"
@@ -59,10 +59,9 @@ export const Lowerfooter = () => {
               Организатор лотереи Минфин России
             </p>
           </div>
-          {/* <p className="mt-auto">©2021-2024 ООО «Спортивные Лотереи»</p> */}
         </div>
         <div className="flex flex-col gap-4">
-          <p className="text-[28px] leading-8 font-bold font-HavalMittel">
+          <p className="text-[28px] leading-8 !font-HavalMittel-thin">
             Горячая линия: 8 800 333-7-333
           </p>
           <div className="max-w-[543px] flex justify-between text-[20px] leading-6 font-HavalMittel">
@@ -114,11 +113,10 @@ export const Lowerfooter = () => {
             </p>
           </div>
         </div>
-        <div className="flex gap-4 ml-[46px] relative">
+        <div className=" hidden xl:flex xl:gap-4 xl:ml-[46px] xl:relative">
           <Image
             src={'/icons/appstore.svg'}
             alt="visa logo"
-            className="object-fit"
             width={60}
             height={44}
             sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
@@ -132,7 +130,6 @@ export const Lowerfooter = () => {
           <Image
             src={'/icons/android.svg'}
             alt="visa logo"
-            className="object-fit"
             width={60}
             height={44}
             sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
@@ -163,7 +160,7 @@ export const Lowerfooter = () => {
       <div className="grid grid-cols-[358px_1fr_360px] mt-4">
         <p>©2021-2024 ООО «Спортивные Лотереи»</p>
         <div className="flex flex-wrap gap-x-10 text-base leading-5 font-HavalMittel">
-          {data.map((item, index) => (
+          {data.map((item) => (
             <p key={item.title}>{item.title}</p>
           ))}
         </div>

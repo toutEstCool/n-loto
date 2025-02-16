@@ -2,7 +2,6 @@
 
 import { BannerNewMillioner } from '@/shared/components/banner-new-millioner';
 import { Faq } from '@/shared/components/faq';
-import { LittleBannerCard } from '@/shared/components/little-banner-card';
 import { LotteryGift } from '@/shared/components/lottery-gift';
 import { LotteryTicketCard } from '@/shared/components/lottery-ticket-card';
 import { News } from '@/shared/components/news';

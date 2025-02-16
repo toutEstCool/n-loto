@@ -3,8 +3,87 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Haval Mittel';
-  src: url('/fonts/HalvarMittel-Bd.ttf') format('truetype');
+  font-family: 'Halvar Mittel Black';
+  src: url('/fonts/HalvarMittel/HalvarMittel-Blk.eot');
+  src: local('Halvar Mittelschrift Black'), local('HalvarMittel-Blk'),
+      url('/fonts/HalvarMittel/HalvarMittel-Blk.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/HalvarMittel/HalvarMittel-Blk.woff2') format('woff2'),
+      url('/fonts/HalvarMittel/HalvarMittel-Blk.woff') format('woff'),
+      url('/fonts/HalvarMittel/HalvarMittel-Blk.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Bold';
+  src: url('/fonts/HalvarMittel/HalvarMittel-Bd.eot');
+  src: local('Halvar Mittelschrift Bold'), local('HalvarMittel-Bd'),
+      url('/fonts/HalvarMittel/HalvarMittel-Bd.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/HalvarMittel/HalvarMittel-Bd.woff2') format('woff2'),
+      url('/fonts/HalvarMittel/HalvarMittel-Bd.woff') format('woff'),
+      url('/fonts/HalvarMittel/HalvarMittel-Bd.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Hl';
+  src: url('/fonts/HalvarMittel/HalvarMittel-Hl_1.eot');
+  src: local('Halvar Mittelschrift Hl'), local('HalvarMittel-Hl_1'),
+      url('/fonts/HalvarMittel/HalvarMittel-Hl_1.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/HalvarMittel/HalvarMittel-Hl_1.woff2') format('woff2'),
+      url('/fonts/HalvarMittel/HalvarMittel-Hl_1.woff') format('woff'),
+      url('/fonts/HalvarMittel/HalvarMittel-Hl_1.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Medium';
+  src: url('/fonts/HalvarMittel/HalvarMittel-Md.eot');
+  src: local('Halvar Mittelschrift Medium'), local('HalvarMittel-Md'),
+      url('/fonts/HalvarMittel/HalvarMittel-Md.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/HalvarMittel/HalvarMittel-Md.woff2') format('woff2'),
+      url('/fonts/HalvarMittel/HalvarMittel-Md.woff') format('woff'),
+      url('/fonts/HalvarMittel/HalvarMittel-Md.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Regular';
+  src: url('/fonts/HalvarMittel/HalvarMittel-Rg.eot');
+  src: local('Halvar Mittelschrift Regular'), local('HalvarMittel-Rg'),
+      url('/fonts/HalvarMittel/HalvarMittel-Rg.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/HalvarMittel/HalvarMittel-Rg.woff2') format('woff2'),
+      url('/fonts/HalvarMittel/HalvarMittel-Rg.woff') format('woff'),
+      url('/fonts/HalvarMittel/HalvarMittel-Rg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Light';
+  src: url('/fonts/HalvarMittel/HalvarMittel-Lt.eot');
+  src: local('Halvar Mittelschrift Light'), local('HalvarMittel-Lt'),
+      url('/fonts/HalvarMittel/HalvarMittel-Lt.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/HalvarMittel/HalvarMittel-Lt.woff2') format('woff2'),
+      url('/fonts/HalvarMittel/HalvarMittel-Lt.woff') format('woff'),
+      url('/fonts/HalvarMittel/HalvarMittel-Lt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Thin';
+  src: url('/fonts/HalvarMittel/HalvarMittel-Th.eot');
+  src: local('Halvar Mittelschrift Thin'), local('HalvarMittel-Th'),
+      url('/fonts/HalvarMittel/HalvarMittel-Th.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/HalvarMittel/HalvarMittel-Th.woff2') format('woff2'),
+      url('/fonts/HalvarMittel/HalvarMittel-Th.woff') format('woff'),
+      url('/fonts/HalvarMittel/HalvarMittel-Th.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
 }
 
 html {

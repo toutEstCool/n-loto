@@ -63,7 +63,7 @@ export const WinnerHistory = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-between items-center mt-[126px]">
+                <div className="flex justify-between items-center mt-5">
                   <div className="flex gap-2">
                     <Image
                       src="/icons/palm.svg"
@@ -71,7 +71,7 @@ export const WinnerHistory = () => {
                       width={28}
                       height={28}
                     />
-                    <p>Месталлион</p>
+                    <p>Мечталлион</p>
                   </div>
 
                   <button>100 ₽</button>
@@ -81,10 +81,31 @@ export const WinnerHistory = () => {
           ))}
         </CarouselContent>
         <div className="absolute left-[48%] -translate-x-[50%] -bottom-[40px] hidden xl:flex xl:gap-[400px]">
-          <CarouselPrevious className="text-[#1d154f] w-[44px] h-[44px] border-[#1f48d8] bg-[#efebe0] " />
+          <CarouselPrevious
+            className="text-[#1d154f] w-[44px] h-[44px] border-[#1f48d8] bg-[#efebe0] "
+            icon={
+              <Image
+                src="/icons/big-arrow.svg"
+                alt="left"
+                className="rotate-[180deg]"
+                width={24}
+                height={24}
+              />
+            }
+          />
         </div>
         <div className="absolute left-[52%] -translate-x-[50%] -bottom-[40px] hidden xl:flex xl:gap-[400px]">
-          <CarouselNext className="text-[#1d154f] w-[44px] h-[44px] border-[#1f48d8] bg-[#efebe0]" />
+          <CarouselNext
+            className="text-[#1d154f] w-[44px] h-[44px] border-[#1f48d8] bg-[#efebe0]"
+            icon={
+              <Image
+                src="/icons/big-arrow.svg"
+                alt="left"
+                width={24}
+                height={24}
+              />
+            }
+          />
         </div>
       </Carousel>
     </div>

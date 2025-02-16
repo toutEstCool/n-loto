@@ -1,5 +1,6 @@
-import { Container } from "@/widgets/container"
-import { Phone } from "lucide-react"
+import { Container } from '@/widgets/container';
+import { Phone } from 'lucide-react';
+import Link from 'next/link';
 
 export const UpperHeader = () => {
   return (
@@ -8,22 +9,29 @@ export const UpperHeader = () => {
         <div className="flex justify-between">
           <ul className="flex items-center text-[#dddddd] cursor-pointer gap-8">
             <li className="hover:text-white">Франчайзинг</li>
-            <li className="hover:text-white">О компании</li>
+            <li className="hover:text-white">
+              <Link href={'/about'}>О компании</Link>
+            </li>
           </ul>
           <div>
             <a href="tel:" className="flex items-center gap-2">
               <Phone color="white" size={14} />
-              <p className="text-white font-medium xl:block hidden">Круглосуточная поддержка по телефону</p>
+              <p className="text-white font-medium xl:block hidden">
+                Круглосуточная поддержка по телефону
+              </p>
               <p className="text-white font-medium">8 800 333-7-333</p>
             </a>
           </div>
           <ul className="flex items-center text-[#dddddd] cursor-pointer gap-8">
-            <li className="hover:text-white">Проверить билет</li>
             <li className="hover:text-white">
-              Как получить выигрыш</li>
+              <Link href={'/check-win'}>Проверить билет</Link>
+            </li>
+            <li className="hover:text-white">
+              <Link href={'/get-lottery-win'}>Как получить выигрыш</Link>
+            </li>
           </ul>
         </div>
       </Container>
     </div>
-  )
-}
+  );
+};

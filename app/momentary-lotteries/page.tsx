@@ -27,27 +27,29 @@ const MomentaryLotteries = () => {
         </h1>
       </Container>
       <Container>
-        <div className="max-w-[1050px] w-full flex flex-col gap-8">
+        <div className="xl:max-w-[1050px] w-full flex flex-col gap-8">
           <div className="flex flex-col items-start gap-6">
             <div className="w-full flex gap-6">
-              <div className="max-w-[562px] w-full bg-white rounded-[20px] p-8 h-[332px] flex flex-col items-start justify-center">
-                <Image
-                  src="/icons/ticket.svg"
-                  alt="ticket"
-                  width={48}
-                  height={48}
-                  className="mb-3"
-                />
-                <h3 className="mb-4 text-[24px] leading-8 font-bold font-HavalMittel">
-                  Что такое моментальные лотереи?
-                </h3>
+              <div className="max-w-[562px] w-full bg-white rounded-[20px] lg:p-6 xl:p-8 h-[332px] flex flex-col items-start justify-center">
+                <div className="lg:flex lg:gap-4 xl:block xl:gap-0">
+                  <Image
+                    src="/icons/ticket.svg"
+                    alt="ticket"
+                    width={48}
+                    height={48}
+                    className="mb-3"
+                  />
+                  <h3 className="mb-4 text-[24px] leading-8 font-bold font-HavalMittel">
+                    Что такое моментальные лотереи?
+                  </h3>
+                </div>
                 <p className="text-[20px] leading-6 font-normal font-HavalMittel">
                   В билете моментальной (бестиражной) лотереи Вы увидите свой
                   выигрыш сразу, удалив защитный слой. Вам не нужно ждать
                   специального розыгрыша тиража.
                 </p>
               </div>
-              <div className="max-w-[464px] w-full bg-white rounded-[20px] p-8">
+              <div className="max-w-[464px] w-full bg-white rounded-[20px] lg:p-6 xl:p-8">
                 <p className="mb-6 text-[20px] leading-6 font-normal font-HavalMittel">
                   Билеты моментальных лотерей продаются только офлайн:
                 </p>
@@ -86,9 +88,11 @@ const MomentaryLotteries = () => {
             </div>
           </div>
 
-          <div className="bg-white p-8 pb-2 rounded-[20px] flex flex-col gap-4">
-            <h2>Лотереи</h2>
-            <div className="grid grid-cols-4 max-w-[1010px] w-full gap-x-6">
+          <div className="bg-white lg:p-6 xl:p-8 pb-2 rounded-[20px] flex flex-col gap-4">
+            <h2 className="lg:text-[24px] xl:text-[28px] leading-8 font-bold font-HavalMittel">
+              Лотереи
+            </h2>
+            <div className="grid lg:grid-cols-2 xl:grid-cols-4 max-w-[1010px] w-full gap-x-6">
               {Array.from({ length: 14 }).map((_, index) => (
                 <Link href={`/momentary-lotteries/${index}`} key={index}>
                   <div className="mb-6">
@@ -118,17 +122,17 @@ const MomentaryLotteries = () => {
               ))}
             </div>
           </div>
-          <div className=" bg-white p-8 rounded-[20px]">
-            <h2 className="mb-4 text-[28px] leading-8 font-bold font-HavalMittel ">
+          <div className=" bg-white lg:p-6 xl:p-8 rounded-[20px]">
+            <h2 className="mb-4 lg:text-[24px] xl:text-[28px] leading-8 font-bold font-HavalMittel ">
               Где купить
             </h2>
             <button className="py-3 px-5 border-2 border-[#2f41b0] bg-[#2f41b0] text-white text-[20px] leading-6 font-medium font-HavalMittel rounded-[12px]">
               Показать карту продаж
             </button>
           </div>
-          <div className=" bg-white p-8 rounded-[20px]">
+          <div className=" bg-white lg:p-6 xl:p-8 rounded-[20px]">
             <div className="bg-[#f0ead8] p-6 flex justify-between items-center rounded-[12px]">
-              <h2 className="text-[28px] leading-8 font-medium font-HavalMittel">
+              <h2 className="lg:text-[24px] xl:text-[28px] leading-8 font-medium font-HavalMittel">
                 Где и как получить выигрыш?
               </h2>
               <div
