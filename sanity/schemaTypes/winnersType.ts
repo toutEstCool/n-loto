@@ -26,18 +26,6 @@ export const winnersType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'company',
-      title: 'Компания',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'companyPrice',
-      title: 'Цена билета',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'video',
       title: 'Видео-превью',
       type: 'object',

@@ -5,11 +5,23 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title('Blog')
     .items([
+      S.documentTypeListItem('lotteryTickets').title('Lottery Tickets'),
       S.documentTypeListItem('lottery').title('lottery'),
+      S.documentTypeListItem('news').title('news'),
+      S.documentTypeListItem('recentWin').title('recentWin'),
+      S.documentTypeListItem('specials').title('specials'),
       S.documentTypeListItem('winners').title('winners'),
       S.divider(),
       ...S.documentTypeListItems().filter(
         (item) =>
-          item.getId() && !['lottery', 'winners'].includes(item.getId()!),
+          item.getId() &&
+          ![
+            'lotteryTickets',
+            'lottery',
+            'news',
+            'recentWin',
+            'specials',
+            'winners',
+          ].includes(item.getId()!),
       ),
     ]);
