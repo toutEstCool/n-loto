@@ -1,7 +1,15 @@
-import { FC, memo, useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { Carousel } from "@/shared/ui/carousel";
-import { TopSliderCard } from "../../top-slider-card";
+'use client';
+
+import { FC, memo, useEffect, useState } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  CarouselApi,
+} from '@/shared/ui/carousel';
+import { TopSliderCard } from '../../top-slider-card';
 
 interface ISliderProps {
   cards: Array<{
@@ -14,32 +22,60 @@ interface ISliderProps {
 }
 
 export const Slider: FC<ISliderProps> = memo(({ cards }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, dragFree: true, duration: 3000 });
+  const [api, setApi] = useState<CarouselApi | null>(null);
+  const [, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    if (!api) return;
+
+    const updateIndex = () => setCurrentIndex(api.selectedScrollSnap());
+
+    api.on('select', updateIndex);
+
+    return () => {
+      api.off('select', updateIndex);
+    };
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+
     const autoplay = () => {
-      if (emblaApi) {
-        emblaApi.scrollNext();
+      if (api.canScrollNext()) {
+        api.scrollNext();
+      } else {
+        api.scrollTo(0);
       }
     };
 
     const interval = setInterval(autoplay, 3000);
-
     return () => clearInterval(interval);
-  }, [emblaApi]);
+  }, [api]);
 
   return (
-    <div className="h-full max-w-[946px] overflow-hidden" ref={emblaRef}>
-      <Carousel className="flex items-center gap-3 sm:gap-6">
-        {cards.map((card, index) => (
-          <div key={index} className="w-[200px] sm:w-[460px] mr-1 shrink-0">
-            <TopSliderCard {...card} />
-          </div>
-        ))}
+    <div className="relative h-full w-full overflow-hidden">
+      <Carousel
+        setApi={setApi}
+        opts={{
+          align: 'start',
+          loop: true,
+        }}
+      >
+        <CarouselContent className="">
+          {cards.map((card, index) => (
+            <CarouselItem
+              key={index}
+              className={`mr-3 sm:mr-6 basic-1/2  md:basic-1/2 lg:basic-1/3 xl:basic-1/4`}
+            >
+              <TopSliderCard {...card} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
       </Carousel>
     </div>
   );
 });
 
-
-Slider.displayName = "Slider";
+Slider.displayName = 'Slider';
