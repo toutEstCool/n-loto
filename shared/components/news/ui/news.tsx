@@ -12,25 +12,38 @@ export const News = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="flex gap-6 overflow-auto h-[284px]">
         {Array.from({ length: 3 }).map((_, index) => (
-          <div className="max-w-[456px]" key={index}>
+          <div
+            className="min-w-[300px] max-w-[300px] w-[300px] xl:max-w-[456px]"
+            key={index}
+          >
             <Image
               src="/images/news.png"
               alt="winner"
               width={1000}
               height={1000}
-              className="rounded-[16px]"
+              className="rounded-[16px] max-h-[108px] xl:max-h-[127px]"
               style={{
                 width: '100%',
-                height: '127px',
+                height: '100%',
               }}
             />
             <div className="flex flex-col gap-3">
-              <p className="text-[#5e6976] text-[20px] leading-6 font-normal">
+              <p
+                className="text-[#5e6976] font-HavalMittel-regular
+                text-[18px] leading-6
+                xl:text-[20px]
+              "
+              >
                 14 февраля, 2025 г.
               </p>
-              <h3 className="text-[#364059] font-bold text-[24px] leading-8 font-HavalMittel">
+              <h3
+                className="text-[#364059] font-HavalMittel-bold
+                text-[20px] leading-6
+                xl:text-[24px] xl:leading-8
+              "
+              >
                 ДАРИТЕ ПОДАРКИ, О КОТОРЫХ МЕЧТАЮТ, С ЛОТЕРЕЕЙ «МЕЧТАЛЛИОН»
               </h3>
               <button className="flex gap-2 text-[#1f48d8] text-[20px] leading-6 font-normal">

@@ -21,15 +21,12 @@ export const Lotterykits = () => {
         <div>
           {/* Тут будет слайдер  */}
           <Carousel
-            opts={{ slidesToScroll: 2, containScroll: 'trimSnaps' }}
+            opts={{ slidesToScroll: 1, containScroll: 'trimSnaps' }}
             className=""
           >
             <CarouselContent className="-ml-1">
               {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem
-                  key={index}
-                  className="pl-1 md:basis-1/2 lg:basis-1/4"
-                >
+                <CarouselItem key={index} className="basis-1/2 lg:basis-1/4">
                   <LotteryKitsCard />
                 </CarouselItem>
               ))}

@@ -65,7 +65,7 @@ export const Slider: FC<ISliderProps> = memo(({ cards }) => {
           {cards.map((card, index) => (
             <CarouselItem
               key={index}
-              className={`${card.isBigWin ? '352px' : '176px'} mr-3 sm:mr-6`}
+              className={`mr-3 sm:mr-6 basic-1/2  md:basic-1/2 lg:basic-1/3 xl:basic-1/4`}
             >
               <TopSliderCard {...card} />
             </CarouselItem>

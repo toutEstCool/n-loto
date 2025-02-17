@@ -86,7 +86,6 @@ export default function Home() {
           <Slider cards={cardData} />
           {/* <LittleBannerCard bgUrl="https://online-static.website.cloud.croc.ru/online-meta/44e021fe-69e6-49e5-9558-92f182600fc0.png" /> */}
         </div>
-        {/* Next Step */}
         <div className="mt-5 sm:mt-6">
           <WBigSlider
             items={images.length}
@@ -103,32 +102,26 @@ export default function Home() {
             )}
           />
         </div>
-        {/* lottery double slider */}
+
         <LotteryDouble />
-        {/* Lottery pack */}
+
         <Lotterykits />
-        {/* Buy it */}
+
         <div className="sm:mt-16">
-          <h2 className="text-center text-[#8b3a9a] mb-6 text-[42px] leading-[52px] font-medium">
-            Покупайте, заполняйте, побеждайте!
+          <h2
+            className="text-[#8b3a9a] mb-6 flex flex-col text-center xl:block font-Acrom font-medium
+            text-[36px] leading-[42px] 
+            xl:text-[42px] xl:leading-[52px] 
+          "
+          >
+            <span>Покупайте,</span> заполняйте, побеждайте!
           </h2>
-          {/* Buy it card */}
-          <div className="grid grid-cols-2 gap-2">
-            {/* start */}
+
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-2">
             <LotteryTicketCard />
             <LotteryTicketCard />
             <LotteryTicketCard />
             <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            {/* end */}
           </div>
         </div>
 
