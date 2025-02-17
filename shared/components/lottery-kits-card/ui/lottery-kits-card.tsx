@@ -1,5 +1,6 @@
 import { Button } from '@/shared/ui/button';
 import { Gift, Tag } from 'lucide-react';
+import Image from 'next/image';
 
 export const LotteryKitsCard = () => {
   return (
@@ -52,7 +53,12 @@ export const LotteryKitsCard = () => {
                 Купить · 300 ₽
               </Button>
               <div className="max-w-[64px] w-full border-[2px] py-3 px-5 flex rounded-xl border-[#8b3a9a] cursor-pointer">
-                <Gift width={20} height={20} color="#8b3a9a" fill="white" />
+                <Image
+                  src="/icons/gift.svg"
+                  alt="left"
+                  width={20}
+                  height={20}
+                />
               </div>
             </div>
           </div>

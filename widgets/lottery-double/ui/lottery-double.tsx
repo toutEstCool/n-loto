@@ -27,7 +27,7 @@ export const LotteryDouble = () => {
         <p
           className="text-[#2f46b0] font-HavalMittel-regular
           text-[18px] leading-6
-          xl:text-xl
+          xl:text-xl xl:w-[160px] xl:leading-6
         "
         >
           Ближайшие тиражи — успей купить в 2 клика.
@@ -36,18 +36,18 @@ export const LotteryDouble = () => {
       <div className="xl:px-6 xl:mx-3 xl:max-w-[766px]">
         <Carousel
           style={{ borderRadius: '0' }}
-          className="!rounded-0 div:!rounded-0"
+          className=""
           opts={{
             containScroll: 'trimSnaps',
             slidesToScroll: 1,
             align: 'start',
           }}
         >
-          <CarouselContent className="!rounded-0">
+          <CarouselContent className="">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem
                 key={index}
-                className="basis-1/2 xl:basis-1/2 !rounded-0 max-w-[298px] min-w-[183px] mr-3"
+                className="basis-1/2 xl:basis-1/2 max-w-[298px] xl:max-w-[353px] min-w-[183px] mr-3 h-full"
               >
                 <LotteryCountCard />
               </CarouselItem>
@@ -101,7 +101,7 @@ export const LotteryDouble = () => {
             Оплатить
           </Button>
           <div className="max-w-[48px] w-full border-[2px] p-3 flex rounded-[10px] border-[#8b3a9a] cursor-pointer">
-            <Gift width={20} height={20} color="#8b3a9a" fill="#0000" />
+            <Image src="/icons/gift.svg" alt="left" width={20} height={20} />
           </div>
         </div>
       </div>

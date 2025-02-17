@@ -22,7 +22,7 @@ export const LotteryCountCard = () => {
   const decrement = () => setCount(count > 0 ? count - 1 : 0);
 
   return (
-    <div className="xl:max-w-[353px] w-full flex xl:flex-row flex-col relative">
+    <div className="xl:max-w-[353px] xl:h-[132px] w-full flex xl:flex-row flex-col relative">
       <div className="absolute top-1 left-1 w-full">
         <TimerLabel />
       </div>
@@ -31,7 +31,7 @@ export const LotteryCountCard = () => {
         alt="lottery-balls"
         width={500}
         height={300}
-        className="xl:max-w-[237px] max-h-[100px]"
+        className="xl:max-w-[237px] max-h-[100px] xl:max-h-[144px]"
         style={{
           width: '100%',
           height: '100%',
