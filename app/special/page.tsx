@@ -12,7 +12,7 @@ const Special = () => {
   return (
     <Container className="mt-[40px] sm:mt-[86px] min-h-screen ">
       <div className="pt-3 mt-6">
-        <Breadcrumbs items={breadcrumbItems} />
+        <Breadcrumbs variant="black" items={breadcrumbItems} />
       </div>
 
       <div

@@ -21,7 +21,7 @@ const DetailMomentaryLotteries = () => {
       />
 
       <Container className="pt-3 mb-6 flex flex-col gap-8 text-white">
-        <Breadcrumbs items={breadcrumbItems} />
+        <Breadcrumbs variant="white" items={breadcrumbItems} />
         <h1
           className="font-Acrom 
             text-[24px] leading-8 font-medium

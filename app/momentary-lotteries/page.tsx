@@ -22,7 +22,7 @@ const MomentaryLotteries = () => {
         className="w-full h-[345px] xl:h-[380px] absolute top-0 left-0 -z-[1]"
       />
       <Container className="pt-3 mb-6 flex flex-col gap-8 text-white">
-        <Breadcrumbs items={breadcrumbItems} />
+        <Breadcrumbs variant="white" items={breadcrumbItems} />
         <h1
           className="font-Acrom 
             text-[24px] leading-8 font-medium
