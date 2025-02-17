@@ -11,3 +11,16 @@ export function urlFor(source: any) {
 export async function getPosts() {
   return client.fetch(`*[_type == "post"]{title, slug, mainImage}`);
 }
+
+export async function getSpecials() {
+  return client.fetch(
+    `*[_type == "specials"]{
+      actionName,
+      description,
+      startDate,
+      endDate,
+      "lotteries": lotteries[]-> { lotteryName },
+      "imageUrl": image.asset->url
+    }`,
+  );
+}
