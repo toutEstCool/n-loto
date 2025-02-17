@@ -3,8 +3,9 @@ import React from 'react';
 export const LotteryGift = () => {
   return (
     <div
-      className="mt-16 relative h-[215px] xl:h-[295px] rounded-[20px]
-        bg-[url(https://image.nloto.ru/online-meta/1de1c3fb-2f6a-4026-a290-a869d81cc00b.jpg)]
+      className="mt-16 relative h-[377px] md:h-[215px] xl:h-[295px] rounded-[20px]
+        bg-[url(/images/lottery-gift-small.jpg)]
+        md:bg-[url(https://image.nloto.ru/online-meta/1de1c3fb-2f6a-4026-a290-a869d81cc00b.jpg)]
         xl:bg-[url(/images/lottery-gift.jpg)]
       "
       style={{

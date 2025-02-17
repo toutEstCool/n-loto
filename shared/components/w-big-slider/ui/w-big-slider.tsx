@@ -19,8 +19,9 @@ export const WBigSlider: React.FC<IWBigSliderProps> = ({
   renderItem,
 }) => {
   const [api, setApi] = useState<CarouselApi>();
-  const [, setCurrent] = useState(0);
-  const [, setCount] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+  // const [selectedIndex, setSelectedIndex] = useState(0)
 
   useEffect(() => {
     if (!api) {
@@ -65,9 +66,6 @@ export const WBigSlider: React.FC<IWBigSliderProps> = ({
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="w-[18px] h-[18px] absolute bg-[#F2F4FF] top-1/2 -translate-y-1/2 -left-[9px] rounded-full"></div>
-        <div className="w-[18px] h-[18px] absolute bg-[#F2F4FF] top-1/2 -translate-y-1/2 -right-[9px] rounded-full"></div>
-
         <CarouselPrevious
           className="absolute left-4 top-1/2 -translate-y-1/2 z-5 bg-transparent border-transparent hover:bg-transparent"
           icon={
@@ -92,8 +90,20 @@ export const WBigSlider: React.FC<IWBigSliderProps> = ({
             />
           }
         />
-        <div></div>
       </Carousel>
+      <div className="gap-1 inline-flex absolute left-1/2 -translate-x-1/2 bottom-4 z-10">
+        {Array.from(Array(count).keys()).map((i) => (
+          <button
+            key={i}
+            className={`mx-1 h-1 flex-grow rounded-full p-0 transition-all duration-300  ${
+              i === current - 1
+                ? 'bg-white hover:bg-white w-6'
+                : 'bg-[#ffffff90] w-2'
+            }`}
+            onClick={() => api?.scrollTo(i)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

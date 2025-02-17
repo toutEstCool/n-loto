@@ -54,6 +54,7 @@ const AccordionTrigger = React.forwardRef<
         {children}
         {hasChildren && (
           <ChevronDown
+            stroke={chevronColor}
             className={`h-6 text-[${chevronColor}] w-6 shrink-0 text-muted-foreground transition-transform duration-300`}
           />
         )}

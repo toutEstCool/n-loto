@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/widgets/header';
 import { Footer } from '@/widgets/footer';
 import { TopScroll } from '@/widgets/top-scroll/ui/top-scroll';
+import { MobileFooter } from '@/widgets/mobile-footer';
 
 const inter = Inter({
   subsets: ['cyrillic'],
@@ -29,7 +30,8 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen">{children}</main>
         <TopScroll />
-        {/* <Footer /> */}
+        <Footer />
+        <MobileFooter />
       </body>
     </html>
   );

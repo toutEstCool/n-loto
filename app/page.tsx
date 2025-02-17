@@ -90,14 +90,17 @@ export default function Home() {
           <WBigSlider
             items={images.length}
             renderItem={(index) => (
-              <div className="w-full flex items-center justify-center mx-1 h-[191px] sm:h-[213px] lg:h-[264px]">
+              <div className="w-full relative flex items-center justify-center mx-1 h-[191px] sm:h-[213px] lg:h-[264px]">
                 <Image
                   src={images[index]}
                   alt={`Slide ${index + 1}`}
-                  className="w-full h-[191px] sm:h-[180px] lg:h-[264px] object-cover rounded-lg"
+                  className="w-full h-[191px] sm:h-[180px] lg:h-[264px] rounded-lg"
                   width={500}
                   height={300}
                 />
+
+                <div className="w-[18px] h-[18px] absolute bg-[#F2F4FF] top-1/2 -translate-y-1/2 -left-[9px] rounded-full"></div>
+                <div className="w-[18px] h-[18px] absolute bg-[#F2F4FF] top-1/2 -translate-y-1/2 -right-[9px] rounded-full"></div>
               </div>
             )}
           />
@@ -107,10 +110,11 @@ export default function Home() {
 
         <Lotterykits />
 
-        <div className="sm:mt-16">
+        <div className="mt-8 sm:mt-16">
           <h2
-            className="text-[#8b3a9a] mb-6 flex flex-col text-center xl:block font-Acrom font-medium
-            text-[36px] leading-[42px] 
+            className="text-[#8b3a9a] mb-6 flex flex-col text-center xl:block font-Acrom
+            text-[28px] leading-[32px] font-bold
+            md:font-medium md:text-[36px] md:leading-[42px]
             xl:text-[42px] xl:leading-[52px] 
           "
           >

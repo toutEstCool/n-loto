@@ -59,15 +59,33 @@ export const Faq = () => {
   return (
     <div className="bg-[#112D73] text-white pt-6 pb-8 mt-16">
       <Container>
-        <div className="flex justify-between mb-6">
-          <h2 className="text-[42px] font-bold">Вопросы и ответы</h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2
+            className="font-bold font-Acrom w-[228px] md:w-full
+            text-[28px] leading-[32px]
+            md:text-[36px] md:leading-[42px]
+            xl:text-[42px] xl:leading-[52px]
+          "
+          >
+            Вопросы и ответы
+          </h2>
           <Button
             variant="outline"
             size="lg"
-            className="rounded-[12px] border-2 text-[20px] font-normal"
+            className="hidden rounded-[12px] border-2 font-normal md:flex items-center
+              text-[18px] leading-[24px]
+              xl:text-[20px]
+            "
           >
             посмотреть всё <ChevronRight />
           </Button>
+          <button
+            className="md:hidden rounded-[12px] border-2 font-normal flex items-center
+              text-[18px] leading-[24px] px-2 py-1
+            "
+          >
+            все <ChevronRight />
+          </button>
         </div>
         <Accordion type="single" collapsible>
           {items.map((item, index) => (
@@ -77,7 +95,7 @@ export const Faq = () => {
               hasChildren={item.children && item.children.length > 0}
             >
               <AccordionTrigger
-                className="text-[24px] font-medium p-6 border-2 border-white rounded-[100px]"
+                className="text-[14px] md:text-[24px] py-4 px-6 font-bold font-Acrom md:p-6 border-2 border-white rounded-[100px]"
                 hasChildren={item.children && item.children.length > 0}
                 chevronColor="#fff"
               >

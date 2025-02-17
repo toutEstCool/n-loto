@@ -14,7 +14,7 @@ export const Lotterykits = () => {
     <div className="mt-[32px] sm:mt-16">
       <div className="bg-white rounded-[20px] p-4 sm:p-8">
         <div className="mb-[16px] sm:mb-8">
-          <h2 className="text-[#364059] text-[24px] sm:text-[36px] font-bold leading-[42px]">
+          <h2 className="text-[#364059] text-[24px] md:text-[36px] font-bold leading-[42px] font-Acrom">
             Наборы лотерей
           </h2>
         </div>
@@ -24,9 +24,12 @@ export const Lotterykits = () => {
             opts={{ slidesToScroll: 1, containScroll: 'trimSnaps' }}
             className=""
           >
-            <CarouselContent className="-ml-1">
+            <CarouselContent className="">
               {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index} className="basis-1/2 lg:basis-1/4">
+                <CarouselItem
+                  key={index}
+                  className="basis-1/1 md:basis-1/2 lg:basis-1/4"
+                >
                   <LotteryKitsCard />
                 </CarouselItem>
               ))}

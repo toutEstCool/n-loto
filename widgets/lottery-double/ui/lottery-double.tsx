@@ -35,6 +35,7 @@ export const LotteryDouble = () => {
       </div>
       <div className="xl:px-6 xl:mx-3 xl:max-w-[766px]">
         <Carousel
+          style={{ borderRadius: '0' }}
           className="!rounded-0 div:!rounded-0"
           opts={{
             containScroll: 'trimSnaps',
@@ -46,7 +47,7 @@ export const LotteryDouble = () => {
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem
                 key={index}
-                className="basis-1/2 xl:basis-1/2 !rounded-0 max-w-[298px] mr-3"
+                className="basis-1/2 xl:basis-1/2 !rounded-0 max-w-[298px] min-w-[183px] mr-3"
               >
                 <LotteryCountCard />
               </CarouselItem>
@@ -80,17 +81,23 @@ export const LotteryDouble = () => {
         </Carousel>
       </div>
       <div
-        className="w-full bg-[#e4d9b9] p-3 rounded-[10px] flex justify-between items-center mt-4
+        className="w-full bg-[#e4d9b9] p-3 rounded-[10px] flex flex-col gap-3 justify-between items-center mt-4
+        md:flex-row
         xl:max-w-[260px] xl:ml-auto xl:flex-col xl:m-0
       "
       >
         <div className="xl:h-[60px] w-full xl:flex flex-col items-center justify-center">
-          <p className="leading-6 text-[18px] xl:text-[20px] font-HavalMittel-regular text-[#364059]">
-            билеты не выбраны
+          <p className="leading-6 text-[18px] xl:text-[20px] font-HavalMittel-regular text-center text-[#364059]">
+            Билеты не выбраны
           </p>
         </div>
         <div className="w-full flex items-center gap-2 h-[48px]">
-          <Button className="max-w-[252px] w-full xl:max-w-[700px] bg-[#2f41b0] rounded-xl hover:bg-[#2a399e] h-full">
+          <Button
+            className="max-w-[252px] w-full xl:max-w-[700px] bg-[#2f41b0] rounded-xl hover:bg-[#2a399e] h-full
+            text-[18px] leading-6 font-HavalMittel-medium
+            xl:text-[20px]
+          "
+          >
             Оплатить
           </Button>
           <div className="max-w-[48px] w-full border-[2px] p-3 flex rounded-[10px] border-[#8b3a9a] cursor-pointer">

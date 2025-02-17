@@ -6,8 +6,15 @@ export const News = () => {
   return (
     <div className="w-full bg-white mt-16 rounded-[20px] p-6 relative pb-[84px] flex flex-col gap-8">
       <div className="flex justify-between items-center ">
-        <h2 className="text-[36px] leading-[42px] font-bold">Новости</h2>
-        <button className="border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px] text-[20px] leading-6 font-medium">
+        <h2
+          className="font-bold text-[#364059]
+          text-[28px] leading-[32px]
+          md:text-[36px] md:leading-[42px]
+        "
+        >
+          Новости
+        </h2>
+        <button className="hidden md:block border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px] text-[20px] leading-6 font-medium">
           Все новости
         </button>
       </div>
@@ -53,6 +60,10 @@ export const News = () => {
           </div>
         ))}
       </div>
+
+      <button className="md:hidden border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px] text-[20px] leading-6 font-medium">
+        Все новости
+      </button>
     </div>
   );
 };

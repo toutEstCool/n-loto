@@ -11,8 +11,12 @@ export const Footer: React.FC<IFooterProps> = (props) => {
   const { className } = props;
 
   return (
-    <footer className={cn('bg-[#F2F4FF] min-h-screen py-8', className)}>
-      {/* <div className="sticky h-10 z-[1] top-0 left-0">lol this is logo</div> */}
+    <footer
+      className={cn(
+        'bg-[#F2F4FF] min-h-screen py-8 hidden xl:block',
+        className,
+      )}
+    >
       <Container>
         <UpperFooter />
         <Lowerfooter />

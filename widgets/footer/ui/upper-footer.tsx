@@ -24,13 +24,12 @@ export const UpperFooter = () => {
         ))}
       </div>
 
-      <div className="xl:hidden flex justify-between w-full">
+      <div className="max-w-[340px] flex flex-col gap-6 w-full">
         <div className="max-w-[314px]">
           <h3
             className="
             font-bold text-[#364059] font-HavalMittel
-            lg:mb-1 lg:text-[20px] lg:leading-6
-            xl:mb-4 xl:text-2xl
+            mb-1 text-[24px] leading-6
             "
           >
             Способы оплаты
@@ -81,119 +80,23 @@ export const UpperFooter = () => {
           </div>
           <p
             className="
-            text-[#5e6976] mb-6 font-normal font-HavalMittel
-            lg:mb-1 lg:text-[14px] lg:leading-4
-            xl:mb-4 xl:text-2xl
+            text-[#5e6976] font-HavalMittel-regular
+            mb-1 text-[14px] leading-4
             "
           >
             Официальный сайт «Национальная Лотерея» гарантирует безопасность
             всех способов оплаты и не сохраняет ваши данные.
           </p>
-          <div className="hidden xl:flex xl:gap-3">
-            <Image
-              src={'/icons/vk.svg'}
-              alt="visa logo"
-              className="object-fit"
-              width={60}
-              height={44}
-              sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxWidth: '32px',
-                maxHeight: '44px',
-              }}
-            />
-            <Image
-              src={'/icons/odnoklassniki.svg'}
-              alt="visa logo"
-              className="object-fit"
-              width={60}
-              height={44}
-              sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxWidth: '32px',
-                maxHeight: '44px',
-              }}
-            />
-            <Image
-              src={'/icons/tg.svg'}
-              alt="visa logo"
-              className="object-fit"
-              width={60}
-              height={44}
-              sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxWidth: '32px',
-                maxHeight: '44px',
-              }}
-            />
-          </div>
         </div>
-
-        <div className="flex flex-col gap-6">
+        <div className="flex gap-3">
+          <Image src={'/icons/vk.svg'} alt="visa logo" width={32} height={32} />
           <Image
-            src={'/icons/android.svg'}
-            alt="visa logo"
-            className="object-fit"
-            width={60}
-            height={44}
-            sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
-            style={{
-              width: '100%',
-              height: 'auto',
-              maxWidth: '130px',
-              maxHeight: '40px',
-            }}
+            src={'/icons/odnoklassniki.svg'}
+            alt="ok logo"
+            width={32}
+            height={32}
           />
-          <div className="flex gap-3">
-            <Image
-              src={'/icons/vk.svg'}
-              alt="visa logo"
-              className="object-fit"
-              width={60}
-              height={44}
-              sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxWidth: '32px',
-                maxHeight: '44px',
-              }}
-            />
-            <Image
-              src={'/icons/odnoklassniki.svg'}
-              alt="visa logo"
-              className="object-fit"
-              width={60}
-              height={44}
-              sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxWidth: '32px',
-                maxHeight: '44px',
-              }}
-            />
-            <Image
-              src={'/icons/tg.svg'}
-              alt="visa logo"
-              className="object-fit"
-              width={60}
-              height={44}
-              sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxWidth: '32px',
-                maxHeight: '44px',
-              }}
-            />
-          </div>
+          <Image src={'/icons/tg.svg'} alt="visa logo" width={32} height={32} />
         </div>
       </div>
     </div>

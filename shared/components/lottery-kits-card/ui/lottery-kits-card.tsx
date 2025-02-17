@@ -3,7 +3,7 @@ import { Gift, Tag } from 'lucide-react';
 
 export const LotteryKitsCard = () => {
   return (
-    <div className="mr-3 w-[318px] rounded-xl relative">
+    <div className="md:mr-3 w-[318px] rounded-xl relative">
       <div>
         <div
           className="w-full h-[368px] bg-cover bg-center relative"
@@ -34,7 +34,7 @@ export const LotteryKitsCard = () => {
             </div>
             <div>
               <h2
-                className="text-center h-[63px] text-[#364059] font-HavalMittel-bold
+                className="text-center h-[63px] text-[#364059] font-HavalMittel-bold content-center
                 text-[16px] leading-5
                 xl:text-[18px] xl:leading-6
               "
