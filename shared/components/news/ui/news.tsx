@@ -19,10 +19,10 @@ export const News = () => {
         </button>
       </div>
 
-      <div className="flex gap-6 overflow-auto h-[284px]">
+      <div className="flex gap-6 overflow-auto h-[284px] xl:h-[300px]">
         {Array.from({ length: 3 }).map((_, index) => (
           <div
-            className="min-w-[300px] max-w-[300px] w-[300px] xl:max-w-[456px]"
+            className="min-w-[300px] max-w-[300px] w-[300px] xl:w-full xl:max-w-[456px]"
             key={index}
           >
             <Image

@@ -44,7 +44,7 @@ export const WinnerHistory = () => {
           {Array.from({ length: 9 }).map((_, index) => (
             <CarouselItem
               key={index}
-              className="basis-1/1 md:max-w-[270px] xl:max-w-[1000px] md:basis-1/2 lg:basis-1/5"
+              className="basis-1/1 md:max-w-[270px] xl:max-w-[1000px] md:basis-1/2 lg:basis-1/4"
             >
               <HeroWinnerCard />
             </CarouselItem>

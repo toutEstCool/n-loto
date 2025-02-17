@@ -2,12 +2,15 @@ import React from 'react';
 import { Breadcrumbs } from '@/shared/components/breadcrumbs/breadcrumbs';
 import { SpecialCard } from '@/shared/components/special-card';
 import { Container } from '@/widgets/container';
+import { getSpecials } from '@/sanity/lib/sanity';
 
-const Special = () => {
+const Special = async () => {
   const breadcrumbItems = [
     { label: 'Главная', href: '/' },
     { label: 'Акции', href: '/special' },
   ];
+
+  const specials = await getSpecials();
 
   return (
     <Container className="mt-[40px] sm:mt-[86px] min-h-screen ">
@@ -33,8 +36,9 @@ const Special = () => {
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {Array.from({ length: 7 }).map((_, index) => (
-            <SpecialCard key={index} />
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+          {specials.map((special: any) => (
+            <SpecialCard key={special.actionName} {...special} />
           ))}
         </div>
       </div>
