@@ -11,11 +11,6 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        black: {
-          100: '#364059',
-        },
-      },
       screens: {
         xxs: '375px',
         xs: '425px',

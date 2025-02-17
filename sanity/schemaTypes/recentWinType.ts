@@ -1,15 +1,15 @@
 import { TagIcon } from '@sanity/icons';
 import { defineField, defineType } from 'sanity';
 
-export const lotteriesType = defineType({
-  name: 'lotteries',
-  title: 'Lotteries',
+export const recentWinType = defineType({
+  name: 'recentWin',
+  title: 'recentWin',
   type: 'document',
   icon: TagIcon,
   fields: [
     defineField({
-      name: 'lotteryName',
-      title: 'Название лотереи',
+      name: 'recentWin',
+      title: 'Recent win',
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
