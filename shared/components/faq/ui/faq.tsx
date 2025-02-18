@@ -109,8 +109,8 @@ export const Faq = () => {
                         key={subIndex}
                         className="font-HavalMittel-regular pb-4
                         text-[14px] leading-4 ml-2
-                        md:text-[15px] md:leading-5 md:ml-4
-                        xl:ml-6 
+                        md:ml-4
+                        xl:ml-6 xl:leading-5
                         "
                       >
                         {subItem.title}
