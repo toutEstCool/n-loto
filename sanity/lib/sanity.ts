@@ -79,3 +79,17 @@ export const getRecentWins = async () => {
     }`,
   );
 };
+
+export const getLotteryTickets = async () => {
+  return client.fetch(
+    `*[_type == "lotteryTickets"]{
+      _id,
+      lotteryName,
+      superPrize,
+      drawNumber,
+      drawDate,
+      ticketPrice,
+      "imageUrl": image.asset->url
+    }`,
+  );
+};
