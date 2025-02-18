@@ -16,7 +16,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
 }) => {
   const colors = {
     black: ['#36405990', '#364059'],
-    white: ['#ffffff90', '#ffffff'],
+    white: ['#ffffff90', '#000'],
   };
   return (
     <nav aria-label="breadcrumb">

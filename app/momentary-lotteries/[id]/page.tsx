@@ -11,7 +11,7 @@ const DetailMomentaryLotteries = () => {
   ];
 
   return (
-    <div className="mt-[74px] sm:mt-[86px] min-h-screen relative mb-16">
+    <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative mb-16">
       <div
         style={{
           backgroundImage: 'url(/images/check_win-bg.png)',
