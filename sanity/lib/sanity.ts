@@ -9,12 +9,15 @@ export function urlFor(source: any) {
 }
 
 export async function getPosts() {
-  return client.fetch(`*[_type == "post"]{title, slug, mainImage}`);
+  return client.fetch(`*[_type == "post"]{
+    _id,
+    title, slug, mainImage}`);
 }
 
 export async function getSpecials() {
   return client.fetch(
     `*[_type == "specials"]{
+      _id,
       actionName,
       description,
       startDate,
@@ -28,6 +31,7 @@ export async function getSpecials() {
 export async function getMapCoords() {
   return client.fetch(
     `*[_type == "mapCoords"]{
+      _id,
       place,
       latitude,
       longitude
@@ -38,6 +42,7 @@ export async function getMapCoords() {
 export async function getMomentaryLotteries() {
   return client.fetch(
     `*[_type == "momentaryLottery"]{
+      _id,
       title,
       ticketPrice,
       mainPrize,
@@ -45,3 +50,32 @@ export async function getMomentaryLotteries() {
     }`,
   );
 }
+
+export const getWinners = async () => {
+  return client.fetch(
+    `*[_type == "winners"]{
+    _id,
+    name,
+    region,
+    amount,
+    price,
+    company,
+    "companyLogo": companyLogo.asset->url,
+    "thumbnail": video.thumbnail.asset->url,
+    "videoUrl": video.videoUrl
+  }`,
+  );
+};
+
+export const getRecentWins = async () => {
+  return client.fetch(
+    `*[_type == "recentWin"]{
+      _id,
+      recentWin,
+      date,
+      drawNumber,
+      prizeAmount,
+      "iconUrl": icon.asset->url
+    }`,
+  );
+};

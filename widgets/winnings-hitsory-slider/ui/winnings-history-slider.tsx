@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import { WinningsHistoryCard } from '@/shared/components/winnings-history-card';
 import {
   Carousel,
@@ -8,8 +10,20 @@ import {
   CarouselPrevious,
 } from '@/shared/ui/carousel';
 import Image from 'next/image';
+import { WinnersType } from '@/sanity/schemaTypes/winnersType';
+import { getWinners } from '@/sanity/lib/sanity';
 
 export const WinningsHistorySlider = () => {
+  const [winners, setWinners] = React.useState<WinnersType[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const winners = await getWinners();
+      setWinners(winners);
+    };
+
+    fetchData();
+  }, []);
   return (
     <div>
       <h2
@@ -33,12 +47,12 @@ export const WinningsHistorySlider = () => {
           }}
         >
           <CarouselContent className="">
-            {[1, 2, 3, 4, 5, 6].map((card, index) => (
+            {winners.map((winner, index) => (
               <CarouselItem
                 key={index}
                 className="basis-1/1 md:basis-1/2 xl:basis-1/4  md:max-w-[300px] xl:max-w-[280px] mr-4"
               >
-                <WinningsHistoryCard />
+                <WinningsHistoryCard winner={winner} />
               </CarouselItem>
             ))}
           </CarouselContent>

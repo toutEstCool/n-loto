@@ -1,11 +1,30 @@
+import { RecentWinType } from '@/sanity/schemaTypes/recentWinType';
+import { formatNumber } from '@/shared/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 
-export const WinningsRecentCard = () => {
+interface Props {
+  recentWin: RecentWinType;
+}
+
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  const formattedDate = date.toLocaleDateString('ru-RU', {
+    day: 'numeric',
+    month: 'short',
+  });
+  const formattedTime = date.toLocaleTimeString('ru-RU', {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  return `${formattedDate}, ${formattedTime}`;
+};
+
+export const WinningsRecentCard = ({ recentWin }: Props) => {
   return (
     <div className="bg-white p-4 rounded-[32px]">
       <div className="flex gap-3 mb-3">
-        <Image src="/icons/palm.svg" alt="palm" width={44} height={44} />
+        <Image src={recentWin.iconUrl} alt="palm" width={44} height={44} />
         <div>
           <h3
             className="text-[#364059] font-HavalMittel-bold
@@ -13,7 +32,7 @@ export const WinningsRecentCard = () => {
             xl:text-[22px] xl:leading-7
           "
           >
-            12 добрых дел
+            {recentWin.recentWin}
           </h3>
           <p
             className="text-[#5e6976] font-HavalMittel-regular
@@ -21,7 +40,7 @@ export const WinningsRecentCard = () => {
             xl:text-[18px] xl:leading-6
           "
           >
-            14 февр., 12:03 • Тираж № 001195
+            {formatDate(recentWin.date)} • Тираж № {recentWin.drawNumber}
           </p>
         </div>
       </div>
@@ -39,7 +58,7 @@ export const WinningsRecentCard = () => {
           xl:text-[20px] 
         "
         >
-          118 000 000 ₽
+          {formatNumber(+recentWin.prizeAmount)} ₽
         </p>
       </div>
     </div>

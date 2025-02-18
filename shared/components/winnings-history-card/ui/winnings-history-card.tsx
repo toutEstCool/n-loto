@@ -1,12 +1,18 @@
+import { WinnersType } from '@/sanity/schemaTypes/winnersType';
+import { formatNumber } from '@/shared/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 
-export const WinningsHistoryCard = () => {
+interface Props {
+  winner: WinnersType;
+}
+
+export const WinningsHistoryCard = ({ winner }: Props) => {
   return (
     <div className="bg-white p-4 rounded-[24px] max-w-[280px] w-full">
       <div className="mb-3 relative cursor-pointer group">
         <Image
-          src="/images/winners.png"
+          src={winner.thumbnail}
           alt="winners"
           width={1000}
           height={1000}
@@ -27,7 +33,7 @@ export const WinningsHistoryCard = () => {
         xl:text-[24px] xl:leading-8
       "
       >
-        Наталья
+        {winner.name}
       </h2>
       <p
         className="mb-1 font-HavalMittel-regular text-[#5e6976]
@@ -35,7 +41,7 @@ export const WinningsHistoryCard = () => {
         xl:text-[16px] xl:leading-5
       "
       >
-        Волгоградская обл.
+        {winner.region}
       </p>
       <div className="py-1.5 pr-3 pl-10 bg-[#efebe0] inline-flex gap-2 object-contain rounded-[8px] relative">
         <Image
@@ -51,19 +57,19 @@ export const WinningsHistoryCard = () => {
           xl:text-[20px] xl:leading-6 
         "
         >
-          118 000 000 ₽
+          {formatNumber(+winner.amount)} ₽
         </p>
       </div>
       <div className="flex justify-between items-center mt-3">
         <div className="flex gap-2 items-center">
-          <Image src="/icons/palm.svg" alt="palm" width={28} height={28} />
+          <Image src={winner?.companyLogo} alt="palm" width={28} height={28} />
           <p
             className="font-HavalMittel-regular text-[#364059]
             text-[16px] leading-5
             xl:text-[18px] xl:leading-6
           "
           >
-            Мечталлион
+            {winner.company}
           </p>
         </div>
 

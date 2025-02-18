@@ -1,6 +1,15 @@
 import { TagIcon } from '@sanity/icons';
 import { defineField, defineType } from 'sanity';
 
+export interface RecentWinType {
+  _id: string;
+  recentWin: string;
+  date: string;
+  drawNumber: string;
+  prizeAmount: string;
+  iconUrl: string;
+}
+
 export const recentWinType = defineType({
   name: 'recentWin',
   title: 'recentWin',
