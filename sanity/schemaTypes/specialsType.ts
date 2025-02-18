@@ -1,6 +1,15 @@
 import { DocumentIcon } from '@sanity/icons';
 import { defineField, defineType } from 'sanity';
 
+export interface SpecialsType {
+  actionName: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+  lotteries: string[];
+  imageUrl: string;
+}
+
 export const specialsType = defineType({
   name: 'specials',
   title: 'specials',

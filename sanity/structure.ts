@@ -11,6 +11,8 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem('recentWin').title('recentWin'),
       S.documentTypeListItem('specials').title('specials'),
       S.documentTypeListItem('winners').title('winners'),
+      S.documentTypeListItem('mapCoords').title('mapCoords'),
+      S.documentTypeListItem('momentaryLottery').title('momentaryLottery'),
       S.divider(),
       ...S.documentTypeListItems().filter(
         (item) =>
@@ -22,6 +24,8 @@ export const structure: StructureResolver = (S) =>
             'recentWin',
             'specials',
             'winners',
+            'mapCoords',
+            'momentaryLottery',
           ].includes(item.getId()!),
       ),
     ]);

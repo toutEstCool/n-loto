@@ -1,11 +1,28 @@
+'use client';
+
+import { getMomentaryLotteries } from '@/sanity/lib/sanity';
+import { MomentaryLotteriesType } from '@/sanity/schemaTypes/mommentaryLotteryType';
 import { Breadcrumbs } from '@/shared/components/breadcrumbs/breadcrumbs';
+import { MommentaryLotteryCard } from '@/shared/components/mommentary-lottery-card';
+import { WhereBuyMap } from '@/shared/components/where-buy-map';
 import { Container } from '@/widgets/container';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const MomentaryLotteries = () => {
+  const [lotteries, setLotteries] = useState<MomentaryLotteriesType[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const lotteries = await getMomentaryLotteries();
+      setLotteries(lotteries);
+    };
+
+    fetchData();
+  }, []);
+
   const breadcrumbItems = [
     { label: 'Главная', href: '/' },
     { label: 'Моментальные лотереи', href: '/get-lottery-win' },
@@ -163,75 +180,15 @@ const MomentaryLotteries = () => {
               Лотереи
             </h2>
             <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1010px] xl:max-w-[912px] w-full gap-x-6">
-              {Array.from({ length: 14 }).map((_, index) => (
+              {lotteries.map((lottery, index) => (
                 <Link href={`/momentary-lotteries/${index}`} key={index}>
-                  <div className="mb-6">
-                    <Image
-                      src="/images/quest-lottery.webp"
-                      alt="lottery-1"
-                      width={1000}
-                      height={1000}
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                      }}
-                    />
-                    <div className="py-1 px-2 my-2 bg-[#efebe0] inline-flex gap-2 object-contain rounded-[8px] relative">
-                      <p
-                        className=" font-HavalMittel-regular
-                        text-[16px] leading-5
-                        xl:text-[18px] xl:leading-6
-                      "
-                      >
-                        Билет • 100 ₽
-                      </p>
-                    </div>
-                    <h3
-                      className="mb-3 font-medium font-Acrom
-                        text-[18px] leading-6
-                        xl:text-[20px] xl:leading-6
-                      "
-                    >
-                      Мечталлион
-                    </h3>
-                    <p
-                      className="font-HavalMittel-regular
-                        text-[14px] leading-4
-                        xl:text-[16px] xl:leading-5
-                      "
-                    >
-                      Главный приз 1 000 000 ₽
-                    </p>
-                  </div>
+                  <MommentaryLotteryCard lottery={lottery} />
                 </Link>
               ))}
             </div>
           </div>
-          <div
-            className=" bg-white rounded-[20px]
-            p-4 
-            md:p-6 
-            2xl:p-8
-          "
-          >
-            <h2
-              className=" font-bold font-HavalMittel text-[#364059]
-              text-[18px] mb-4 leading-6
-              md:text-[24px] md:mb-4 md:leading-8
-              xl:text-[28px]
-            "
-            >
-              Где купить
-            </h2>
-            <button
-              className="font-HavalMittel-medium w-full py-3 px-5 border-2 border-[#2f41b0] bg-[#2f41b0] text-white rounded-[12px]
-              text-[18px] leading-6 
-              md:max-w-[236px] md:text-[20px]
-            "
-            >
-              Показать карту продаж
-            </button>
-          </div>
+          <WhereBuyMap />
+
           <div
             className=" bg-white rounded-[20px]
             p-4 

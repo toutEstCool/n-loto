@@ -5,6 +5,8 @@ import { lotteryTicketsType } from './lotteryTicketsType';
 import { newsType } from './newsPostType';
 import { recentWinType } from './recentWinType';
 import { specialsType } from './specialsType';
+import { mapCoordsType } from './mapCoordsType';
+import { momentaryLottery } from './mommentaryLotteryType';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -14,5 +16,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     recentWinType,
     specialsType,
     winnersType,
+    mapCoordsType,
+    momentaryLottery,
   ],
 };

@@ -5,7 +5,7 @@ const builder = imageUrlBuilder(client);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function urlFor(source: any) {
-  return builder.image(source);
+  return builder.image(source).url();
 }
 
 export async function getPosts() {
@@ -20,6 +20,27 @@ export async function getSpecials() {
       startDate,
       endDate,
       "lotteries": lotteries[]-> { lotteryName },
+      "imageUrl": image.asset->url
+    }`,
+  );
+}
+
+export async function getMapCoords() {
+  return client.fetch(
+    `*[_type == "mapCoords"]{
+      place,
+      latitude,
+      longitude
+    }`,
+  );
+}
+
+export async function getMomentaryLotteries() {
+  return client.fetch(
+    `*[_type == "momentaryLottery"]{
+      title,
+      ticketPrice,
+      mainPrize,
       "imageUrl": image.asset->url
     }`,
   );

@@ -11,6 +11,7 @@ const Special = async () => {
   ];
 
   const specials = await getSpecials();
+  console.log(specials);
 
   return (
     <Container className="mt-[40px] sm:mt-[86px] min-h-screen ">
@@ -38,7 +39,7 @@ const Special = async () => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {specials.map((special: any) => (
-            <SpecialCard key={special.actionName} {...special} />
+            <SpecialCard key={special.actionName} special={special} />
           ))}
         </div>
       </div>
