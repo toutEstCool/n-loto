@@ -24,7 +24,7 @@ export const NewsCard = ({ winner }: Props) => {
         alt="winner"
         width={1000}
         height={1000}
-        className="rounded-[16px] max-h-[108px] xl:max-h-[127px]"
+        className="rounded-[16px] max-h-[324px] md:max-h-[108px] xl:max-h-[127px]"
         style={{
           width: '100%',
           height: '100%',
