@@ -105,7 +105,14 @@ export const Faq = () => {
                 <AccordionContent>
                   <ul className="flex flex-col gap-4 max-w-[790px] w-full">
                     {item.children.map((subItem, subIndex) => (
-                      <li key={subIndex} className="text-[15px] font-normal">
+                      <li
+                        key={subIndex}
+                        className="font-HavalMittel-regular pb-4
+                        text-[14px] leading-4 ml-2
+                        md:ml-4
+                        xl:ml-6 xl:leading-5
+                        "
+                      >
                         {subItem.title}
                       </li>
                     ))}

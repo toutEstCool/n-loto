@@ -30,7 +30,7 @@ export const News = () => {
         </button>
       </div>
 
-      <div className="flex gap-6 overflow-auto h-[284px] xl:h-auto xl:overflow-visible">
+      <div className="flex gap-6 overflow-auto h-[565px] md:h-[284px] xl:h-auto xl:overflow-visible">
         {winners.map((winner) => (
           <NewsCard key={winner._id} winner={winner} />
         ))}
