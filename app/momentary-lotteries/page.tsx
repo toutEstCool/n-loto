@@ -33,10 +33,8 @@ const MomentaryLotteries = () => {
       <div
         style={{
           backgroundImage: 'url(/images/momentary_lotteries-bg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
         }}
-        className="w-full h-[345px] xl:h-[380px] absolute top-0 left-0 -z-[1]"
+        className="w-full h-[345px] xl:h-[380px] absolute top-0 left-0 -z-[1] bg-cover bg-[-75%_0%] md:bg-[center]"
       />
       <Container className="pt-3 mb-6 flex flex-col gap-8 text-white">
         <Breadcrumbs variant="white" items={breadcrumbItems} />
