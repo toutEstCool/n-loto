@@ -7,8 +7,6 @@ interface Props {
 }
 
 export const LotteryTicketCard = ({ ticket }: Props) => {
-  console.log(ticket);
-
   return (
     <div
       className="relative flex flex-col p-4 bg-white xl:max-w-[700px] max-h-[313px] w-full h-full rounded-[10px] 

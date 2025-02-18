@@ -11,7 +11,6 @@ const Special = async () => {
   ];
 
   const specials = await getSpecials();
-  console.log(specials);
 
   return (
     <Container className="mt-[40px] sm:mt-[86px] min-h-screen ">
