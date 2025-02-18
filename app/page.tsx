@@ -124,6 +124,7 @@ export default function Home() {
         <TicketLottery />
         <LotteryGift />
         <BannerNewMillioner />
+
         <WinnerHistory />
         <BannerNewMillioner />
         <News />

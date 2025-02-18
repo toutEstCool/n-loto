@@ -93,3 +93,14 @@ export const getLotteryTickets = async () => {
     }`,
   );
 };
+
+export const getNews = async () => {
+  return client.fetch(
+    `*[_type == "news"]{
+      _id,
+      newsTitle,
+      drawDate,
+      "image": image.asset->url
+    }`,
+  );
+};

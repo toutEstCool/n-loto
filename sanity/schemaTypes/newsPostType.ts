@@ -1,6 +1,13 @@
 import { DocumentIcon } from '@sanity/icons';
 import { defineField, defineType } from 'sanity';
 
+export interface NewsType {
+  _id: string;
+  newsTitle: string;
+  drawDate: string;
+  image: string;
+}
+
 export const newsType = defineType({
   name: 'news',
   title: 'news',

@@ -2,6 +2,7 @@ import { TagIcon } from '@sanity/icons';
 import { defineField, defineType } from 'sanity';
 
 export interface WinnersType {
+  _id: string;
   name: string;
   region: string;
   amount: string;
