@@ -114,7 +114,7 @@ const About = () => {
   ];
 
   return (
-    <div className="mt-[74px] sm:mt-[86px] min-h-screen relative">
+    <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative">
       <div
         style={{
           backgroundImage: 'url(/images/about-bg.png)',

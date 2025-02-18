@@ -29,12 +29,16 @@ const MomentaryLotteries = () => {
   ];
 
   return (
-    <div className="mt-[40px] sm:mt-[86px] min-h-screen relative">
+    <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative">
       <div
         style={{
           backgroundImage: 'url(/images/momentary_lotteries-bg.png)',
         }}
-        className="w-full h-[345px] xl:h-[380px] absolute top-0 left-0 -z-[1] bg-cover bg-[-75%_0%] md:bg-[center]"
+        className="w-full  absolute top-0 left-0 -z-[1]
+        bg-cover h-[345px] bg-[-75%_0%]
+        sm:bg-[center]
+        xl:h-[380px]
+        "
       />
       <Container className="pt-3 mb-6 flex flex-col gap-8 text-white">
         <Breadcrumbs variant="white" items={breadcrumbItems} />

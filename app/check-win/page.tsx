@@ -11,7 +11,7 @@ const CheckWin = () => {
   ];
 
   return (
-    <div className="mt-[40px] sm:mt-[86px] min-h-screen relative">
+    <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative">
       <div
         style={{
           backgroundImage: 'url(/images/check_win-bg.png)',
