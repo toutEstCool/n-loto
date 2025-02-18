@@ -1,11 +1,17 @@
+import { SpecialsType } from '@/sanity/schemaTypes/specialsType';
+import { formatDate, truncateText } from '@/shared/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 
-export const SpecialCard = () => {
+interface Props {
+  special: SpecialsType;
+}
+
+export const SpecialCard = ({ special }: Props) => {
   return (
     <div className="max-w-[432px] w-full flex flex-col gap-3 md:h-[483px]">
       <Image
-        src="/images/special.jpg"
+        src={special.imageUrl}
         alt=""
         width={1050}
         height={450}
@@ -21,14 +27,14 @@ export const SpecialCard = () => {
           xl:text-[20px]
         "
         >
-          До 9 марта 2025 года
+          До {formatDate(special.startDate)}
         </p>
         <h3
           className="font-bold font-Acrom mt-2
           text-[18px] leading-6
         "
         >
-          Дарите любимым «Мечталлион»
+          {special.actionName}
         </h3>
       </div>
       <div className="mt-auto">
@@ -38,9 +44,7 @@ export const SpecialCard = () => {
           xl:text-[18px] xl:leading-6
         "
         >
-          С 14 февраля по 9 марта дарите 3 билета «Мечталлион» через сервис
-          «Подари билет» на сайте nloto.ru или приложение «Национальная Лотерея»
-          одной покупко...
+          {truncateText(special.description)}
           <span className="text-[#024cf8] items-end">Подробнее</span>
         </p>
         <button

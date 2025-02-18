@@ -1,4 +1,5 @@
 import { Breadcrumbs } from '@/shared/components/breadcrumbs/breadcrumbs';
+import { WhereBuyMap } from '@/shared/components/where-buy-map';
 import { Container } from '@/widgets/container';
 import React from 'react';
 
@@ -89,26 +90,11 @@ const GetLotteryWin = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-[20px] p-4 md:p-6 xl:p-8 flex flex-col gap-4 md:gap-6 w-full mb-16">
-            <h2
-              className="font-HavalMittel-bold text-[#364059]
-              text-[20px] leading-6
-              xl:text-[24px] xl:leading-8
-            "
-            >
-              Карта получения выигрышей
-            </h2>
-            <button className=" border-2 border-[#1b2c92] bg-[#1b2c92] py-3 px-5 rounded-[12px]">
-              <span
-                className="font-HavalMittel-medium text-white
-                text-[18px] leading-6 max-w-[168px]
-                xl:text-[20px] xl:leading-6 xl:max-w-[182px]
-              "
-              >
-                Показать карту
-              </span>
-            </button>
-          </div>
+          <WhereBuyMap
+            title="Карта получения выигрышей"
+            showBtnText="Показать карту"
+            hideBtnText="Скрыть карту"
+          />
         </div>
       </Container>
     </div>

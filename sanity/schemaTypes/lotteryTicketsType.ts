@@ -1,6 +1,16 @@
 import { DocumentIcon } from '@sanity/icons';
 import { defineField, defineType } from 'sanity';
 
+export interface LotteryTicketsType {
+  _id: string;
+  lotteryName: string;
+  superPrize: string;
+  drawNumber: string;
+  drawDate: string;
+  ticketPrice: string;
+  imageUrl: string;
+}
+
 export const lotteryTicketsType = defineType({
   name: 'lotteryTickets',
   title: 'Lottery Tickets',

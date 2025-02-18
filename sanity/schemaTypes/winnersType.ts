@@ -1,6 +1,18 @@
 import { TagIcon } from '@sanity/icons';
 import { defineField, defineType } from 'sanity';
 
+export interface WinnersType {
+  _id: string;
+  name: string;
+  region: string;
+  amount: string;
+  price: string;
+  company: string;
+  companyLogo: string;
+  thumbnail: string;
+  videoUrl: string;
+}
+
 export const winnersType = defineType({
   name: 'winners',
   title: 'Winners',
@@ -23,6 +35,25 @@ export const winnersType = defineType({
       name: 'amount',
       title: 'Выигрыш',
       type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'price',
+      title: 'Стоимость билета',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'company',
+      title: 'компания',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'companyLogo',
+      title: 'Логотип компании',
+      type: 'image',
+      options: { hotspot: true },
       validation: (Rule) => Rule.required(),
     }),
     defineField({

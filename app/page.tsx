@@ -3,7 +3,6 @@
 import { BannerNewMillioner } from '@/shared/components/banner-new-millioner';
 import { Faq } from '@/shared/components/faq';
 import { LotteryGift } from '@/shared/components/lottery-gift';
-import { LotteryTicketCard } from '@/shared/components/lottery-ticket-card';
 import { News } from '@/shared/components/news';
 import { Slider } from '@/shared/components/slider';
 import { WBigSlider } from '@/shared/components/w-big-slider';
@@ -12,6 +11,7 @@ import { Container } from '@/widgets/container';
 import { Lotterykits } from '@/widgets/lottery-kits';
 import { LotteryDouble } from '@/widgets/lottery-double';
 import Image from 'next/image';
+import { TicketLottery } from '@/shared/components/ticket-lottery';
 
 const cardData = [
   {
@@ -120,17 +120,11 @@ export default function Home() {
           >
             <span>Покупайте,</span> заполняйте, побеждайте!
           </h2>
-
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-2">
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-            <LotteryTicketCard />
-          </div>
         </div>
-
+        <TicketLottery />
         <LotteryGift />
         <BannerNewMillioner />
+
         <WinnerHistory />
         <BannerNewMillioner />
         <News />

@@ -1,7 +1,22 @@
+'use client';
+
+import { getRecentWins } from '@/sanity/lib/sanity';
+import { RecentWinType } from '@/sanity/schemaTypes/recentWinType';
 import { WinningsRecentCard } from '@/shared/components/winnings-recent-card';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export const WinningsRecetSection = () => {
+  const [winners, setWinners] = React.useState<RecentWinType[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const winners = await getRecentWins();
+      setWinners(winners);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div>
       <h2
@@ -14,10 +29,9 @@ export const WinningsRecetSection = () => {
         Недавние победы
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-6">
-        <WinningsRecentCard />
-        <WinningsRecentCard />
-        <WinningsRecentCard />
-        <WinningsRecentCard />
+        {winners.map((winner) => (
+          <WinningsRecentCard recentWin={winner} key={winner._id} />
+        ))}
       </div>
     </div>
   );

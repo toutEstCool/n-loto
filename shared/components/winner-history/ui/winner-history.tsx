@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -8,8 +8,20 @@ import {
 } from '@/shared/ui/carousel';
 import Image from 'next/image';
 import { HeroWinnerCard } from '../../hero-winner-card';
+import { getWinners } from '@/sanity/lib/sanity';
+import { WinnersType } from '@/sanity/schemaTypes/winnersType';
 
 export const WinnerHistory = () => {
+  const [winners, setWinners] = React.useState<WinnersType[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const winners = await getWinners();
+      setWinners(winners);
+    };
+
+    fetchData();
+  }, []);
   return (
     <div className="w-full bg-white mt-16 rounded-[20px] p-6 relative xl:pb-[84px] flex flex-col gap-8">
       <div className="flex justify-between items-center ">
@@ -41,12 +53,12 @@ export const WinnerHistory = () => {
         }}
       >
         <CarouselContent className="-ml-1">
-          {Array.from({ length: 9 }).map((_, index) => (
+          {winners.map((winner) => (
             <CarouselItem
-              key={index}
-              className="basis-1/1 md:max-w-[270px] xl:max-w-[1000px] md:basis-1/2 lg:basis-1/4"
+              key={winner._id}
+              className="basis-1/1 md:max-w-[270px] xl:max-w-[1000px] md:basis-1/2 lg:basis-1/4 xl:basis-1/5"
             >
-              <HeroWinnerCard />
+              <HeroWinnerCard winner={winner} />
             </CarouselItem>
           ))}
         </CarouselContent>

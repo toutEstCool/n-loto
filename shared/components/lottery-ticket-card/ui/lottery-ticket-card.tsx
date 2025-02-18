@@ -1,7 +1,12 @@
+import { LotteryTicketsType } from '@/sanity/schemaTypes/lotteryTicketsType';
 import Image from 'next/image';
 import React from 'react';
 
-export const LotteryTicketCard = () => {
+interface Props {
+  ticket: LotteryTicketsType;
+}
+
+export const LotteryTicketCard = ({ ticket }: Props) => {
   return (
     <div
       className="relative flex flex-col p-4 bg-white xl:max-w-[700px] max-h-[313px] w-full h-full rounded-[10px] 
@@ -10,7 +15,7 @@ export const LotteryTicketCard = () => {
     >
       <div className="md:w-[71%] relative overflow-hidden rounded-l-xl">
         <Image
-          src="/images/color-balls.png"
+          src={ticket.imageUrl}
           alt="Card Banner"
           width={0}
           height={0}
@@ -46,12 +51,13 @@ export const LotteryTicketCard = () => {
         md:w-[25%] md:flex-col
       "
       >
-        {/* css-disble */}
         <div className="font-Acrom font-bold text-[18px] leading-6 mt-auto md:m-0 flex flex-col-reverse md:block">
           <p className="">
-            Тираж <br /> № 000127
+            Тираж <br /> № {ticket.drawNumber}
           </p>
-          <p className="">23.02.2025</p>
+          <p className="mt-0 xl:mt-4">
+            {new Date(ticket.drawDate).toLocaleDateString()}
+          </p>
         </div>
         <div className="mt-auto md:m-0">
           <p
