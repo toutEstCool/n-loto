@@ -39,7 +39,7 @@ const Contacts = () => {
     <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative mb-16 xl:mb-0">
       <div
         style={{
-          backgroundImage: 'url(/images/about-bg.png)',
+          backgroundImage: 'url(/images/check_win-bg.png)',
           backgroundSize: 'cover',
         }}
         className="w-full h-[450px] absolute top-0 left-0 -z-[1]"

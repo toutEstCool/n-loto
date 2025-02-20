@@ -29,7 +29,7 @@ export const Map = () => {
     .map((point) => `${point.lat},${point.lon},pm2rdl`)
     .join('~');
 
-  const mapSrc = `https://yandex.com/map-widget/v1/?ll=10.854186%2C49.182076&z=4&pt=${pointsString}`;
+  const mapSrc = `https://yandex.com/map-widget/v1/?ll=${points[0]?.lat}%2C${points[0]?.lon}&z=12&pt=${pointsString}`;
 
   return (
     <div

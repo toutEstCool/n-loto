@@ -13,6 +13,11 @@ import React, { useEffect, useState } from 'react';
 
 const MomentaryLotteries = () => {
   const [lotteries, setLotteries] = useState<MomentaryLotteriesType[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -198,7 +203,10 @@ const MomentaryLotteries = () => {
             xl:p-8
           "
           >
-            <div className="bg-[#f0ead8] p-3 md:p-6 flex justify-between items-center rounded-[12px]">
+            <div
+              className="bg-[#f0ead8] p-3 md:p-6 flex justify-between items-center rounded-[12px]"
+              onClick={toggleOpen}
+            >
               <h2
                 className="font-[500] font-Acrom
                 text-[18px] leading-6
@@ -214,6 +222,7 @@ const MomentaryLotteries = () => {
                 <ChevronDown stroke="#000" />
               </div>
             </div>
+            {isOpen && <div>open</div>}
           </div>
         </div>
       </Container>

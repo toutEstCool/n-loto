@@ -86,23 +86,23 @@ export const footerData = [
     links: [
       {
         title: 'О компании',
-        link: '',
+        link: '/about',
       },
       {
         title: 'Контакты',
-        link: '',
+        link: '/contacts',
       },
       {
         title: 'Обратная связь',
-        link: '',
+        link: '/feedback',
       },
       {
         title: 'Вопросы и ответы',
-        link: '',
+        link: '/faq',
       },
       {
         title: 'Пресс-центр',
-        link: '',
+        link: '/press-center',
       },
       {
         title: 'Франчайзинг',
