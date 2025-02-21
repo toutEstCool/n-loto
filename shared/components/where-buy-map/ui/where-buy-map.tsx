@@ -1,13 +1,7 @@
 'use client';
 
-import { getMapCoords } from '@/sanity/lib/sanity';
-import React, { useEffect, useState } from 'react';
-
-interface MapCoords {
-  place: string;
-  latitude: string;
-  longitude: string;
-}
+import React, { useState } from 'react';
+import { Map } from '../../map';
 
 interface Props {
   title?: string;
@@ -22,30 +16,10 @@ export const WhereBuyMap = (props: Props) => {
     hideBtnText = 'Скрыть карту продаж',
   } = props;
   const [showMap, setShowMap] = useState(false);
-  const [points, setPoints] = useState<{ lat: string; lon: string }[]>([]);
 
   const toggleShowMap = () => {
     setShowMap(!showMap);
   };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const mapCoords = await getMapCoords();
-      const locations = mapCoords.map((coord: MapCoords) => ({
-        lat: coord.latitude,
-        lon: coord.longitude,
-      }));
-      setPoints(locations);
-    };
-
-    fetchData();
-  }, []);
-
-  const pointsString = points
-    .map((point) => `${point.lat},${point.lon},pm2rdl`)
-    .join('~');
-
-  const mapSrc = `https://yandex.com/map-widget/v1/?ll=10.854186%2C49.182076&z=4&pt=${pointsString}`;
 
   return (
     <div
@@ -76,19 +50,7 @@ export const WhereBuyMap = (props: Props) => {
 
       {showMap && (
         <div className="mt-4">
-          <div
-            style={{
-              position: 'relative',
-              overflow: 'hidden',
-              width: '100%',
-              height: '400px',
-            }}
-          >
-            <iframe
-              src={mapSrc}
-              style={{ position: 'relative', width: '100%', height: '100%' }}
-            ></iframe>
-          </div>
+          <Map />
         </div>
       )}
     </div>

@@ -13,6 +13,7 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem('winners').title('winners'),
       S.documentTypeListItem('mapCoords').title('mapCoords'),
       S.documentTypeListItem('momentaryLottery').title('momentaryLottery'),
+      S.documentTypeListItem('promoCharity').title('promoCharity'),
       S.divider(),
       ...S.documentTypeListItems().filter(
         (item) =>
@@ -26,6 +27,7 @@ export const structure: StructureResolver = (S) =>
             'winners',
             'mapCoords',
             'momentaryLottery',
+            'promoCharity',
           ].includes(item.getId()!),
       ),
     ]);

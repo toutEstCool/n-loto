@@ -11,6 +11,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-gradient':
+          'linear-gradient(225deg, rgb(233, 148, 232) 0%, rgb(162, 203, 251) 49.48%, rgb(138, 237, 231) 100%)',
+      },
       screens: {
         xxs: '375px',
         xs: '425px',

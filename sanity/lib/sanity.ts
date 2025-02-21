@@ -104,3 +104,18 @@ export const getNews = async () => {
     }`,
   );
 };
+
+export const getPromoCharity = async () => {
+  return client.fetch(
+    `*[_type == "promoCharity"]{
+      _id,
+      title,
+      description,
+      date,
+      companyName,
+      ticketPrice,
+      "companyLogo": companyLogo.asset->url,
+      "bannerImage": bannerImage.asset->url
+    }`,
+  );
+};

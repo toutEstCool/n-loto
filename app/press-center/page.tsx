@@ -1,0 +1,45 @@
+import { getNews } from '@/sanity/lib/sanity';
+import { NewsType } from '@/sanity/schemaTypes/newsPostType';
+import { Breadcrumbs } from '@/shared/components/breadcrumbs/breadcrumbs';
+import { PressCenterContent } from '@/shared/components/press-center-content';
+import { Container } from '@/widgets/container';
+import React from 'react';
+
+const PressCenter = async () => {
+  const breadcrumbItems = [
+    { label: 'Главная', href: '/' },
+    { label: 'Пресс-центр', href: '/press-center' },
+  ];
+
+  const news: NewsType[] = await getNews();
+
+  return (
+    <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative mb-16 xl:mb-0">
+      <div
+        style={{
+          backgroundImage: 'url(/images/check_win-bg.png)',
+          backgroundSize: 'cover',
+        }}
+        className="w-full h-[450px] absolute top-0 left-0 -z-[1]"
+      />
+      <Container className="pt-3 mb-6 flex flex-col gap-8 text-white">
+        <Breadcrumbs variant="white" items={breadcrumbItems} />
+        <h1
+          className="font-bold font-Acrom
+                  text-[24px] leading-8
+                  md:text-[28px] 
+                  xl:text-[36px] xl:leading-[42px]
+                "
+        >
+          Новости
+        </h1>
+      </Container>
+
+      <Container className="flex flex-col gap-6">
+        <PressCenterContent news={news} />
+      </Container>
+    </div>
+  );
+};
+
+export default PressCenter;
