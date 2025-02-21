@@ -110,7 +110,7 @@ export const footerData = [
       },
       {
         title: 'Благотворительность',
-        link: '',
+        link: '/promo-charity',
       },
     ],
   },
