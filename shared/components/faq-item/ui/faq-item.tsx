@@ -30,46 +30,52 @@ export const FaqItem = ({ title, content, children }: FaqItemProps) => {
         />
         <h2
           className="font-[500] font-Acrom pl-3 text-[#364059]
-                text-[18px] leading-6
+                text-[18px] leading-6 max-w-[245px]
                 md:text-[24px] md:leading-8 
                 xl:text-[28px] 
               "
         >
           {title}
         </h2>
-        <div
-          className={`w-[44px] h-[44px] flex items-center justify-center bg-white rounded-full cursor-pointer`}
-        >
-          <ChevronDown
-            stroke="#000"
-            className={cn(
-              'rotate-0 transition-all duration-300',
-              {
-                'rotate-180': isOpen,
-              },
-              [],
-            )}
-          />
+        <div>
+          <div
+            className={`w-[44px] h-[44px] flex items-center justify-center bg-white rounded-full cursor-pointer`}
+          >
+            <ChevronDown
+              stroke="#000"
+              className={cn(
+                'rotate-0 transition-all duration-300',
+                {
+                  'rotate-180': isOpen,
+                },
+                [],
+              )}
+            />
+          </div>
         </div>
       </div>
       {isOpen && (
         <div className="pl-6 flex flex-col gap-4">
-          <div className="flex flex-col gap-0">
-            {Array.isArray(content) ? (
-              content.map((item) => (
-                <p
-                  className="text-[#364059] text-[16px] leading-6 font-HavalMittel-medium max-w-[734px] pl-8"
-                  key={item}
-                >
-                  {item}
+          {Array.isArray(content) && content.length > 0 && (
+            <div className="flex flex-col gap-0">
+              {Array.isArray(content) &&
+              content.length > 0 &&
+              Array.isArray(content) ? (
+                content.map((item) => (
+                  <p
+                    className="text-[#364059] text-[14px] leading-5 md:text-[16px] md:leading-6 font-HavalMittel-medium max-w-[734px] pl-4 md:pl-8"
+                    key={item}
+                  >
+                    {item}
+                  </p>
+                ))
+              ) : (
+                <p className="text-[#364059] text-[16px] leading-6 font-HavalMittel-medium max-w-[734px]">
+                  {content}
                 </p>
-              ))
-            ) : (
-              <p className="text-[#364059] text-[16px] leading-6 font-HavalMittel-medium max-w-[734px]">
-                {content}
-              </p>
-            )}
-          </div>
+              )}
+            </div>
+          )}
           {children &&
             children.map((child) => <FaqItem key={child.title} {...child} />)}
         </div>

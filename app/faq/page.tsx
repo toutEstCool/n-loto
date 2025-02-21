@@ -111,10 +111,10 @@ const Faq = () => {
           backgroundImage: 'url(/images/check_win-bg.png)',
         }}
         className="w-full  absolute top-0 left-0 -z-[1]
-            bg-cover h-[345px] bg-[-75%_0%]
-            sm:bg-[center]
-            xl:h-[380px]
-            "
+          bg-cover h-[345px] bg-[-75%_0%]
+          sm:bg-[center]
+          xl:h-[380px]
+          "
       />
       <Container className="pt-3 mb-6 flex flex-col gap-8 text-white">
         <Breadcrumbs variant="white" items={breadcrumbItems} />
