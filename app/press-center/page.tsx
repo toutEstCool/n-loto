@@ -3,7 +3,7 @@ import { NewsType } from '@/sanity/schemaTypes/newsPostType';
 import { Breadcrumbs } from '@/shared/components/breadcrumbs/breadcrumbs';
 import { PressCenterContent } from '@/shared/components/press-center-content';
 import { Container } from '@/widgets/container';
-import React from 'react';
+import React, { Suspense } from 'react';
 
 const PressCenter = async () => {
   const breadcrumbItems = [
@@ -36,7 +36,9 @@ const PressCenter = async () => {
       </Container>
 
       <Container className="flex flex-col gap-6">
-        <PressCenterContent news={news} />
+        <Suspense fallback={<div></div>}>
+          <PressCenterContent news={news} />
+        </Suspense>
       </Container>
     </div>
   );
