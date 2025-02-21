@@ -5,6 +5,7 @@ import { MomentaryLotteriesType } from '@/sanity/schemaTypes/mommentaryLotteryTy
 import { Breadcrumbs } from '@/shared/components/breadcrumbs/breadcrumbs';
 import { MommentaryLotteryCard } from '@/shared/components/mommentary-lottery-card';
 import { WhereBuyMap } from '@/shared/components/where-buy-map';
+import { cn } from '@/shared/lib/utils';
 import { Container } from '@/widgets/container';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
@@ -13,6 +14,11 @@ import React, { useEffect, useState } from 'react';
 
 const MomentaryLotteries = () => {
   const [lotteries, setLotteries] = useState<MomentaryLotteriesType[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -198,7 +204,10 @@ const MomentaryLotteries = () => {
             xl:p-8
           "
           >
-            <div className="bg-[#f0ead8] p-3 md:p-6 flex justify-between items-center rounded-[12px]">
+            <div
+              className="cursor-pointer bg-[#f0ead8] p-3 md:p-6 flex justify-between items-center rounded-[12px]"
+              onClick={toggleOpen}
+            >
               <h2
                 className="font-[500] font-Acrom
                 text-[18px] leading-6
@@ -211,9 +220,27 @@ const MomentaryLotteries = () => {
               <div
                 className={`w-[44px] h-[44px] flex items-center justify-center bg-white rounded-full cursor-pointer`}
               >
-                <ChevronDown stroke="#000" />
+                <ChevronDown
+                  stroke="#000"
+                  className={cn('transition-all duration-300', {
+                    'transform rotate-180': isOpen,
+                  })}
+                />
               </div>
             </div>
+            {isOpen && (
+              <p
+                className="font-HavalMittel-medium text-[#5e6976]
+                pt-4 pl-4 pb-2 max-w-[734px] w-full text-[14px] leading-5
+                md:text-[16px] md:leading-5
+              "
+              >
+                Выигрыш можно получить различными способами в точках продаж,
+                личном кабинете на сайте или мобильном приложении. Детали о
+                порядке и условиях получения выигрыша здесь:{' '}
+                <span className="text-[#024cf8]">«Как получить выигрыш»</span>
+              </p>
+            )}
           </div>
         </div>
       </Container>
