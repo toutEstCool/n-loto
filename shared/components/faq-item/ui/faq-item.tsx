@@ -31,7 +31,7 @@ export const FaqItem = ({ title, content, children }: FaqItemProps) => {
         <h2
           className="font-[500] font-Acrom pl-3 text-[#364059]
                 text-[18px] leading-6 max-w-[245px]
-                md:text-[24px] md:leading-8 
+                md:text-[24px] md:leading-8 md:max-w-[1000px]
                 xl:text-[28px] 
               "
         >

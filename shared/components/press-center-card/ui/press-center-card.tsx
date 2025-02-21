@@ -32,7 +32,12 @@ export const PressCenterCard = ({ news, showBorder }: Props) => {
           alt={news.newsTitle}
           width={1000}
           height={1000}
-          className="rounded-[12px] max-h-[360px] min-h-[360px] md:min-h-[100px] md:max-h-[196px]"
+          className={cn(
+            'rounded-[12px] max-h-[360px] min-h-[360px] md:max-h-[248px] md:min-h-[248px] xl:max-h-[196px] xl:min-h-[196px]',
+            {
+              'xl:max-h-[313px] xl:min-h-[313px]': showBorder,
+            },
+          )}
           style={{
             width: '100%',
             objectFit: 'cover',

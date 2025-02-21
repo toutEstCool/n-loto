@@ -73,7 +73,7 @@ export const PressCenterContent = ({ news }: Props) => {
         </h2>
         <div
           className={cn('flex flex-col gap-8', {
-            'grid grid-cols-1 md:grid-cols-2 gap-6': tab === 'press-reliz',
+            'grid grid-cols-1 xl:grid-cols-2 gap-6': tab === 'press-reliz',
           })}
         >
           {news.map((news) => (
