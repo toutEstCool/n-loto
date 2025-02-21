@@ -1,12 +1,17 @@
+import { getNews } from '@/sanity/lib/sanity';
+import { NewsType } from '@/sanity/schemaTypes/newsPostType';
 import { Breadcrumbs } from '@/shared/components/breadcrumbs/breadcrumbs';
+import { PressCenterContent } from '@/shared/components/press-center-content';
 import { Container } from '@/widgets/container';
 import React from 'react';
 
-const PressCenter = () => {
+const PressCenter = async () => {
   const breadcrumbItems = [
     { label: 'Главная', href: '/' },
     { label: 'Пресс-центр', href: '/press-center' },
   ];
+
+  const news: NewsType[] = await getNews();
 
   return (
     <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative mb-16 xl:mb-0">
@@ -30,8 +35,8 @@ const PressCenter = () => {
         </h1>
       </Container>
 
-      <Container className="flex flex-col xl:items-start xl:flex-row gap-6">
-        <div className="bg-white rounded-[20px] p-4 md:p-6 2xl:p-8 flex flex-col gap-8 w-full max-w-[1050px]"></div>
+      <Container className="flex flex-col gap-6">
+        <PressCenterContent news={news} />
       </Container>
     </div>
   );
