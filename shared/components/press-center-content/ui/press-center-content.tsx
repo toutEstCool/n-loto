@@ -63,12 +63,17 @@ export const PressCenterContent = ({ news }: Props) => {
           },
         )}
       >
-        <h2 className="text-[#364059] text-[42px] leading-[52px] font-bold font-Acrom">
+        <h2
+          className="text-[#364059] font-bold font-Acrom
+          text-[36px] leading-[42px]
+          xl:text-[42px] xl:leading-[52px]
+        "
+        >
           {tab === 'news' ? 'НОВОСТИ' : 'Пресс-релизы'}
         </h2>
         <div
           className={cn('flex flex-col gap-8', {
-            'grid grid-cols-2 gap-6': tab === 'press-reliz',
+            'grid grid-cols-1 md:grid-cols-2 gap-6': tab === 'press-reliz',
           })}
         >
           {news.map((news) => (
