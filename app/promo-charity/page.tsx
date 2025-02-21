@@ -1,9 +1,12 @@
+import { getPromoCharity } from '@/sanity/lib/sanity';
+import { PromoCharityType } from '@/sanity/schemaTypes/PromoCharityType';
 import { PromoCharityCard } from '@/shared/components/promo-charity-card';
 import { Container } from '@/widgets/container';
-import Image from 'next/image';
 import React from 'react';
 
-const PromoCharity = () => {
+const PromoCharity = async () => {
+  const charity: PromoCharityType[] = await getPromoCharity();
+
   return (
     <div className="mt-[70px] sm:mt-[88px] md:mt-[116px] min-h-screen relative mb-16 xl:mb-0">
       <Container>
@@ -29,8 +32,8 @@ const PromoCharity = () => {
         </div>
 
         <div className="flex flex-col gap-6 mt-6">
-          {[1, 2, 3].map((item) => (
-            <PromoCharityCard key={item} />
+          {charity.map((charity) => (
+            <PromoCharityCard key={charity._id} charity={charity} />
           ))}
         </div>
       </Container>
