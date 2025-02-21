@@ -27,9 +27,8 @@ const Feedback = () => {
       <div
         style={{
           backgroundImage: 'url(/images/feedback-bg.png)',
-          backgroundSize: 'cover',
         }}
-        className="w-full h-[450px] absolute top-0 left-0 -z-[1]"
+        className="w-full h-[400px] md:h-[450px] bg-[90%_0%] bg-[cover] md:bg-[cover] absolute top-0 left-0 -z-[1]"
       />
       <Container className="pt-3 mb-6 flex flex-col gap-8 text-white">
         <Breadcrumbs variant="white" items={breadcrumbItems} />
