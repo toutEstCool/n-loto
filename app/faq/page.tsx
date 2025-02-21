@@ -101,7 +101,7 @@ const faqItems = [
 const Faq = () => {
   const breadcrumbItems = [
     { label: 'Главная', href: '/' },
-    { label: 'Моментальные лотереи', href: '/get-lottery-win' },
+    { label: 'Вопросы и ответы', href: '/faq' },
   ];
 
   return (
@@ -125,7 +125,7 @@ const Faq = () => {
                 xl:text-4xl xl:font-bold
               "
         >
-          Моментальные лотереи
+          Вопросы и ответы
         </h1>
       </Container>
       <Container>

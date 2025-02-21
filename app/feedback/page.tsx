@@ -153,7 +153,7 @@ const Feedback = () => {
             </label>
           </div>
           <button
-            className="mb-16 bg-[#2f41b0] text-white py-3 px-5 font-HavalMittel-medium border-2 border-[#2f41b0] max-w-[136px]
+            className="mb-12 md:mb-16 bg-[#2f41b0] text-white py-3 px-5 font-HavalMittel-medium border-2 border-[#2f41b0] md:max-w-[136px]
             text-[20px] leading-6 rounded-[12px]
           "
           >
@@ -171,22 +171,53 @@ const Feedback = () => {
           <h2 className="text-[24px] leading-8 text-[#364059] font-Acrom font-bold">
             Контакты
           </h2>
-          <p
-            className="text-[#364059] font-HavalMittel-regular mb-4
+          <div
+            className="text-[#364059] font-HavalMittel-regular mb-4 flex flex-col gap-[18px]
             text-[14px] leading-4
             xl:text-[16px] xl:leading-5
           "
           >
-            Свяжитесь с нами через форму обратной связи
-          </p>
-          <button
-            className="whitespace-nowrap w-full border-2 border-[#2f41b0] text-white bg-[#2f41b0] font-HavalMittel-medium py-3 px-5 rounded-[12px] hover:bg-[white] hover:text-[#2f41b0]
-            text-[18px] leading-6 max-w-[170px]
-            xl:text-[20px] xl:max-w-[185px]
-          "
-          >
-            Обратная связь
-          </button>
+            <div>
+              <p>Юридический адрес:</p>
+              <p>
+                Россия, 142210, Московская область, г. Серпухов, Клубный пер.,
+                д. 1/2, пом. 203
+              </p>
+            </div>
+            <div>
+              <p>Почтовый адрес:</p>
+              <p>Бокс № 1004, Москва, 109992 *</p>
+            </div>
+            <div>
+              <p>
+                * Письма, адресованные на адрес а/я № 1, Москва, 115114, будут
+                автоматически переадресованы на почтовый адрес Бокс № 1004,
+                Москва, 109992.
+              </p>
+            </div>
+            <div>
+              <p>Пресс-служба «Национальной Лотереи»:</p>
+              <p>press@nationallottery.ru</p>
+            </div>
+            <div>
+              <p>Клиентский центр:</p>
+              <p>115114 г. Москва, ул. Кожевническая, д. 14.</p>
+              <p>Часы работы – Пн-Пт с 9.00 до 21.00</p>
+              <p>Сб-Вс и праздничные дни – с 9.00 до 18.00.</p>
+            </div>
+            <div>
+              <p className="font-HavalMittel-medium text-[16px] leading-5">
+                Телефон:
+              </p>
+              <p>8 800 333-7-333</p>
+            </div>
+            <div>
+              <p className="font-HavalMittel-medium text-[16px] leading-5">
+                E-mail:
+              </p>
+              <p>support@nloto.ru</p>
+            </div>
+          </div>
         </div>
       </Container>
     </div>

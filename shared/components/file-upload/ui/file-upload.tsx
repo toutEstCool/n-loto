@@ -25,17 +25,19 @@ export const FileUpload = () => {
   return (
     <div>
       <div
-        className="w-full rounded-[16px] border border-[#b9c1cd border-dashed p-8 text-center flex flex-col gap-4 text-[#364059]"
+        className="xl:w-full xl:rounded-[16px] xl:border border-[#b9c1cd border-dashed xl:p-8 text-center flex flex-col gap-4 text-[#364059]"
         onDrop={handleDrop}
         onDragOver={handleDragOver}
       >
-        <p className="text-[16px] leading-5 font-HavalMittel-medium">
+        <p className="hidden xl:block text-[16px] leading-5 font-HavalMittel-medium">
           Перетащите файлы сюда
         </p>
-        <p className="text-[16px] leading-5 font-HavalMittel-medium">или</p>
+        <p className="hidden xl:block text-[16px] leading-5 font-HavalMittel-medium">
+          или
+        </p>
 
         <label>
-          <button className="mx-auto flex justify-center gap-2 border-2 border-[#1b2c92] py-3 px-5 rounded-[24px] box-border">
+          <button className="xl:mx-auto flex justify-center gap-2 border-2 border-[#1b2c92] py-3 px-5 rounded-[24px] box-border">
             <Paperclip />
             <span className="text-[20px] leading-6 font-HavalMittel-medium text-black">
               Выберите файлы
