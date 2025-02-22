@@ -2,6 +2,7 @@ import { getNews } from '@/sanity/lib/sanity';
 import { NewsType } from '@/sanity/schemaTypes/newsPostType';
 import React, { useEffect } from 'react';
 import { NewsCard } from '../../news-card';
+import Link from 'next/link';
 
 export const News = () => {
   const [winners, setWinners] = React.useState<NewsType[]>([]);
@@ -25,9 +26,11 @@ export const News = () => {
         >
           Новости
         </h2>
-        <button className="hidden md:block border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px] text-[20px] leading-6 font-medium">
-          Все новости
-        </button>
+        <Link href="/press-center">
+          <button className="hidden md:block border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px] text-[20px] leading-6 font-medium">
+            Все новости
+          </button>
+        </Link>
       </div>
 
       <div className="flex gap-6 overflow-auto h-[565px] md:h-[284px] xl:h-auto xl:overflow-visible">
@@ -36,9 +39,11 @@ export const News = () => {
         ))}
       </div>
 
-      <button className="md:hidden border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px] text-[20px] leading-6 font-medium">
-        Все новости
-      </button>
+      <Link href="/press-center">
+        <button className="md:hidden border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px] text-[20px] leading-6 font-medium">
+          Все новости
+        </button>
+      </Link>
     </div>
   );
 };

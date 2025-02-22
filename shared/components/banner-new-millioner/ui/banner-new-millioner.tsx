@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export const BannerNewMillioner = () => {
@@ -35,9 +36,11 @@ export const BannerNewMillioner = () => {
           </p>
         </div>
       </div>
-      <button className="rounded-[12px] p-2 md:py-[10px] md:px-[20px] bg-white absolute bottom-6 left-[50%] -translate-x-[50%] text-[#59205b] text-[18px] md:text-[20px] leading-6 font-medium hover:text-white hover:bg-[#59205b] transition-[.3s]">
-        Недавние победы
-      </button>
+      <Link href="/winnings">
+        <button className="rounded-[12px] p-2 md:py-[10px] md:px-[20px] bg-white absolute bottom-6 left-[50%] -translate-x-[50%] text-[#59205b] text-[18px] md:text-[20px] leading-6 font-medium hover:text-white hover:bg-[#59205b] transition-[.3s]">
+          Недавние победы
+        </button>
+      </Link>
     </div>
   );
 };

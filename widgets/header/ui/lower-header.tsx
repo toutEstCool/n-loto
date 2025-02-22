@@ -1,4 +1,5 @@
 import { useMenuVisibility } from '@/features/header';
+import { ModalRegister } from '@/shared/components/modal-register';
 import { BurgerMenu } from '@/widgets/burger-menu';
 import { Container } from '@/widgets/container';
 import Image from 'next/image';
@@ -77,7 +78,8 @@ export const LowerHeader = () => {
               <li>
                 <button>
                   <span>
-                    <span>Вход / Регистрация</span>
+                    {/* <span></span> */}
+                    <ModalRegister />
                   </span>
                 </button>
               </li>
