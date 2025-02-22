@@ -74,7 +74,7 @@ export const LowerHeader = () => {
           </div>
           {/* Right Section */}
           <div>
-            <ul className="text-[#2F41B0] font-HavalMittel-regular text-[14px] md:text-[16px] font-medium">
+            <ul className="text-[#2F41B0] font-HavalMittel-regular text-[14px] md:text-[20px] font-medium">
               <li>
                 <button>
                   <span>
