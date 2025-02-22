@@ -37,7 +37,8 @@ export const PromoCharityCard = ({ charity }: Props) => {
             xl:text-[22px]
           "
           >
-            {charity.title}
+            {/* {charity.title} */}
+            текст текст текст
           </h3>
 
           <div
@@ -47,7 +48,10 @@ export const PromoCharityCard = ({ charity }: Props) => {
               ${isExpanded ? '' : 'max-h-[145px] overflow-hidden'}`}
           >
             {charity.description.map((text, index) => (
-              <p key={index}>{text}</p>
+              <p key={index}>
+                {/* {text} */}
+                текст текст текст
+              </p>
             ))}
           </div>
 
@@ -60,7 +64,7 @@ export const PromoCharityCard = ({ charity }: Props) => {
               "
               onClick={() => setIsExpanded(true)}
             >
-              Показать весь текст
+              текст текст текст
             </button>
           )}
         </div>
@@ -84,22 +88,28 @@ export const PromoCharityCard = ({ charity }: Props) => {
                 className="rounded-[12px]"
               />
               <p className="text-[#5e6976] text-[20px] leading-5 font-HavalMittel-bold">
-                {charity.companyName}
+                {/* {charity.companyName} */}
+                текст текст
               </p>
             </div>
             <button className="border-2 border-[#2f41b0] rounded-[12px] py-3 px-5 text-[#2f41b0] text-[20px] leading-6 font-HavalMittel-medium">
-              Купить билет • {charity.ticketPrice} ₽
+              {/* Купить билет • {charity.ticketPrice} ₽ */}
+              текст текст текст
             </button>
           </div>
         </div>
       </div>
 
       <Image
-        src={charity.bannerImage}
+        src={
+          false
+            ? charity.bannerImage
+            : 'https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg'
+        }
         alt="promo_charity-card"
         width={1000}
         height={1000}
-        className="min-h-[180px] md:min-h-[360px] rounded-[12px]"
+        className="min-h-[180px] max-h-[180px] md:min-h-[360px] md:max-h-[360px] rounded-[12px]"
         style={{ width: '100%', height: '100%' }}
       />
       <div
@@ -119,10 +129,11 @@ export const PromoCharityCard = ({ charity }: Props) => {
           {charity.companyName}
         </p>
         <button className="md:hidden border-2 border-[#2f41b0] rounded-[12px] px-5 py-3 text-[#2f41b0] text-[18px] leading-6 font-HavalMittel-medium">
-          Купить
+          текст текст
         </button>
         <button className="hidden md:block md:h-[32px] border-2 border-[#2f41b0] rounded-[12px] p-1 text-[#2f41b0] text-[18px] leading-6 font-HavalMittel-medium">
-          Купить • {charity.ticketPrice} ₽
+          {/* Купить • {charity.ticketPrice} ₽ */}
+          текст текст текст
         </button>
       </div>
     </div>

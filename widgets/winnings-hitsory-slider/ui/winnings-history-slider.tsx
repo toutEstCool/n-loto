@@ -33,8 +33,8 @@ export const WinningsHistorySlider = () => {
         xl:text-[42px] xl:leading-[52px]
       "
       >
-        Истории
-        <br className="xs:hidden" /> победителей
+        текст текст
+        <br className="xs:hidden" /> текст
       </h2>
       <div className="my-6 xl:pb-[88px]">
         <Carousel

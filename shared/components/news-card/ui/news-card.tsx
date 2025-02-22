@@ -20,7 +20,11 @@ export const NewsCard = ({ winner }: Props) => {
   return (
     <div className="min-w-[300px] max-w-[300px] w-[300px] xl:w-full xl:max-w-[456px]">
       <Image
-        src={winner.image}
+        src={
+          false
+            ? winner.image
+            : 'https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg'
+        }
         alt="winner"
         width={1000}
         height={1000}
@@ -45,10 +49,10 @@ export const NewsCard = ({ winner }: Props) => {
                 xl:text-[24px] xl:leading-8
               "
         >
-          {winner.newsTitle}
+          {/* {winner.newsTitle} */} текст текст текст текст текст текст
         </h3>
         <button className="flex gap-2 text-[#1f48d8] text-[20px] leading-6 font-normal">
-          Читать <ArrowRight width={14} height={14} />
+          текст текст <ArrowRight width={14} height={14} />
         </button>
       </div>
     </div>

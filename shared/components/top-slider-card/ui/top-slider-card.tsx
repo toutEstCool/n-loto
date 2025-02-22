@@ -9,7 +9,7 @@ interface ICardProps {
 }
 
 export const TopSliderCard: React.FC<ICardProps> = (props) => {
-  const { amount, winners, timeAgo, isBigWin } = props;
+  const { isBigWin } = props;
 
   return (
     <div
@@ -17,16 +17,16 @@ export const TopSliderCard: React.FC<ICardProps> = (props) => {
       style={{ userSelect: 'none' }}
     >
       <div className="flex items-center justify-between w-full">
-        <h3 className="font-extrabold text-[13px] sm:text-[18px]">4x4</h3>
+        <h3 className="font-extrabold text-[13px] sm:text-[18px]">Текст,</h3>
         {isBigWin && (
           <p className="h-full text-[#8f42cb] font-medium text-[11px] sm:text-[16px] whitespace-nowrap">
-            Крупный выигрыш!
+            Текст, Текст,
           </p>
         )}
       </div>
       <div>
         <h2 className="text-[24px] sm:text-[32px] text-[#364059] font-bold">
-          {amount} ₽
+          Текст,
         </h2>
       </div>
       <div className="flex items-center justify-between">
@@ -34,14 +34,14 @@ export const TopSliderCard: React.FC<ICardProps> = (props) => {
           <div className="flex items-center gap-1">
             <Tag color="#5e6976" width={12} height={12} />
             <span className="text-[#5e6976] text-[10px] sm:text-[13px] font-medium">
-              {winners} выйграл
+              Текст,
             </span>
           </div>
         )}
         <div className="flex items-center gap-1">
           <Clock3 color="#B9C1CD" width={12} height={12} />
           <span className="text-[#B9C1CD] text-[10px] sm:text-[13px] font-medium">
-            {timeAgo}
+            Текст, Текст, Текст,
           </span>
         </div>
       </div>

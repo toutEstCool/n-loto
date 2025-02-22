@@ -6,15 +6,16 @@ import React from 'react';
 
 const CheckWin = () => {
   const breadcrumbItems = [
-    { label: 'Главная', href: '/' },
-    { label: 'Проверка билета', href: '/check-win' },
+    { label: 'текст', href: '/' },
+    { label: ' текст текст', href: '/check-win' },
   ];
 
   return (
     <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative">
       <div
         style={{
-          backgroundImage: 'url(/images/check_win-bg.png)',
+          backgroundImage:
+            'url(https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg)',
           backgroundSize: 'cover',
         }}
         className="w-full h-[450px] absolute top-0 left-0 -z-[1]"
@@ -28,7 +29,7 @@ const CheckWin = () => {
             xl:text-4xl xl:font-bold
           "
         >
-          Проверка билета
+          текст текст текст
         </h1>
       </Container>
 
@@ -41,7 +42,7 @@ const CheckWin = () => {
               md:text-[28px] md:leading-8
             "
             >
-              Проверить билет на сайте
+              текст текст текст текст текст текст
             </h2>
             <div className="flex gap-2">
               <p
@@ -50,7 +51,7 @@ const CheckWin = () => {
                 xl:text-[18px] xl:leading-6
               "
               >
-                Номер билета
+                текст текст текст
               </p>
               <div>
                 <HelpCircle
@@ -74,7 +75,7 @@ const CheckWin = () => {
                 xl:text-[20px]
               "
               >
-                Проверить
+                текст
               </button>
             </div>
           </div>
@@ -86,37 +87,38 @@ const CheckWin = () => {
               md:text-[28px] md:leading-8
             "
             >
-              Проверить билет быстрее и проще по QR-коду
+              текст текст текст текст текст текст текст текст текст
             </h2>
             <div className="relative">
               <Image
-                src="/images/check_win-check-QR.png"
+                src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
                 alt="qr"
                 width={1000}
                 height={1000}
-                className="md:block hidden"
+                className="md:block hidden max-h-[400px] rounded-[12px]"
                 style={{
                   width: '100%',
                   height: 'auto',
                 }}
               />
               <Image
-                src="/images/check_win-mobile.png"
+                src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
                 alt="qr"
                 width={1000}
                 height={1000}
-                className="md:hidden rounded-[12px]"
+                className="md:hidden max-h-[400px] rounded-[12px]"
                 style={{
                   width: '100%',
                   height: 'auto',
                 }}
               />
               <div
-                className=" md:absolute md:right-0 md:top-0 md:max-w-[324px] lg:max-w-[432px]"
+                className=" md:absolute md:right-0 md:top-0 md:max-w-[324px] lg:max-w-[432px] rounded-[12px]"
                 style={{
                   width: '100%',
                   height: '100%',
-                  backgroundImage: 'url(/images/check_win-check-QR2.png)',
+                  backgroundImage:
+                    'url(https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg)',
                   backgroundSize: '100% 100%',
                 }}
               >
@@ -132,12 +134,12 @@ const CheckWin = () => {
                       xl:text-[28px] xl:leading-8
                     "
                     >
-                      Скачать мобильное приложение
+                      текст текст текст текст
                     </h3>
                     <button className="w-full bg-[#3ddb85] xl:hidden px-5 py-3 text-[18px] leading-6 rounded-[12px] font-HavalMittel-medium">
-                      Скачать для Android
+                      текст текст текст
                     </button>
-                    <p className="hidden xl:flex">Сканируйте QR-код</p>
+                    <p className="hidden xl:flex">текст текст текст</p>
                     <Image
                       src="/icons/QR.svg"
                       alt="qr"
@@ -146,11 +148,11 @@ const CheckWin = () => {
                       height={100}
                     />
                   </div>
-                  <ul className="flex mt-[50px] md:mt-0 md:hidden xl:flex flex-col gap-1">
+                  <ul className="flex mt-[50px] md:mt-0 lg:hidden xl:flex flex-col gap-1">
                     {[
-                      'Простая регистрация',
-                      'Быстрая покупка и проверка билетов',
-                      'Моментальный вывод выигрыша',
+                      'текст текст текст ',
+                      'текст текст текст текст текст',
+                      'текст текст текст текст',
                     ].map((item) => (
                       <li key={item} className="flex gap-2 ">
                         <Star
@@ -181,16 +183,16 @@ const CheckWin = () => {
               backgroundSize: '100% 100%',
               width: '100%',
             }}
-            className="mb-16 max-w-[1440px] h-[477px] md:h-[323px] bg-[url(/images/check_win-mobile_lottery.png)] md:bg-[url(/images/check_win-banner.png)]"
+            className="mb-16 max-w-[1440px] rounded-[12px] h-[477px] md:h-[323px] bg-[url(https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg)] md:bg-[url(https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg)]"
           >
             <div className="p-11 md:max-w-[310px] lg:max-w-[577px] w-full h-full flex flex-col gap-4">
               <div className="flex flex-col gap-2 text-white">
                 <Image
-                  src="/icons/mechtallion.svg"
+                  src="/icons/newLogo.png"
                   alt="banner"
                   width={1000}
                   height={1000}
-                  className="max-w-[246px] mb-2 hidden md:block"
+                  className="max-w-[246px] w-full max-h-[42px] mb-2 hidden md:block"
                   style={{
                     width: '100%',
                     height: 'auto',
@@ -202,12 +204,12 @@ const CheckWin = () => {
                   lg:text-[28px] lg:leading-8
                   "
                 >
-                  Билеты онлайн
+                  текст текст текст
                 </h3>
                 <ul>
                   {[
-                    'Результаты розыгрыша в личном кабинете',
-                    'Моментальный вывод выигрыша на карту',
+                    'текст текст текст текст текст текст ',
+                    'текст текст текст текст текст текст ',
                   ].map((item) => (
                     <li key={item} className="flex gap-2 ">
                       <Star
@@ -230,7 +232,7 @@ const CheckWin = () => {
                 </ul>
               </div>
               <button className="mt-auto md:mt-0 py-3 px-5 border-2 border-white text-white text-[20px] leading-6 font-medium rounded-[12px]">
-                Купить билет
+                текст
               </button>
             </div>
           </div>

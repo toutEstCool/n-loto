@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { HeroWinnerCard } from '../../hero-winner-card';
 import { getWinners } from '@/sanity/lib/sanity';
 import { WinnersType } from '@/sanity/schemaTypes/winnersType';
+import Link from 'next/link';
 
 export const WinnerHistory = () => {
   const [winners, setWinners] = React.useState<WinnersType[]>([]);
@@ -32,16 +33,18 @@ export const WinnerHistory = () => {
           xl:text-[36px] xl:leading-[42px]
         "
         >
-          Истории наших победителей
+          Текст, Текст, Текст, Текст,
         </h2>
-        <button
-          className="hidden md:block border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px]  
+        <Link href="/winnings">
+          <button
+            className="hidden md:block border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px]  
           text-[18px] leading-6 font-medium font-HavalMittel-medium
           xl:text-[20px]
-        "
-        >
-          Больше победителей
-        </button>
+          "
+          >
+            Текст, Текст,
+          </button>
+        </Link>
       </div>
       <Carousel
         className=""
@@ -56,7 +59,7 @@ export const WinnerHistory = () => {
           {winners.map((winner) => (
             <CarouselItem
               key={winner._id}
-              className="basis-1/1 max-w-[270px] xl:max-w-[1000px] md:basis-1/2 lg:basis-1/4 xl:basis-1/5"
+              className="basis-1/1 max-w-[270px] w-full xl:max-w-[1000px] md:basis-1/2 xl:basis-1/5"
             >
               <HeroWinnerCard winner={winner} />
             </CarouselItem>

@@ -18,15 +18,16 @@ const CustomInput = () => {
 
 const Feedback = () => {
   const breadcrumbItems = [
-    { label: 'Главная', href: '/' },
-    { label: 'Обратная связь', href: '/feedback' },
+    { label: 'текст текст', href: '/' },
+    { label: 'текст текст текст', href: '/feedback' },
   ];
 
   return (
     <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative mb-16 xl:mb-0">
       <div
         style={{
-          backgroundImage: 'url(/images/feedback-bg.png)',
+          backgroundImage:
+            'url(https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg)',
         }}
         className="w-full h-[400px] md:h-[450px] bg-[90%_0%] bg-[cover] md:bg-[cover] absolute top-0 left-0 -z-[1]"
       />
@@ -39,7 +40,7 @@ const Feedback = () => {
                 xl:text-[36px] xl:leading-[42px]
               "
         >
-          Обратная связь
+          текст текст текст
         </h1>
       </Container>
 
@@ -47,14 +48,14 @@ const Feedback = () => {
         <div className="bg-white rounded-[20px] p-4 md:p-6 2xl:p-8 flex flex-col gap-8 w-full max-w-[1050px]">
           <div className="max-w-[644px] w-full flex flex-col gap-2">
             <h2 className="font-Acrom font-medium text-[24px] leading-8 text-[#364059]">
-              У вас есть вопросы?
+              текст текст текст
             </h2>
             <p
               className="font-HavalMittel-medium text-[#364059]
               text-[16px] leading-5
               "
             >
-              Свяжитесь с нами через форму обратной связи
+              текст текст текст текст текст текст текст
             </p>
           </div>
           <form>
@@ -63,7 +64,7 @@ const Feedback = () => {
               text-[24px] leading-8 mb-8
             "
             >
-              Личные данные
+              текст текст текст
             </h2>
             <div className="max-w-[310px] flex flex-col gap-8">
               <label
@@ -71,7 +72,7 @@ const Feedback = () => {
               text-[14px] leading-4 
             "
               >
-                Представьтесь
+                текст текст текст
                 <CustomInput />
               </label>
               <label
@@ -79,7 +80,7 @@ const Feedback = () => {
                 text-[14px] leading-4 
               "
               >
-                Номер телефона*
+                текст текст текст
                 <CustomInput />
               </label>
               <label
@@ -87,7 +88,7 @@ const Feedback = () => {
                 text-[14px] leading-4 
               "
               >
-                Электронная почта*
+                текст текст текст
                 <CustomInput />
               </label>
             </div>
@@ -98,14 +99,14 @@ const Feedback = () => {
               text-[24px] leading-8 mb-8
             "
               >
-                Цель обращения
+                текст текст текст
               </h2>
               <label
                 className="max-w-[310px] flex flex-col gap-1 text-[#101820]
                 text-[14px] leading-4 
               "
               >
-                Цель обращения*
+                текст текст текст
                 <CustomInput />
               </label>
               <label
@@ -113,7 +114,7 @@ const Feedback = () => {
                 text-[14px] leading-4 
               "
               >
-                Текст вопроса*
+                текст текст текст
                 <textarea
                   name=""
                   id=""
@@ -126,15 +127,15 @@ const Feedback = () => {
           </form>
           <div className="mt-8 max-w-[644px] flex flex-col gap-2">
             <h2 className="text-[14px] leading-4 font-HavalMittel-medium">
-              Файл
+              текст
             </h2>
             <p className="text-[#929eab] text-[14px] leading-5">
-              Вы можете прикрепить не более 5 файлов общим размером не более
-              20мб
+              текст текст текст текст текст текст текст текст текст текст текст
+              текст
             </p>
             <div>
               <button className="text-[#024cf8] font-HavalMittel-medium text-[14px] leading-5">
-                Доступные форматы файлов
+                текст текст текст
               </button>
             </div>
             <FileUpload />
@@ -146,8 +147,8 @@ const Feedback = () => {
                 className="w-4 h-4 appearance-none border border-[#5e6976] rounded-[4px] checked:bg-[#364059] checked:border-transparent focus:outline-none"
               />
               <p className="text-[#364059] text-[14px] leading-4 font-HavalMittel-medium">
-                Я согласен c <span className="text-[#024cf8]">политикой</span>{' '}
-                обработки данных
+                текст текст <span className="text-[#024cf8]">текст текст</span>{' '}
+                текст текст текст
               </p>
             </label>
           </div>
@@ -156,10 +157,10 @@ const Feedback = () => {
             text-[20px] leading-6 rounded-[12px]
           "
           >
-            Отправить
+            текст
           </button>
           <p className="text-[#5e6976] text-[14px] leading-4 font-HavalMittel-regular">
-            *Обязательные поля для заполнения
+            текст текст текст текст
           </p>
         </div>
         <div
@@ -168,7 +169,7 @@ const Feedback = () => {
         "
         >
           <h2 className="text-[24px] leading-8 text-[#364059] font-Acrom font-bold">
-            Контакты
+            текст текст
           </h2>
           <div
             className="text-[#364059] font-HavalMittel-regular mb-4 flex flex-col gap-[18px]
@@ -177,44 +178,40 @@ const Feedback = () => {
           "
           >
             <div>
-              <p>Юридический адрес:</p>
-              <p>
-                Россия, 142210, Московская область, г. Серпухов, Клубный пер.,
-                д. 1/2, пом. 203
-              </p>
+              <p>текст текст текст</p>
+              <p>текст текст текст текст текст текст текст текст текст</p>
             </div>
             <div>
-              <p>Почтовый адрес:</p>
-              <p>Бокс № 1004, Москва, 109992 *</p>
+              <p>текст текст текст</p>
+              <p>текст текст текст</p>
             </div>
             <div>
               <p>
-                * Письма, адресованные на адрес а/я № 1, Москва, 115114, будут
-                автоматически переадресованы на почтовый адрес Бокс № 1004,
-                Москва, 109992.
+                текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст
               </p>
             </div>
             <div>
-              <p>Пресс-служба «Национальной Лотереи»:</p>
-              <p>press@nationallottery.ru</p>
+              <p>текст текст текст текст текст текст</p>
+              <p>текст текст текст текст текст текст</p>
             </div>
             <div>
-              <p>Клиентский центр:</p>
-              <p>115114 г. Москва, ул. Кожевническая, д. 14.</p>
-              <p>Часы работы – Пн-Пт с 9.00 до 21.00</p>
-              <p>Сб-Вс и праздничные дни – с 9.00 до 18.00.</p>
+              <p>текст текст текст </p>
+              <p>текст текст текст текст текст текст </p>
+              <p>текст текст текст текст текст текст </p>
+              <p>текст текст текст текст текст текст текст текст текст </p>
             </div>
             <div>
               <p className="font-HavalMittel-medium text-[16px] leading-5">
-                Телефон:
+                текст текст текст
               </p>
-              <p>8 800 333-7-333</p>
+              <p>текст текст текст </p>
             </div>
             <div>
               <p className="font-HavalMittel-medium text-[16px] leading-5">
-                E-mail:
+                текст текст текст
               </p>
-              <p>support@nloto.ru</p>
+              <p>текст текст текст </p>
             </div>
           </div>
         </div>

@@ -1,11 +1,12 @@
-import { useMenuVisibility } from '@/features/header';
+// import { useMenuVisibility } from '@/features/header';
+import { ModalRegister } from '@/shared/components/modal-register';
 import { BurgerMenu } from '@/widgets/burger-menu';
 import { Container } from '@/widgets/container';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export const LowerHeader = () => {
-  const { isVisible, toggleVisibility } = useMenuVisibility();
+  // const { isVisible, toggleVisibility } = useMenuVisibility();
 
   return (
     <div className="bg-[#FFFFFF] py-1">
@@ -20,11 +21,11 @@ export const LowerHeader = () => {
             <Link href="/">
               <div className="mr-8">
                 <Image
-                  src={'/logo.svg'}
+                  src={'/icons/newLogo.png'}
                   alt="Logo"
                   width={150}
                   height={40}
-                  sizes="(max-width: 768px) 88px, (max-width: 1280px) 110px, 110px"
+                  sizes="(max-width: 1280px) 110px, 110px"
                   style={{
                     width: '100%',
                     height: 'auto',
@@ -35,9 +36,8 @@ export const LowerHeader = () => {
               </div>
             </Link>
             <ul className="hidden xl:flex items-center gap-8 text-[#2F41B0] text-[16px] font-medium">
-              <li>
+              {/* <li>
                 <div className="w-full relative ml-6">
-                  {/* Кнопка */}
                   <button
                     className="border-t-[1px] border-b-[1px] border-[#8b3a9a] text-[#8b3a9a] font-black"
                     onClick={toggleVisibility}
@@ -45,7 +45,6 @@ export const LowerHeader = () => {
                     Второй шанс
                   </button>
 
-                  {/* Блок, который появляется под кнопкой */}
                   {isVisible && (
                     <div className="absolute z-50 top-full left-0 w-[340px]  bg-[#fff] shadow-lg rounded-md flex flex-col gap-2 transition-all duration-300 mt-6 p-3">
                       <div className="flex gap-2">
@@ -62,7 +61,7 @@ export const LowerHeader = () => {
                     </div>
                   )}
                 </div>
-              </li>
+              </li> */}
               <li className="hover:text-[#8b3a9a] transition-all duration-300 cursor-pointer text-[20px] font-HavalMittel-regular">
                 <Link href={'/special'}>Акции</Link>
               </li>
@@ -73,13 +72,9 @@ export const LowerHeader = () => {
           </div>
           {/* Right Section */}
           <div>
-            <ul className="text-[#2F41B0] font-HavalMittel-regular text-[14px] md:text-[16px] font-medium">
+            <ul className="text-[#2F41B0] font-HavalMittel-regular text-[14px] md:text-[20px] font-medium">
               <li>
-                <button>
-                  <span>
-                    <span>Вход / Регистрация</span>
-                  </span>
-                </button>
+                <ModalRegister />
               </li>
             </ul>
           </div>

@@ -9,7 +9,7 @@ const TimerLabel = () => {
     <div className="inline-flex items-center gap-1 p-1 rounded-[12px] bg-[#e4002b] text-white">
       <Clock size={16} />
       <p className="text-[10px] font-HavalMittel-regular">
-        Через 10 мин 20 сек
+        текст, текст, текст, текст
       </p>
     </div>
   );
@@ -27,11 +27,13 @@ export const LotteryCountCard = () => {
         <TimerLabel />
       </div>
       <Image
-        src={'/images/color-balls.png'}
+        src={
+          'https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg'
+        }
         alt="lottery-balls"
         width={500}
         height={300}
-        className="xl:max-w-[237px] max-h-[100px] xl:max-h-[144px]"
+        className="xl:max-w-[237px] max-h-[100px] xl:max-h-[144px] rounded-[12px]"
         style={{
           width: '100%',
           height: '100%',
@@ -55,7 +57,7 @@ export const LotteryCountCard = () => {
         </div>
         <div className="text-center border-y-[2px] border-[#364059] ">
           <p className="xl:text-[28px] text-[24px] leading-8 font-medium font-HavalMittel text-[#364059]">
-            100 ₽
+            текст,
           </p>
         </div>
       </div>

@@ -7,8 +7,8 @@ import React, { Suspense } from 'react';
 
 const PressCenter = async () => {
   const breadcrumbItems = [
-    { label: 'Главная', href: '/' },
-    { label: 'Пресс-центр', href: '/press-center' },
+    { label: 'текст текст', href: '/' },
+    { label: 'текст текст', href: '/press-center' },
   ];
 
   const news: NewsType[] = await getNews();
@@ -17,7 +17,8 @@ const PressCenter = async () => {
     <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative mb-16 xl:mb-0">
       <div
         style={{
-          backgroundImage: 'url(/images/check_win-bg.png)',
+          backgroundImage:
+            'url(https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg)',
           backgroundSize: 'cover',
         }}
         className="w-full h-[450px] absolute top-0 left-0 -z-[1]"
@@ -31,7 +32,7 @@ const PressCenter = async () => {
                   xl:text-[36px] xl:leading-[42px]
                 "
         >
-          Новости
+          текст текст текст
         </h1>
       </Container>
 

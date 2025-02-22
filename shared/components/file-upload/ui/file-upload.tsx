@@ -30,17 +30,17 @@ export const FileUpload = () => {
         onDragOver={handleDragOver}
       >
         <p className="hidden xl:block text-[16px] leading-5 font-HavalMittel-medium">
-          Перетащите файлы сюда
+          текст текст текст текст
         </p>
         <p className="hidden xl:block text-[16px] leading-5 font-HavalMittel-medium">
-          или
+          текст
         </p>
 
         <label>
           <button className="xl:mx-auto flex justify-center gap-2 border-2 border-[#1b2c92] py-3 px-5 rounded-[24px] box-border">
             <Paperclip />
             <span className="text-[20px] leading-6 font-HavalMittel-medium text-black">
-              Выберите файлы
+              текст текст текст
             </span>
           </button>
           <input

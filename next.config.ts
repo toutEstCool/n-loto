@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
       'online-static.website.cloud.croc.ru',
       'i.pinimg.com',
       'cdn.sanity.io',
+      'img.freepik.com',
+      'photogora.ru',
     ],
   },
 };

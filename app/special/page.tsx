@@ -6,8 +6,8 @@ import { getSpecials } from '@/sanity/lib/sanity';
 
 const Special = async () => {
   const breadcrumbItems = [
-    { label: 'Главная', href: '/' },
-    { label: 'Акции', href: '/special' },
+    { label: 'текст текст', href: '/' },
+    { label: 'текст текст текст', href: '/special' },
   ];
 
   const specials = await getSpecials();
@@ -32,7 +32,7 @@ const Special = async () => {
           xl:text-[42px] xl:leading-[52px]
         "
         >
-          Акции
+          текст текст
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">

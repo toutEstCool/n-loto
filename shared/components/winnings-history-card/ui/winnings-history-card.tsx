@@ -1,5 +1,5 @@
 import { WinnersType } from '@/sanity/schemaTypes/winnersType';
-import { formatNumber } from '@/shared/lib/utils';
+// import { formatNumber } from '@/shared/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 
@@ -12,16 +12,21 @@ export const WinningsHistoryCard = ({ winner }: Props) => {
     <div className="bg-white p-4 rounded-[24px] max-w-[280px] w-full">
       <div className="mb-3 relative cursor-pointer group">
         <Image
-          src={winner.thumbnail}
+          src={
+            false
+              ? winner.thumbnail
+              : 'https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg'
+          }
           alt="winners"
           width={1000}
           height={1000}
+          className="rounded-[12px] max-h-[128px] md:max-h-[150px] xl:max-h-[140px]"
           style={{
             width: '100%',
             height: 'auto',
           }}
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-[#112d73] bg-opacity-50 group-hover:bg-[#112d73] flex items-center justify-center group-hover:bg-opacity-80 transition-all duration-300">
+        <div className="rounded-[12px] absolute top-0 left-0 w-full h-full bg-[#112d73] bg-opacity-50 group-hover:bg-[#112d73] flex items-center justify-center group-hover:bg-opacity-80 transition-all duration-300">
           <div className="w-11 h-11 bg-[#fff5] rounded-full flex items-center justify-center opacity-100 transform scale-100 group-hover:scale-150 transition-transform duration-300">
             <Image src="/icons/play.svg" alt="play" width={24} height={24} />
           </div>
@@ -33,7 +38,8 @@ export const WinningsHistoryCard = ({ winner }: Props) => {
         xl:text-[24px] xl:leading-8
       "
       >
-        {winner.name}
+        {/* {winner.name} */}
+        текст текст
       </h2>
       <p
         className="mb-1 font-HavalMittel-regular text-[#5e6976]
@@ -41,7 +47,8 @@ export const WinningsHistoryCard = ({ winner }: Props) => {
         xl:text-[16px] xl:leading-5
       "
       >
-        {winner.region}
+        {/* {winner.region} */}
+        текст текст текст текст текст
       </p>
       <div className="py-1.5 pr-3 pl-10 bg-[#efebe0] inline-flex gap-2 object-contain rounded-[8px] relative">
         <Image
@@ -57,19 +64,30 @@ export const WinningsHistoryCard = ({ winner }: Props) => {
           xl:text-[20px] xl:leading-6 
         "
         >
-          {formatNumber(+winner.amount)} ₽
+          {/* {formatNumber(+winner.amount)} ₽ */}
+          текст
         </p>
       </div>
       <div className="flex justify-between items-center mt-3">
         <div className="flex gap-2 items-center">
-          <Image src={winner?.companyLogo} alt="palm" width={28} height={28} />
+          <Image
+            src={
+              false
+                ? winner?.companyLogo
+                : 'https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg'
+            }
+            alt="palm"
+            width={28}
+            height={28}
+          />
           <p
             className="font-HavalMittel-regular text-[#364059]
             text-[16px] leading-5
             xl:text-[18px] xl:leading-6
           "
           >
-            {winner.company}
+            {/* {winner.company} */}
+            текст
           </p>
         </div>
 
@@ -79,7 +97,7 @@ export const WinningsHistoryCard = ({ winner }: Props) => {
           xl:text-[18px] xl:leading-6
         "
         >
-          100 ₽
+          текст
         </button>
       </div>
     </div>

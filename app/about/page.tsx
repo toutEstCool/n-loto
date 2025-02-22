@@ -4,120 +4,45 @@ import React from 'react';
 import { Breadcrumbs } from '@/shared/components/breadcrumbs/breadcrumbs';
 
 const reports = [
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-1Т» за 2021 год',
-    id: 1,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-1Т» за 2022 год',
-    id: 2,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-1Т» за 2023 год',
-    id: 3,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-2Т» за 2022 год',
-    id: 4,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-2Т» за 2023 год',
-    id: 5,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-3б» за 2022 год',
-    id: 6,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-3Б» за 2023 год',
-    id: 7,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-3Т» за 2020 год',
-    id: 8,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-3Т» за 2021 год',
-    id: 9,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-3Т» за 2023 год',
-    id: 10,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-4Б» за 2023 год',
-    id: 11,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-4Т» за 2022 год',
-    id: 12,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-4Т» за 2023 год',
-    id: 13,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-5Т» за 2020 год',
-    id: 14,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-5Т» за 2021 год',
-    id: 15,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-5Т» за 2023 год',
-    id: 16,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-6Б» за 2020 год',
-    id: 17,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-6б» за 2021 год',
-    id: 18,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-6б» за 2022 год',
-    id: 19,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-6Б» за 2023 год',
-    id: 20,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-7Б» за 2023 год',
-    id: 21,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-8б» за 2022 год',
-    id: 22,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-8Б» за 2023 год',
-    id: 23,
-  },
-  {
-    title: 'Отчет о проведении лотереи «ВГЛ-9Б» за 2023 год',
-    id: 24,
-  },
-  {
-    title:
-      'Сводная ведомость результатов проведения специальной оценки условий труда',
-    id: 25,
-  },
+  { title: 'текст текст текст текст «текст» текст текст', id: 1 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 2 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 3 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 4 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 5 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 6 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 7 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 8 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 9 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 10 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 11 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 12 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 13 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 14 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 15 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 16 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 17 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 18 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 19 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 20 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 21 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 22 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 23 },
+  { title: 'текст текст текст текст «текст» текст текст', id: 24 },
+  { title: 'текст текст текст текст текст текст текст текст текст', id: 25 },
 ];
 
 const About = () => {
   const breadcrumbItems = [
-    { label: 'Главная', href: '/' },
-    { label: 'О компании', href: '/about' },
+    { label: 'текст текст', href: '/' },
+    { label: 'текст текст текст', href: '/about' },
   ];
 
   return (
     <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative">
       <div
         style={{
-          backgroundImage: 'url(/images/about-bg.png)',
+          backgroundImage:
+            'url(https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg)',
           backgroundSize: 'cover',
         }}
         className="w-full h-[450px] absolute top-0 left-0 -z-[1]"
@@ -131,7 +56,7 @@ const About = () => {
           xl:text-[36px] xl:leading-[42px]
         "
         >
-          О компании
+          текст текст
         </h1>
       </Container>
 
@@ -143,9 +68,9 @@ const About = () => {
             xl:text-[28px]
           "
           >
-            Мы — новая государственная лотерея, организованная Министерством
-            финансов Российской Федерации. Оператор лотереи: ООО «Спортивные
-            Лотереи».
+            текст текст текст текст текст текст текст текст текст текст текст
+            текст текст текст текст текст текст текст текст текст текст текст
+            текст текст
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-between">
             <div
@@ -160,11 +85,12 @@ const About = () => {
                 xl:text-[28px]
               "
               >
-                НАША МИССИЯ
+                текст текст
               </h2>
               <Image
-                src="/images/about-space-rocket.png"
+                src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
                 alt="our mission"
+                className="rounded-[12px]"
                 width={1000}
                 height={1000}
                 style={{
@@ -178,8 +104,8 @@ const About = () => {
                 xl:text-[20px] 
               "
               >
-                Сделать лотереи по-настоящему национальной традицией,
-                объединяющей поколения, где каждый сможет найти свою игру.
+                текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст текст текст текст
               </p>
             </div>
             <div
@@ -194,11 +120,12 @@ const About = () => {
                 xl:text-[28px]
               "
               >
-                НАШИ ЦЕННОСТИ
+                текст текст
               </h2>
               <Image
-                src="/images/about-space-earth.png"
+                src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
                 alt="our mission"
+                className="rounded-[12px]"
                 width={1000}
                 height={1000}
                 style={{
@@ -212,16 +139,17 @@ const About = () => {
                 xl:text-[20px] 
               "
               >
-                Играть честно. Действовать открыто и в интересах общества. Быть
-                доступными для всех.
+                текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст
               </p>
             </div>
           </div>
           <Image
-            src="/images/about-banner.png"
+            src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
             alt="our mission"
             width={1000}
             height={1000}
+            className="rounded-[12px] max-h-[494px] md:max-h-[307px] xl:max-h-[292px]"
             style={{
               width: '100%',
               height: 'auto',
@@ -234,7 +162,7 @@ const About = () => {
               xl:text-[28px]
             "
             >
-              Отчетность
+              текст текст
             </h2>
             <p
               className="font-HavalMittel-regular text-[#364059]
@@ -242,10 +170,9 @@ const About = () => {
               xl:text-[18px] xl:leading-6
               "
             >
-              Для нас честность и открытость не просто слова. Лотереи под
-              брендом «Национальная Лотерея» проводятся на основании
-              распоряжения Правительства Российской Федерации от 29 августа 2019
-              г. № 1921-р в полном соответствии с законом о лотереях.
+              текст текст текст текст текст текст текст текст текст текст текст
+              текст текст текст текст текст текст текст текст текст текст текст
+              текст текст текст текст текст текст текст текст текст текст текст
             </p>
             <p
               className="font-HavalMittel-regular text-[#364059]
@@ -253,16 +180,17 @@ const About = () => {
               xl:text-[18px] xl:leading-6
             "
             >
-              Здесь мы публикуем официальную отчетность компании ООО «Спортивные
-              Лотереи», с которой может ознакомиться каждый.
+              текст текст текст текст текст текст текст текст текст текст текст
+              текст текст текст текст
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 чд:grid-cols-3 gap-4">
             {reports.map((report) => (
               <div className="flex items-center gap-2" key={report.id}>
                 <Image
-                  src="/icons/pdf-file.svg"
+                  src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
                   alt="our mission"
+                  className="rounded-[12px]"
                   width={64}
                   height={64}
                 />
@@ -280,35 +208,35 @@ const About = () => {
         </div>
         <div className="xl:max-w-[334px] w-full flex flex-col gap-6">
           <Image
-            src="/images/about-ask-question.png"
+            src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
             alt="our mission"
             width={334}
             height={223}
-            className="block md:hidden xl:block"
+            className="block md:hidden xl:block rounded-[12px]"
             style={{ width: '100%', height: 'auto' }}
           />
           <Image
-            src="/images/about-mark_tg.png"
+            src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
             alt="our mission"
             width={334}
             height={223}
-            className="hidden md:block xl:hidden"
+            className="hidden md:block xl:hidden rounded-[12px]"
             style={{ width: '100%', height: 'auto' }}
           />
           <Image
-            src="/images/about-franchiza.png"
+            src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
             alt="our mission"
             width={334}
             height={223}
-            className="block md:hidden xl:block"
+            className="block md:hidden xl:block rounded-[12px]"
             style={{ width: '100%', height: 'auto' }}
           />
           <Image
-            src="/images/about-franshiza_table.png"
+            src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
             alt="our mission"
             width={334}
             height={223}
-            className="hidden md:block xl:hidden"
+            className="hidden md:block xl:hidden rounded-[12px]"
             style={{ width: '100%', height: 'auto' }}
           />
         </div>
