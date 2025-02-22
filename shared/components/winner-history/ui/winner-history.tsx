@@ -94,9 +94,11 @@ export const WinnerHistory = () => {
         </div>
       </Carousel>
 
-      <button className="md:hidden text-[20px] leading-6 px-5 py-3 rounded-[12px] font-HavalMittel-medium text-white bg-[#2f41b0]">
-        Больше победителей
-      </button>
+      <Link href={'/winnings'}>
+        <button className="md:hidden text-[20px] leading-6 px-5 py-3 rounded-[12px] font-HavalMittel-medium text-white bg-[#2f41b0]">
+          Текст
+        </button>
+      </Link>
     </div>
   );
 };

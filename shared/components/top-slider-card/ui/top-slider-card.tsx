@@ -19,7 +19,7 @@ export const TopSliderCard: React.FC<ICardProps> = (props) => {
       <div className="flex items-center justify-between w-full">
         <h3 className="font-extrabold text-[13px] sm:text-[18px]">Текст,</h3>
         {isBigWin && (
-          <p className="h-full text-[#8f42cb] font-medium text-[11px] sm:text-[16px] whitespace-nowrap">
+          <p className="h-full text-[#364059] font-medium text-[11px] sm:text-[16px] whitespace-nowrap">
             Текст, Текст,
           </p>
         )}

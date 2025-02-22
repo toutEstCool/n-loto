@@ -35,19 +35,19 @@ export const ModalRegister = () => {
                   text-[28px] leading-8
                 "
                 >
-                  Вход / Регистрация
+                  текст текст текст
                 </h2>
                 <p
                   className="font-HavalMittel-regular mb-8
                   text-[18px] leading-6
                 "
                 >
-                  На ваш номер будет отправлен смс-код
+                  текст текст текст текст текст текст
                 </p>
 
                 <label>
                   <span className="text-[14px] leading-4 mb-1 font-HavalMittel-regular">
-                    Телефон
+                    текст
                   </span>
                   <input
                     type="tel"
@@ -57,7 +57,7 @@ export const ModalRegister = () => {
                 </label>
 
                 <button className="w-full py-3 px-5 bg-[#2f41b0] text-white rounded-[8px] hover:bg-opacity-90 transition">
-                  Далее
+                  текст
                 </button>
 
                 <button
