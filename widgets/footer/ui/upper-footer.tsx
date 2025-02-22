@@ -32,7 +32,7 @@ export const UpperFooter = () => {
             mb-1 text-[24px] leading-6
             "
           >
-            Способы оплаты
+            текст текст текст
           </h3>
           <div className="flex">
             <Image
