@@ -15,12 +15,16 @@ export const LotteryTicketCard = ({ ticket }: Props) => {
     >
       <div className="md:w-[71%] relative overflow-hidden rounded-l-xl">
         <Image
-          src={ticket.imageUrl}
+          src={
+            false
+              ? ticket.imageUrl
+              : 'https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg'
+          }
           alt="Card Banner"
           width={0}
           height={0}
           sizes="100vw"
-          className="w-full h-full object-cover rounded-l-xl"
+          className="w-full h-full object-cover rounded-l-xl rounded-[12px]"
         />
       </div>
       <div className="hidden absolute left-[72%] h-full md:flex flex-col gap-2 justify-between">
@@ -53,7 +57,11 @@ export const LotteryTicketCard = ({ ticket }: Props) => {
       >
         <div className="font-Acrom font-bold text-[18px] leading-6 mt-auto md:m-0 flex flex-col-reverse md:block">
           <p className="">
-            Тираж <br /> № {ticket.drawNumber}
+            {/* Тираж */}
+            текст
+            <br />
+            {/* № {ticket.drawNumber} */}
+            текст текст
           </p>
           <p className="mt-0 xl:mt-4">
             {new Date(ticket.drawDate).toLocaleDateString()}
@@ -66,7 +74,8 @@ export const LotteryTicketCard = ({ ticket }: Props) => {
             xl:text-[28px] xl:leading-[52px] 
           "
           >
-            100 ₽
+            {/* 100 ₽ */}
+            текст
           </p>
           <p
             className="w-full border-y-[2px] border-[#364059] ml-auto uppercase font-HavalMittel-regular
@@ -74,7 +83,8 @@ export const LotteryTicketCard = ({ ticket }: Props) => {
             xl:max-w-[100px] xl:text-[28px] xl:leading-[35px]
           "
           >
-            купить
+            {/* купить */}
+            текст
           </p>
         </div>
       </div>

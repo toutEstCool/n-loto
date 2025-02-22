@@ -6,8 +6,8 @@ import { WinningsRecetSection } from '@/widgets/winnings-recent-section';
 
 const Winnings = async () => {
   const breadcrumbItems = [
-    { label: 'Главная', href: '/' },
-    { label: 'Победители', href: '/special' },
+    { label: 'текст', href: '/' },
+    { label: 'текст текст', href: '/special' },
   ];
 
   return (

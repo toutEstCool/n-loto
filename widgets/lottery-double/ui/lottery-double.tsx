@@ -7,7 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/shared/ui/carousel';
-import { Gift } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -22,7 +21,7 @@ export const LotteryDouble = () => {
     >
       <div className="xl:max-w-[260px] xl:mr-[24px] w-full flex flex-col gap-2 mb-4 xl:m-0">
         <h2 className="text-[24px] xl:text-[28px] leading-8 text-[#2f46b0] font-Acrom font-bold">
-          РАЗ, ДВА, ИГРА!
+          Текст, Текст, Текст,
         </h2>
         <p
           className="text-[#2f46b0] font-HavalMittel-regular
@@ -30,7 +29,7 @@ export const LotteryDouble = () => {
           xl:text-xl xl:w-[160px] xl:leading-6
         "
         >
-          Ближайшие тиражи — успей купить в 2 клика.
+          Текст, Текст, Текст, Текст, Текст, Текст,
         </p>
       </div>
       <div className="xl:px-6 xl:mx-3 xl:max-w-[766px]">
@@ -88,7 +87,7 @@ export const LotteryDouble = () => {
       >
         <div className="xl:h-[60px] w-full xl:flex flex-col items-center justify-center">
           <p className="leading-6 text-[18px] xl:text-[20px] font-HavalMittel-regular text-center text-[#364059]">
-            Билеты не выбраны
+            Текст, Текст, Текст,
           </p>
         </div>
         <div className="w-full flex items-center gap-2 h-[48px]">
@@ -98,9 +97,9 @@ export const LotteryDouble = () => {
             xl:text-[20px]
           "
           >
-            Оплатить
+            текст, текст
           </Button>
-          <div className="max-w-[48px] w-full border-[2px] p-3 flex rounded-[10px] border-[#8b3a9a] cursor-pointer">
+          <div className="max-w-[48px] w-full border-[2px] p-3 flex rounded-[10px] border-[#A8A5AD] cursor-pointer">
             <Image src="/icons/gift.svg" alt="left" width={20} height={20} />
           </div>
         </div>

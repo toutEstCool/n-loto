@@ -40,7 +40,7 @@ export const PressCenterContent = ({ news }: Props) => {
           )}
           onClick={() => handleTabChange('news')}
         >
-          Новости
+          текст текст
         </button>
         <button
           className={cn(
@@ -51,7 +51,7 @@ export const PressCenterContent = ({ news }: Props) => {
           )}
           onClick={() => handleTabChange('press-reliz')}
         >
-          Пресс-релиз
+          текст текст текст
         </button>
       </div>
       <div
@@ -69,7 +69,7 @@ export const PressCenterContent = ({ news }: Props) => {
           xl:text-[42px] xl:leading-[52px]
         "
         >
-          {tab === 'news' ? 'НОВОСТИ' : 'Пресс-релизы'}
+          {tab === 'news' ? 'текст текст' : 'текст текст текст'}
         </h2>
         <div
           className={cn('flex flex-col gap-8', {

@@ -33,7 +33,8 @@ export const MobileFooter = () => {
                   mb-1 text-[20px] leading-6
                   "
             >
-              Способы оплаты
+              {/* Способы оплаты */}
+              Текст текст текст
             </h3>
             <div className="flex">
               <Image
@@ -85,8 +86,8 @@ export const MobileFooter = () => {
                   mb-1 text-[14px] leading-4
                   "
             >
-              Официальный сайт «Национальная Лотерея» гарантирует безопасность
-              всех способов оплаты и не сохраняет ваши данные.
+              текст текст текст текст текст текст текст текст текст текст текст
+              текст текст текст текст текст
             </p>
           </div>
           <div className="flex flex-col gap-6">
@@ -125,7 +126,7 @@ export const MobileFooter = () => {
         <div className="flex items-center justify-between mt-6">
           <div>
             <Image
-              src={'/logo.svg'}
+              src={'/icons/newLogo.png'}
               alt="logo"
               width={240}
               height={54}
@@ -136,7 +137,7 @@ export const MobileFooter = () => {
               className="max-w-[240px]"
             />
             <p className="text-[#2f41b0] text-[24px] leading-8 font-HavalMittel-bold mt-4">
-              Горячая линия: <br className="sm:hidden" /> 8 800 333-7-333
+              текст текст <br className="sm:hidden" /> текст текст
             </p>
           </div>
           <Image
@@ -155,26 +156,24 @@ export const MobileFooter = () => {
           <div className="flex items-center gap-2">
             <Image src={'/icons/tg.svg'} alt="tg logo" width={24} height={24} />
             <p className="text-[18px] leading-6 text-[#364059] font-HavalMittel-regular">
-              Служба поддержки
+              текст текст
             </p>
           </div>
           <div className="flex items-center gap-2">
             <Image src={'/icons/mail.svg'} alt="mail" width={24} height={32} />
             <p className="text-[18px] leading-6 text-[#364059] font-HavalMittel-regular">
-              support@nloto.ru
+              текст текст
             </p>
           </div>
         </div>
         <div className="text-[14px] leading-4 text-[#5e6976] font-HavalMittel-regular mt-6">
           <p>
-            Лотереи проводятся на основании распоряжения Правительства
-            Российской Федерации от 29 августа 2019 г. № 1921-р. Организатор
-            лотерей: Министерство финансов Российской Федерации. Оператор
-            лотерей: ООО «Спортивные Лотереи». Тел. 8 800 333-7-333
+            текст текст текст текст текст текст текст текст текст текст текст
+            текст текст текст текст текст текст текст текст текст текст
           </p>
           <p>
-            Сведения о рекламодателе: ООО «Спортивные Лотереи» (ОГРН
-            1195027010386, ИНН 5003133760).
+            текст текст текст текст текст текст текст текст текст текст текст
+            текст текст текст текст
           </p>
         </div>
         <div className="flex flex-col gap-1 sm:flex-wrap gap-x-10 text-base leading-5 font-HavalMittel mt-6">
@@ -183,20 +182,29 @@ export const MobileFooter = () => {
               key={item.title}
               className="text-[14px] leading-4 text-[#2f41b0] font-HavalMittel-regular"
             >
-              {item.title}
+              {/* {item.title} */} текст текст текст
             </p>
           ))}
         </div>
         <div className="flex sm:items-center justify-between mt-6 flex-col sm:flex-row gap-6">
           <div className="flex items-center gap-3">
-            <Image src={'/icons/rus_logo.svg'} alt="r" width={33} height={33} />
+            <Image
+              src={
+                'https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg'
+              }
+              alt="r"
+              width={33}
+              height={33}
+            />
             <div className="w-[1px] h-5 bg-[#5e6976]" />
             <p className="w-[170px] text-[14px] leading-4 text-[#5e6976] font-HavalMittel-regular">
-              Организатор лотереи Минфин России
+              {/* Организатор лотереи Минфин России */}
+              текст текст текст текст текст текст
             </p>
           </div>
           <p className="text-[14px] leading-4 text-[#5e6976] font-HavalMittel-regular">
-            ©2021-2024 ООО «Спортивные Лотереи»
+            {/* ©2021-2024 ООО «Спортивные Лотереи» */}
+            текст текст текст текст
           </p>
         </div>
       </Container>

@@ -5,15 +5,16 @@ import React from 'react';
 
 const GetLotteryWin = () => {
   const breadcrumbItems = [
-    { label: 'Главная', href: '/' },
-    { label: 'Как получить выигрыш', href: '/get-lottery-win' },
+    { label: 'текст текст ', href: '/' },
+    { label: 'текст текст текст', href: '/get-lottery-win' },
   ];
 
   return (
     <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative">
       <div
         style={{
-          backgroundImage: 'url(/images/check_win-bg.png)',
+          backgroundImage:
+            'url(https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg)',
           backgroundSize: 'cover',
         }}
         className="w-full h-[450px] absolute top-0 left-0 -z-[1]"
@@ -27,7 +28,7 @@ const GetLotteryWin = () => {
           xl:text-[36px] xl:leading-[42px]
         "
         >
-          Как получить выигрыш
+          текст текст текст текст
         </h1>
       </Container>
 
@@ -47,8 +48,8 @@ const GetLotteryWin = () => {
                 xl:text-[28px] md:mb-1
               "
               >
-                Браво! Расскажите, как это было, а мы подскажем, как получить
-                выигрыш.
+                текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст
               </h2>
               <p
                 className="font-HavalMittel-regular text-[#364059]
@@ -56,7 +57,7 @@ const GetLotteryWin = () => {
                 xl:text-[24px] xl:leading-8
               "
               >
-                Давайте начнем. Где вы купили билет?
+                текст текст текст текст текст текст текст
               </p>
               <p
                 className="text-[#364059] font-HavalMittel-regular
@@ -64,9 +65,9 @@ const GetLotteryWin = () => {
                 xl:text-[20px]
               "
               >
-                Всех наших партнеров вы можете найти{' '}
+                текст текст текст текст текст текст{' '}
                 <a className="text-[#024cf8]" href="">
-                  на карте ниже.
+                  текст текст текст
                 </a>
               </p>
             </div>
@@ -77,7 +78,7 @@ const GetLotteryWin = () => {
                 xl:text-[20px] xl:leading-6
                 "
               >
-                На сайте или в приложении
+                текст текст текст
               </button>
               <button
                 className="w-full border-2 border-[#024cf8] py-3 px-5 text-[#024cf8] rounded-[12px] font-HavalMittel-medium
@@ -85,15 +86,15 @@ const GetLotteryWin = () => {
                 xl:text-[20px] xl:leading-6
               "
               >
-                У наших партнеров или в клиентском офисе
+                текст текст текст текст текст
               </button>
             </div>
           </div>
 
           <WhereBuyMap
-            title="Карта получения выигрышей"
-            showBtnText="Показать карту"
-            hideBtnText="Скрыть карту"
+            title="текст текст текст"
+            showBtnText="текст текст"
+            hideBtnText="текст текст"
           />
         </div>
       </Container>

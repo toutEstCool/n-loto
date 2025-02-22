@@ -24,11 +24,11 @@ export const News = () => {
           md:text-[36px] md:leading-[42px]
         "
         >
-          Новости
+          Текст, Текст,
         </h2>
         <Link href="/press-center">
           <button className="hidden md:block border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px] text-[20px] leading-6 font-medium">
-            Все новости
+            Текст, Текст,
           </button>
         </Link>
       </div>
@@ -41,7 +41,7 @@ export const News = () => {
 
       <Link href="/press-center">
         <button className="md:hidden border-2 border-[#1f48d8] bg-white py-3 px-5 text-[#1f48d8] rounded-[12px] text-[20px] leading-6 font-medium">
-          Все новости
+          Текст, Текст,
         </button>
       </Link>
     </div>

@@ -30,15 +30,16 @@ const MomentaryLotteries = () => {
   }, []);
 
   const breadcrumbItems = [
-    { label: 'Главная', href: '/' },
-    { label: 'Моментальные лотереи', href: '/get-lottery-win' },
+    { label: 'текст ', href: '/' },
+    { label: 'текст текст текст', href: '/get-lottery-win' },
   ];
 
   return (
     <div className="mt-[40px] sm:mt-[58px] md:mt-[86px] min-h-screen relative">
       <div
         style={{
-          backgroundImage: 'url(/images/momentary_lotteries-bg.png)',
+          backgroundImage:
+            'url(https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg)',
         }}
         className="w-full  absolute top-0 left-0 -z-[1]
         bg-cover h-[345px] bg-[-75%_0%]
@@ -55,7 +56,7 @@ const MomentaryLotteries = () => {
             xl:text-4xl xl:font-bold
           "
         >
-          Моментальные лотереи
+          текст текст текст
         </h1>
       </Container>
       <Container>
@@ -71,14 +72,14 @@ const MomentaryLotteries = () => {
               >
                 <div className="md:flex md:gap-4 xl:block xl:gap-0">
                   <Image
-                    src="/icons/ticket.svg"
+                    src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
                     alt="ticket"
                     width={48}
                     height={48}
-                    className="hidden md:block md:mb-3"
+                    className="hidden rounded-[12px] md:block md:mb-3"
                   />
                   <h3 className="mb-4 text-[24px] leading-8 font-bold font-Acrom">
-                    Что такое моментальные лотереи?
+                    текст текст текст текст текст текст
                   </h3>
                 </div>
                 <p
@@ -87,9 +88,9 @@ const MomentaryLotteries = () => {
                   xl:text-[20px] xl:leading-6 xl:font-normal
                 "
                 >
-                  В билете моментальной (бестиражной) лотереи Вы увидите свой
-                  выигрыш сразу, удалив защитный слой. Вам не нужно ждать
-                  специального розыгрыша тиража.
+                  текст текст текст текст текст текст текст текст текст текст
+                  текст текст текст текст текст текст текст текст текст текст
+                  текст текст текст текст
                 </p>
               </div>
               <div
@@ -105,12 +106,13 @@ const MomentaryLotteries = () => {
                   xl:text-[20px] xl:leading-6 xl:font-normal xl:w-full
                 "
                 >
-                  Билеты моментальных лотерей продаются только офлайн:
+                  текст текст текст текст текст текст
                 </p>
                 <div className="flex items-center gap-4 mb-5">
                   <Image
-                    src="/icons/russian-mail-post.svg"
+                    src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
                     alt="russian-mail-post"
+                    className="rounded-[12px]"
                     width={64}
                     height={64}
                   />
@@ -121,7 +123,7 @@ const MomentaryLotteries = () => {
                       xl:text-[20px] xl:leading-6 
                       "
                     >
-                      Почта России
+                      текст текст текст
                     </h4>
                     <p
                       className="text-[#5e6976] font-HavalMittel-regular
@@ -129,14 +131,15 @@ const MomentaryLotteries = () => {
                       xl:text-[16px] xl:leading-5 
                       "
                     >
-                      В почтовых отделениях
+                      текст текст текст
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 mb-5">
                   <Image
-                    src="/icons/lottery-favicon.svg"
+                    src="https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg"
                     alt="russian-mail-post"
+                    className="rounded-[12px]"
                     width={64}
                     height={64}
                   />
@@ -147,7 +150,7 @@ const MomentaryLotteries = () => {
                       xl:text-[20px] xl:leading-6 
                       "
                     >
-                      Национальная лотерея
+                      текст текст текст
                     </h4>
                     <p
                       className="text-[#5e6976] font-HavalMittel-regular
@@ -155,7 +158,7 @@ const MomentaryLotteries = () => {
                       xl:text-[16px] xl:leading-5 
                       "
                     >
-                      Собственные точки продаж
+                      текст текст текст
                     </p>
                   </div>
                 </div>
@@ -165,7 +168,7 @@ const MomentaryLotteries = () => {
                 md:text-[20px]
                 "
                 >
-                  Показать карту продаж
+                  текст текст текст
                 </p>
               </div>
             </div>
@@ -185,7 +188,7 @@ const MomentaryLotteries = () => {
               xl:text-[28px]
             "
             >
-              Лотереи
+              текст текст текст
             </h2>
             <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1010px] xl:max-w-[912px] w-full gap-x-6">
               {lotteries.map((lottery, index) => (
@@ -195,7 +198,11 @@ const MomentaryLotteries = () => {
               ))}
             </div>
           </div>
-          <WhereBuyMap />
+          <WhereBuyMap
+            title="текст текст текст"
+            hideBtnText="текст текст"
+            showBtnText="текст текст"
+          />
 
           <div
             className=" bg-white rounded-[20px]
@@ -215,7 +222,7 @@ const MomentaryLotteries = () => {
                 xl:text-[28px] 
               "
               >
-                Где и как получить выигрыш?
+                текст текст текст
               </h2>
               <div
                 className={`w-[44px] h-[44px] flex items-center justify-center bg-white rounded-full cursor-pointer`}
@@ -235,10 +242,10 @@ const MomentaryLotteries = () => {
                 md:text-[16px] md:leading-5
               "
               >
-                Выигрыш можно получить различными способами в точках продаж,
-                личном кабинете на сайте или мобильном приложении. Детали о
-                порядке и условиях получения выигрыша здесь:{' '}
-                <span className="text-[#024cf8]">«Как получить выигрыш»</span>
+                текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст{' '}
+                <span className="text-[#024cf8]">«текст текст текст»</span>
               </p>
             )}
           </div>

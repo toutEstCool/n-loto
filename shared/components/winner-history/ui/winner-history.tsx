@@ -33,7 +33,7 @@ export const WinnerHistory = () => {
           xl:text-[36px] xl:leading-[42px]
         "
         >
-          Истории наших победителей
+          Текст, Текст, Текст, Текст,
         </h2>
         <Link href="/winnings">
           <button
@@ -42,7 +42,7 @@ export const WinnerHistory = () => {
           xl:text-[20px]
           "
           >
-            Больше победителей
+            Текст, Текст,
           </button>
         </Link>
       </div>
@@ -59,7 +59,7 @@ export const WinnerHistory = () => {
           {winners.map((winner) => (
             <CarouselItem
               key={winner._id}
-              className="basis-1/1 max-w-[270px] xl:max-w-[1000px] md:basis-1/2 lg:basis-1/4 xl:basis-1/5"
+              className="basis-1/1 max-w-[270px] w-full xl:max-w-[1000px] md:basis-1/2 xl:basis-1/5"
             >
               <HeroWinnerCard winner={winner} />
             </CarouselItem>

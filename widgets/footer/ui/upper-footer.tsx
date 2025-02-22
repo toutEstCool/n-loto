@@ -24,7 +24,7 @@ export const UpperFooter = () => {
         ))}
       </div>
 
-      <div className="max-w-[340px] flex flex-col gap-6 w-full">
+      <div className="max-w-[340px] ml-auto flex flex-col gap-6 w-full">
         <div className="max-w-[314px]">
           <h3
             className="
@@ -84,8 +84,8 @@ export const UpperFooter = () => {
             mb-1 text-[14px] leading-4
             "
           >
-            Официальный сайт «Национальная Лотерея» гарантирует безопасность
-            всех способов оплаты и не сохраняет ваши данные.
+            Текст, текст, текст, текст, текст, текст, текст, текст, текст,
+            текст, текст, текст, текст, текст, текст, текст, текст, текст, текст
           </p>
         </div>
         <div className="flex gap-3">

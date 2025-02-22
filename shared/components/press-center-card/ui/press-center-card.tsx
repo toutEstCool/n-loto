@@ -28,7 +28,11 @@ export const PressCenterCard = ({ news, showBorder }: Props) => {
     >
       <div>
         <Image
-          src={news.image}
+          src={
+            false
+              ? news.image
+              : 'https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg'
+          }
           alt={news.newsTitle}
           width={1000}
           height={1000}
@@ -59,7 +63,7 @@ export const PressCenterCard = ({ news, showBorder }: Props) => {
         xl:text-[28px]
       "
       >
-        {news.newsTitle}
+        {/* {news.newsTitle} */} текст текст текст
       </h3>
       <Link
         href={`press-center/${news._id}`}
@@ -68,7 +72,7 @@ export const PressCenterCard = ({ news, showBorder }: Props) => {
           xl:text-[20px]
         "
       >
-        Читать <ArrowRight />
+        текст <ArrowRight />
       </Link>
     </div>
   );

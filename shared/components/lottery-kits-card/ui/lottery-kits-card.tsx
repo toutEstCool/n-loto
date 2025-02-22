@@ -1,5 +1,5 @@
 import { Button } from '@/shared/ui/button';
-import { Gift, Tag } from 'lucide-react';
+import { Tag } from 'lucide-react';
 import Image from 'next/image';
 
 export const LotteryKitsCard = () => {
@@ -7,9 +7,10 @@ export const LotteryKitsCard = () => {
     <div className="md:mr-3 w-[318px] rounded-xl relative">
       <div>
         <div
-          className="w-full h-[368px] bg-cover bg-center relative"
+          className="w-full h-[368px] bg-cover bg-center relative rounded-[12px]"
           style={{
-            backgroundImage: `url('https://online-static.website.cloud.croc.ru/online-meta/8495e5d8-e87f-474e-8125-e8ebabf0cff5.png')`,
+            backgroundImage: `url('https://photogora.ru/img/product/big/4947/5d2ef838a9cc69778828569119077791.jpg')`,
+            // backgroundImage: `url('https://online-static.website.cloud.croc.ru/online-meta/8495e5d8-e87f-474e-8125-e8ebabf0cff5.png')`,
           }}
         >
           <div className="absolute w-[90%] top-[50%] left-4 flex flex-col justify-center gap-3">
@@ -22,7 +23,7 @@ export const LotteryKitsCard = () => {
                   xl:leading-[20px] xl:text-[15px]
                 "
                 >
-                  50 билетов
+                  Текст, Текст,
                 </span>
               </div>
               <p
@@ -30,7 +31,7 @@ export const LotteryKitsCard = () => {
                   leading-[16px] text-[14px]
                   xl:leading-[20px] xl:text-[15px]"
               >
-                Что внутри?
+                Текст, Текст,
               </p>
             </div>
             <div>
@@ -40,7 +41,7 @@ export const LotteryKitsCard = () => {
                 xl:text-[18px] xl:leading-6
               "
               >
-                Разыграем от 100 млн ₽ на всех
+                Текст, Текст, Текст, Текст, Текст,
               </h2>
             </div>
             <div className="flex items-center gap-2 h-[48px]">
@@ -50,9 +51,9 @@ export const LotteryKitsCard = () => {
                 xl:text-[20px] xl:leading-6
               "
               >
-                Купить · 300 ₽
+                текст текст текст
               </Button>
-              <div className="max-w-[64px] w-full border-[2px] py-3 px-5 flex rounded-xl border-[#8b3a9a] cursor-pointer">
+              <div className="max-w-[64px] w-full border-[2px] py-3 px-5 flex rounded-xl border-[#858389] cursor-pointer">
                 <Image
                   src="/icons/gift.svg"
                   alt="left"
