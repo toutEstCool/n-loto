@@ -153,8 +153,8 @@ const CheckWin = () => {
                       'текст текст текст ',
                       'текст текст текст текст текст',
                       'текст текст текст текст',
-                    ].map((item) => (
-                      <li key={item} className="flex gap-2 ">
+                    ].map((item, index) => (
+                      <li key={index} className="flex gap-2 ">
                         <Star
                           width={8}
                           height={8}
@@ -210,8 +210,8 @@ const CheckWin = () => {
                   {[
                     'текст текст текст текст текст текст ',
                     'текст текст текст текст текст текст ',
-                  ].map((item) => (
-                    <li key={item} className="flex gap-2 ">
+                  ].map((item, index) => (
+                    <li key={index} className="flex gap-2 ">
                       <Star
                         width={8}
                         height={8}

@@ -137,9 +137,9 @@ export const Lowerfooter = () => {
       <div className="grid grid-cols-[358px_1fr_360px] mt-4">
         <p className="mt-auto flex">©2021-2024 текст текст текст</p>
         <div className="flex flex-col gap-1 sm:flex-wrap sm:flex-row gap-x-10 text-base leading-5 font-HavalMittel">
-          {data.map((item) => (
+          {data.map((item, index) => (
             <p
-              key={item.title}
+              key={index}
               className="text-[16px] leading-5 text-[#2f41b0] font-HavalMittel-regular"
             >
               {item.title}

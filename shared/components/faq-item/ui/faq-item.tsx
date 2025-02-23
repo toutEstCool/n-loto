@@ -61,10 +61,10 @@ export const FaqItem = ({ title, content, children }: FaqItemProps) => {
               {Array.isArray(content) &&
               content.length > 0 &&
               Array.isArray(content) ? (
-                content.map((item) => (
+                content.map((item, index) => (
                   <p
                     className="text-[#364059] text-[14px] leading-5 md:text-[16px] md:leading-6 font-HavalMittel-medium max-w-[734px] pl-4 md:pl-8"
-                    key={item}
+                    key={index}
                   >
                     {item}
                   </p>
@@ -77,7 +77,7 @@ export const FaqItem = ({ title, content, children }: FaqItemProps) => {
             </div>
           )}
           {children &&
-            children.map((child) => <FaqItem key={child.title} {...child} />)}
+            children.map((child, index) => <FaqItem key={index} {...child} />)}
         </div>
       )}
     </>

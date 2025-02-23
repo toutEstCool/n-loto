@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
       'photogora.ru',
     ],
   },
+  i18n: {
+    locales: ['ru', 'en', 'kg'],
+    defaultLocale: 'ru',
+  },
 };
 
 export default nextConfig;
