@@ -7,14 +7,14 @@ export const UpperFooter = () => {
   return (
     <div className="flex">
       <div className="grid-cols-4 text-[#364059] hidden xl:grid">
-        {footerData.map((list) => (
-          <ul className="mx-3" key={list.title}>
+        {footerData.map((list, index) => (
+          <ul className="mx-3" key={index}>
             <li className="mb-4 text-2xl font-bold font-HavalMittel">
               {list.title}
             </li>
-            {list.links.map((link) => (
+            {list.links.map((link, index) => (
               <li
-                key={link.title}
+                key={index}
                 className="mb-4 text-lg leading-6 font-normal hover:font-medium"
               >
                 <Link href={link.link}>{link.title}</Link>

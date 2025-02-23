@@ -129,8 +129,8 @@ const Faq = () => {
           "
         >
           <div className="flex flex-col gap-4">
-            {faqItems.map((item) => (
-              <FaqItem key={item.title} {...item} />
+            {faqItems.map((item, index) => (
+              <FaqItem key={index} {...item} />
             ))}
           </div>
         </div>

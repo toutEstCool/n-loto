@@ -281,9 +281,9 @@ const DetailMomentaryLotteries = () => {
                 'текст текст текст текст текст текст текст текст текст текст текст текст N текст-р.',
                 'текст текст: текст текст текст текст',
                 'текст текст: текст «текст текст», текст. текст текст-текст',
-              ].map((item) => (
+              ].map((item, index) => (
                 <p
-                  key={item}
+                  key={index}
                   className="text-[#5e6976] font-HavalMittel-regular
                     text-[18px] leading-6 
                     xl:text-[20px]

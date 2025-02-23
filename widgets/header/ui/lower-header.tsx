@@ -1,4 +1,5 @@
 // import { useMenuVisibility } from '@/features/header';
+import { LanguageChange } from '@/shared/components/language-change';
 import { ModalRegister } from '@/shared/components/modal-register';
 import { BurgerMenu } from '@/widgets/burger-menu';
 import { Container } from '@/widgets/container';
@@ -71,6 +72,7 @@ export const LowerHeader = () => {
             </ul>
           </div>
           {/* Right Section */}
+          <LanguageChange />
           <div>
             <ul className="text-[#2F41B0] font-HavalMittel-regular text-[14px] md:text-[20px] font-medium">
               <li>

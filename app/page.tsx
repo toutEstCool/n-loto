@@ -1,5 +1,4 @@
 'use client';
-
 import { BannerNewMillioner } from '@/shared/components/banner-new-millioner';
 import { Faq } from '@/shared/components/faq';
 import { LotteryGift } from '@/shared/components/lottery-gift';

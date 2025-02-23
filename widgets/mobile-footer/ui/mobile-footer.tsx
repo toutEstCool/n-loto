@@ -177,9 +177,9 @@ export const MobileFooter = () => {
           </p>
         </div>
         <div className="flex flex-col gap-1 sm:flex-wrap gap-x-10 text-base leading-5 font-HavalMittel mt-6">
-          {data.map((item) => (
+          {data.map((item, index) => (
             <p
-              key={item.title}
+              key={index}
               className="text-[14px] leading-4 text-[#2f41b0] font-HavalMittel-regular"
             >
               {/* {item.title} */} текст текст текст

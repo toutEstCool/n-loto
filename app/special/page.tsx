@@ -37,8 +37,8 @@ const Special = async () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-          {specials.map((special: any) => (
-            <SpecialCard key={special.actionName} special={special} />
+          {specials.map((special: any, index: number) => (
+            <SpecialCard key={index} special={special} />
           ))}
         </div>
       </div>
