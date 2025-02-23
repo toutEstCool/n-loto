@@ -6,7 +6,7 @@ export const ModalRegister = () => {
 
   return (
     <div className="flex items-center justify-center cursor-default">
-      <button onClick={() => setIsOpen(true)} className="">
+      <button onClick={() => setIsOpen(true)} className="text-nowrap">
         Вход / Регистрация
       </button>
 

@@ -14,13 +14,13 @@ export const LowerHeader = () => {
       <Container className="h-[32px] sm:h-[50px]">
         <div className="flex items-center justify-between h-[100%]">
           {/* Left Section */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4">
             <div className="xl:hidden">
               {/* <Burger /> */}
               <BurgerMenu />
             </div>
             <Link href="/">
-              <div className="mr-8">
+              <div className="mr-0">
                 <Image
                   src={'/icons/newLogo.png'}
                   alt="Logo"
